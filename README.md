@@ -1,4 +1,6 @@
 # teacher-tools-project
+*Dustin Bayham, John Haight, Josh Hardwick, Tyren Thompson, Adam Youngpeter*
+
 Teacher Tools is a multi-page application that utilizes APIs to refresh content inside its pages.
 As a Saas (Software as a Service) classroom management tool, Teacher Tools enables the teacher to manage their classroom successfully.
 A teacher can accomplish the following:
