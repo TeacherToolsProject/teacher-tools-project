@@ -22,7 +22,7 @@
                 <h1>Welcome To Teacher Tools.</h1>
                 <h2>Classrooms</h2>
                 <ul class="classroom-list" th:each="classroom:${classrooms}">
-                   <li><a class="classroom-items" th:text="${classroom.subject}"></a></li>
+                   <li><a class="classroom-items" th:href="@{/classroom(id=${classroom.id})}" th:text="${classroom.subject}"></a></li>
                 </ul>
             </main>
         </div>
