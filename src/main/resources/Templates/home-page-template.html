@@ -14,13 +14,16 @@
 <body>
         <div class="container">
             <header class="header">
-                <h1>Welcome To Teacher Tools.</h1>
+                <nav>
+
+                </nav>
             </header>
             <main class="main-content">
+                <h1>Welcome To Teacher Tools.</h1>
                 <h2>Classrooms</h2>
-                <nav class="main-content-nav">
-                    <a class="classroom-nav" th:each="classroom:${classrooms}" ></a>
-                </nav>
+                <ul class="classroom-list" th:each="classroom:${classrooms}">
+                   <li><a class="classroom-items" th:text="${classroom.subject}"></a></li>
+                </ul>
             </main>
         </div>
 
