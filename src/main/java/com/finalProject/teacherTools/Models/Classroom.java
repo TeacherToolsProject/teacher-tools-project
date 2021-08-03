@@ -23,7 +23,6 @@ public class Classroom {
     private Collection<Assignment> assignments;
 
     @ManyToMany
-    @JsonIgnore
     private Collection<Student> students;
 
     public Classroom(String subject, int gradeLevel, String room, String time, int year, String semester, Student... students){
@@ -74,4 +73,6 @@ public class Classroom {
     public Collection<Student> getStudents() {
         return students;
     }
+
+    public void addStudent(Student student){students.add(student);}
 }

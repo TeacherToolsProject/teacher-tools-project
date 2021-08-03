@@ -20,7 +20,10 @@
   </header>
   <main class="main-content">
      <h1 th:text="${individualClassroom.subject}"></h1>
-
+      <h3>Student List: </h3>
+        <ul th:each="student:${individualClassroom.students}">
+          <li th:text="${student.getName()}"></li>
+        </ul>
   </main>
 </div>
 

@@ -44,8 +44,16 @@ public class Populator implements CommandLineRunner {
         studentRepo.save(williamsAbbey);
         Student stevensWendy = new Student("Wendy Stevens", "Martha Stevens", "marthas123@nomail.com", "580-555-6985", 9, 12, 2005, civilWarHistory);
         studentRepo.save(stevensWendy);
-        Student jamesLester = new Student("Lester James", "Agatha James", "agathajames@nomail.com", "614-532-8965", 6, 7, 2006, apHistoryOne, civilWarHistory );
+        Student jamesLester = new Student("Lester James", "Agatha James", "agathajames@nomail.com", "614-532-8965", 6, 7, 2006, apHistoryOne, civilWarHistory);
         studentRepo.save(jamesLester);
+        apHistoryOne.addStudent(cushmanGrant);
+        apHistoryOne.addStudent(williamsAbbey);
+        apHistoryOne.addStudent(jamesLester);
+        classroomRepo.save(apHistoryOne);
+        civilWarHistory.addStudent(fongGary);
+        civilWarHistory.addStudent(stevensWendy);
+        civilWarHistory.addStudent(jamesLester);
+        classroomRepo.save(civilWarHistory);
 
         Assignment apHistoryOneFirstAssignment = new Assignment(apHistoryOne, "Favorite Ancient Civilization", "Write a one page paper detailing your favorite ancient civilization, where it was located, " +
                 "what tools they used, what languages they spoke, and any interesting achievements or conflicts they were involved in.", "08/28/2021", "09/02/2021", "100");
