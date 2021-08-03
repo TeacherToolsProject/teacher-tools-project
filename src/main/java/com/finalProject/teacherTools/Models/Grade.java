@@ -15,12 +15,12 @@ public class Grade {
     private double grade;
     private double maximumGrade;
 
-    @OneToOne(mappedBy = "grade, cascade = CascadeType.All, orphanRemoval = true")
+    @OneToOne(mappedBy = "grade")
     private Assignment assignment;
 
     @ManyToOne
     @JsonIgnore
-    private Collection<Student> students;
+    private Student students;
 
     protected Grade(){};
 
@@ -46,7 +46,7 @@ public class Grade {
         return assignment;
     }
 
-    public Collection<Student> getStudents() {
+    public Student getStudents() {
         return students;
     }
 }

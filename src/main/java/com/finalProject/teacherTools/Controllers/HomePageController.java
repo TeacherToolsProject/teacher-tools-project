@@ -16,7 +16,7 @@ public class HomePageController {
 
     @GetMapping("/")
     public String displayHomePage(Model model) {
-        model.addAttribute("class rooms", classroomRepo.findAll());
+        model.addAttribute("classrooms", classroomRepo.findAll());
         return "home-page-template";
     }
 }

@@ -19,7 +19,7 @@ public class Note {
 
     @ManyToOne
     @JsonIgnore
-    private Collection<Student> students;
+    private Student students;
 
     protected Note(){};
 
@@ -41,7 +41,7 @@ public class Note {
         return noteDate;
     }
 
-    public Collection<Student> getStudents() {
+    public Student getStudents() {
         return students;
     }
 }

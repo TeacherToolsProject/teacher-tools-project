@@ -25,7 +25,7 @@ public class Assignment {
     @JsonIgnore
     private Classroom classroom;
 
-    @OneToMany(mappedBy = "assignment, cascade = CascadeType.All, orphanRemoval = true")
+    @OneToMany
     private Collection<Student> students;
 
     @OneToOne

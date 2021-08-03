@@ -19,7 +19,7 @@ public class Classroom {
     private int year;
     private String semester;
 
-    @OneToMany(mappedBy = "classroom, cascade = CascadeType.All, orphanRemoval = true")
+    @OneToMany(mappedBy = "classroom")
     private Collection<Assignment> assignments;
 
     @ManyToMany

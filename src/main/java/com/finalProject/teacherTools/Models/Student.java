@@ -21,17 +21,17 @@ public class Student {
     private int birthdayMonth;
     private int birthdayYear;
 
-    @ManyToMany (mappedBy = "students, cascade = CascadeType.All, orphanRemoval = true" )
+    @ManyToMany (mappedBy = "students" )
     private Collection<Classroom> classrooms;
 
     @ManyToOne
     @JsonIgnore
-    private Collection<Assignment> assignments;
+    private Assignment assignments;
 
-    @OneToMany(mappedBy = "student, cascade = CascadeType.All, orphanRemoval = true")
+    @OneToMany
     private Collection<Grade> grades;
 
-    @OneToMany(mappedBy = "student, cascade = CascadeType.All, orphanRemoval = true")
+    @OneToMany
     private Collection<Note> notes;
 
     protected Student(){};
@@ -84,7 +84,7 @@ public class Student {
         return classrooms;
     }
 
-    public Collection<Assignment> getAssignments() {
+    public Assignment getAssignments() {
         return assignments;
     }
 
