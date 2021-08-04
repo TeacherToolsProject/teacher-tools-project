@@ -23,7 +23,7 @@
      <h1 th:text="${individualClassroom.subject}"></h1>
       <h3>Student List: </h3>
         <ul th:each="student:${individualClassroom.students}">
-          <li th:text="${student.getName()}"></li>
+          <li><a class="single-student" th:href="@{/student(id=${student.id})}" th:text="${student.getName()}"></a></li>
         </ul>
   </main>
 </div>
