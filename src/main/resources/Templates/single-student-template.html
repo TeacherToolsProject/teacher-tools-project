@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Teacher Tools - Your Student</title>
+</head>
+<body>
+<header th:insert="general.html :: header" id="header"></header>
+<div class="container">
+    <header class="header">
+        <nav>
+
+        </nav>
+    </header>
+    <main class="main-content">
+        <div class="student-information">
+            <h1>Student Information:</h1>
+            <h2 th:text="${individualStudent.name}"></h2>
+            <ul class="student-details">
+                <h4>Guardian Information:</h4>
+                <li th:text="${individualStudent.guardianName}"></li>
+                <li th:text="${individualStudent.guardianPhone}"></li>
+                <li th:text="${individualStudent.guardianEmail}"></li>
+                <h4>Student's Birthday:</h4>
+                <li th:text="${individualStudent.birthdayMonth + '/' + individualStudent.birthdayDay + '/' + individualStudent.birthdayYear}"></li>
+                <h4>Student's Classes:</h4>
+                <li th:each="classroom: ${individualStudent.classrooms}"><a th:href="@{/classroom(id=${classroom.id})}" th:text="${classroom.subject}"></a></li>
+
+            </ul>
+        </div>
+    </main>
+</div>
+<footer th:insert="general.html :: footer"></footer>
+
+</body>
+</html>

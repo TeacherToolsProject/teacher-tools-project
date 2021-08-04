@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en"xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Teacher Tools - Your Assignment</title>
+</head>
+<body>
+<header th:insert="general.html :: header" id="header"></header>
+<div class="container">
+  <header class="header">
+    <nav>
+
+    </nav>
+  </header>
+  <main class="main-content">
+
+    <div class="assignment-information">
+      <h1>Assignment Information:</h1>
+      <h2 th:text="${individualAssignment.name}"></h2>
+      <h3 th:text="${individualAssignment.classroom.subject}"></h3>
+      <ul class="assignment-details">
+        <h4>Assignment Details:</h4>
+        <li th:text="${individualAssignment.description}"></li>
+        <h4>Assignment Date:</h4>
+        <li th:text="${individualAssignment.assignedDate}"></li>
+        <h4>Due Date:</h4>
+        <li th:text="${individualAssignment.dueDate}"></li>
+        <h4>Total Points:</h4>
+        <li th:text="${individualAssignment.pointsWorth}"></li>
+        <h4>Students Assigned:</h4>
+        <li th:each="student: ${individualAssignment.students}"><a th:href="@{/student(id=${student.id})}" th:text="${student.name}"></a></li>
+
+      </ul>
+    </div>
+
+  </main>
+</div>
+<footer th:insert="general.html :: footer"></footer>
+
+</body>
+</html>

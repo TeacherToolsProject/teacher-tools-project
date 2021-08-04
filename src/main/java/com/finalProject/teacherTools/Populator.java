@@ -62,6 +62,14 @@ public class Populator implements CommandLineRunner {
                 "including major victories and areas he fought in.", "08/28/2021", "09/03/2021", "50");
         assignmentRepo.save(civilWarHistoryFirstAssignment);
 
-        
+        apHistoryOneFirstAssignment.addStudent(cushmanGrant);
+        apHistoryOneFirstAssignment.addStudent(williamsAbbey);
+        apHistoryOneFirstAssignment.addStudent(jamesLester);
+        assignmentRepo.save(apHistoryOneFirstAssignment);
+
+        civilWarHistoryFirstAssignment.addStudent(fongGary);
+        civilWarHistoryFirstAssignment.addStudent(stevensWendy);
+        civilWarHistoryFirstAssignment.addStudent(jamesLester);
+        assignmentRepo.save(civilWarHistoryFirstAssignment);
     }
 }
