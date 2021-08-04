@@ -24,9 +24,8 @@ public class Student {
     @ManyToMany (mappedBy = "students" )
     private Collection<Classroom> classrooms;
 
-    @ManyToOne
-    @JsonIgnore
-    private Assignment assignments;
+    @ManyToMany(mappedBy = "students")
+    private Collection<Assignment> assignments;
 
     @OneToMany
     private Collection<Grade> grades;
@@ -84,7 +83,7 @@ public class Student {
         return classrooms;
     }
 
-    public Assignment getAssignments() {
+    public Collection<Assignment> getAssignments() {
         return assignments;
     }
 

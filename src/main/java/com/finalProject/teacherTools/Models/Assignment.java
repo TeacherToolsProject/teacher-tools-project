@@ -25,7 +25,7 @@ public class Assignment {
     @JsonIgnore
     private Classroom classroom;
 
-    @OneToMany
+    @ManyToMany
     private Collection<Student> students;
 
     @OneToOne
@@ -73,5 +73,9 @@ public class Assignment {
 
     public Collection<Student> getStudents() {
         return students;
+    }
+
+    public void addStudent(Student student){
+        students.add(student);
     }
 }
