@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"></html>
+<html lang="en">
 <head>
   <meta charset="utf-8"/>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +7,9 @@
     <link rel="stylesheet" a href="/src/main/resources/css/style.css">
     <title>Teacher Tools</title>
 </head>
+
 <body>
+  <div class="container">
     <header th:fragment="header" id="header">
       <nav class="nav-bar">
         <ul class="navigation-items">
@@ -17,24 +19,22 @@
         </ul>
       </nav>
     </header>
-<h2>Student Info for: Grant Cushman</h2>
+    <div class="left-sidebar"></div>
+
+    <main class="main-content">
+<h2>Grant Cushman</h2>
 <div class="student-info">
+    <h3>Guardian Info:</h3>
     <ul>
-        <li>Guardian Name: Shari Little</li>
-        <li>Guardian Email:<a href="mailto: sharilittle123@gmail.com">sharilittle123@gmail.com</a></li>
-        <li>Guardian Phone: 614-867-5309</li>
+        <li>Shari Little</li>
+        <li><a href="mailto: sharilittle123@gmail.com">sharilittle123@gmail.com</a></li>
+        <li>614-867-5309</li>
         <li>Student Birth date: 19/5/1979</li>
     </ul>
 </div>
     <div class="class-attending">
         <h3>Classes Student Attends:</h3>
         <li><a href="ap-history-one.html">AP History One</a></li>
-    </div>
-    <div class="student-assignments">
-        <h3>Students Current Assignments:</h3>
-        <ul>
-            <li><a href="favorite-ancient-civ.html">Favorite Ancient Civilization</a></li>
-        </ul>
     </div>
     <div class="student-grades">
         <h3>Students Current Grades: </h3>
@@ -48,7 +48,9 @@
         <textarea rows="4" cols="50" name="comment" form="usrform">
    </textarea>
     </div>
-    <footer th:fragment="footer">
+    </main>
+    <div class="right-sidebar"></div>
+    <footer class="footer">
       <p>Copyright&copy; Teacher Tools 2021</p>
       <ul class="footer-items">
         <li class="footer-list-item"><a href="#header">Back To Top</a> </li>
@@ -57,4 +59,7 @@
         <li class="footer-list-item"><a href="about-page.html">About</a></li>
       </ul>
     </footer>
-    </body>
+  </div>
+  </body>
+  
+  </html>
