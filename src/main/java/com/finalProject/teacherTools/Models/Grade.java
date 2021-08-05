@@ -3,7 +3,6 @@ package com.finalProject.teacherTools.Models;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
-import java.util.Collection;
 
 @Entity
 public class Grade {
@@ -48,5 +47,9 @@ public class Grade {
 
     public Student getStudents() {
         return students;
+    }
+
+    public void addStudentToGrade(Student student){
+        students.add(student);
     }
 }

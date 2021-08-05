@@ -1,7 +1,5 @@
 package com.finalProject.teacherTools.Models;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
 import javax.persistence.*;
 import java.util.Collection;
 import java.util.Set;
@@ -99,5 +97,9 @@ public class Student {
 
     public Collection<Note> getNotes() {
         return notes;
+    }
+
+    public void addStudentGrade(Grade grade){
+        grades.add(grade);
     }
 }

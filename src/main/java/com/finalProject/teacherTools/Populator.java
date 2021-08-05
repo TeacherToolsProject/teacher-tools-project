@@ -2,7 +2,7 @@ package com.finalProject.teacherTools;
 
 import com.finalProject.teacherTools.Models.Assignment;
 import com.finalProject.teacherTools.Models.Classroom;
-import com.finalProject.teacherTools.Models.Note;
+import com.finalProject.teacherTools.Models.Grade;
 import com.finalProject.teacherTools.Models.Student;
 import com.finalProject.teacherTools.Repos.*;
 import org.springframework.boot.CommandLineRunner;
@@ -80,5 +80,11 @@ public class Populator implements CommandLineRunner {
         civilWarHistoryFirstAssignment.addStudent(stevensWendy);
         civilWarHistoryFirstAssignment.addStudent(jamesLester);
         assignmentRepo.save(civilWarHistoryFirstAssignment);
+
+        Grade grantCushmanApHistoryGrade = new Grade(apHistoryOneFirstAssignment, 92, 100);
+        gradeRepo.save(grantCushmanApHistoryGrade);
+
+        cushmanGrant.addStudentGrade(grantCushmanApHistoryGrade);
+
     }
 }
