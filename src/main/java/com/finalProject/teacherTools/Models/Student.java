@@ -14,6 +14,7 @@ public class Student {
     private Long id;
 
     private String name;
+    private String studentImage;
     private String guardianName;
     private String guardianEmail;
     private String guardianPhone;
@@ -35,9 +36,10 @@ public class Student {
 
     protected Student(){};
 
-    public Student(String name, String guardianName, String guardianEmail, String guardianPhone, int birthdayDay,
+    public Student(String name, String studentImage, String guardianName, String guardianEmail, String guardianPhone, int birthdayDay,
                    int birthdayMonth, int birthdayYear, Classroom... classrooms){
         this.name = name;
+        this.studentImage = studentImage;
         this.guardianName = guardianName;
         this.guardianEmail = guardianEmail;
         this.guardianPhone = guardianPhone;
@@ -53,6 +55,10 @@ public class Student {
 
     public String getName() {
         return name;
+    }
+
+    public String getstudentImage() {
+        return studentImage;
     }
 
     public String getGuardianName() {
