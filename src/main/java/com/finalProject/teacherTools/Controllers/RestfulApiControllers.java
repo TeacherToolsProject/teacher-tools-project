@@ -12,16 +12,16 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class RestfulApiControllers {
 
-    @Resource
-    private AssignmentRepo assignmentRepo;
+    // @Resource
+    // private AssignmentRepo assignmentRepo;
     @Resource
     private ClassroomRepo classroomRepo;
-    @Resource
-    private GradeRepo gradeRepo;
-    @Resource
-    private NoteRepo noteRepo;
-    @Resource
-    private StudentRepo studentRepo;
+    // @Resource
+    // private GradeRepo gradeRepo;
+    // @Resource
+    // private NoteRepo noteRepo;
+    // @Resource
+    // private StudentRepo studentRepo;
 
     @PostMapping("/api/classroom")
     public Iterable<Classroom> addNewClassroom(@RequestBody Classroom classroomToAdd){
