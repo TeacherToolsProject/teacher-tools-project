@@ -25,7 +25,12 @@
                 <li th:text="${individualStudent.birthdayMonth + '/' + individualStudent.birthdayDay + '/' + individualStudent.birthdayYear}"></li>
                 <h4>Student's Classes:</h4>
                 <li th:each="classroom: ${individualStudent.classrooms}"><a th:href="@{/classroom(id=${classroom.id})}" th:text="${classroom.subject}"></a></li>
-
+            </ul>
+        </div>
+        <div class="student-grades">
+            <h4>Student Grades:</h4>
+            <ul th:each="grade:${individualStudent.grades}">
+                <li th:text="${grade.assignment + ': ' + grade.grade + '/' + grade.maximumGrade"></li>
             </ul>
         </div>
     </main>

@@ -83,8 +83,10 @@ public class Populator implements CommandLineRunner {
 
         Grade grantCushmanApHistoryGrade = new Grade(apHistoryOneFirstAssignment, 92, 100);
         gradeRepo.save(grantCushmanApHistoryGrade);
+        assignmentRepo.save(apHistoryOneFirstAssignment);
 
         cushmanGrant.addStudentGrade(grantCushmanApHistoryGrade);
+        studentRepo.save(cushmanGrant);
 
     }
 }

@@ -48,8 +48,4 @@ public class Grade {
     public Student getStudents() {
         return students;
     }
-
-    public void addStudentToGrade(Student student){
-        students.add(student);
-    }
 }
