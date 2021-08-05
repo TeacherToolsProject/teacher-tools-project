@@ -1,5 +1,5 @@
 ### Post a new Classroom
-POST http://localhost:8080/api/classroom
+POST http://localhost:8080/
 Content-Type: application/json
 
 {"subject": "Java 101", "gradeLevel": 11, "room": "202B", "time": "1:00pm", "year": 2021, "semester": "Fall"}
