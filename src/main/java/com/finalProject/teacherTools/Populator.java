@@ -36,15 +36,24 @@ public class Populator implements CommandLineRunner {
         Classroom civilWarHistory = new Classroom("Civil War History", 10, "Zoom Id: 12354-78", "10:00", 2021, "Fall");
         classroomRepo.save(civilWarHistory);
 
-        Student cushmanGrant = new Student("Grant Cushman", "Shari Little", "sharilittle123@gmail.com", "614-867-5309", 19, 5, 1979, apHistoryOne);
+        Student cushmanGrant = new Student("Grant Cushman", 
+        "https://images.unsplash.com/photo-1507537297725-24a1c029d3ca?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80", 
+        "Shari Little", "sharilittle123@gmail.com", "614-867-5309", 19, 5, 1979, apHistoryOne);
         studentRepo.save(cushmanGrant);
-        Student fongGary = new Student("Gary Fong", "Ben Fong", "ben_fong@nomail.com", "614-555-1212", 1, 3, 2006, civilWarHistory);
+        Student fongGary = new Student("Gary Fong",
+        "https://images.unsplash.com/photo-1544168190-79c17527004f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
+         "Ben Fong", "ben_fong@nomail.com", "614-555-1212", 1, 3, 2006, civilWarHistory);
         studentRepo.save(fongGary);
-        Student williamsAbbey = new Student("Abbey Williams", "Trent Williams", "trentman123@nomail.com", "780-555-1212", 6, 10, 2006, apHistoryOne);
+        Student williamsAbbey = new Student("Abbey Williams",
+        "https://images.unsplash.com/photo-1517256673644-36ad11246d21?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80", 
+        "Trent Williams", "trentman123@nomail.com", "780-555-1212", 6, 10, 2006, apHistoryOne);
         studentRepo.save(williamsAbbey);
-        Student stevensWendy = new Student("Wendy Stevens", "Martha Stevens", "marthas123@nomail.com", "580-555-6985", 9, 12, 2005, civilWarHistory);
+        Student stevensWendy = new Student("Wendy Stevens",
+        "https://images.unsplash.com/photo-1529470839332-78ad660a6a82?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80", 
+        "Martha Stevens", "marthas123@nomail.com", "580-555-6985", 9, 12, 2005, civilWarHistory);
         studentRepo.save(stevensWendy);
-        Student jamesLester = new Student("Lester James", "Agatha James", "agathajames@nomail.com", "614-532-8965", 6, 7, 2006, apHistoryOne, civilWarHistory);
+        Student jamesLester = new Student("Lester James","https://images.unsplash.com/photo-1596495717788-01458887290b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
+        "Agatha James", "agathajames@nomail.com", "614-532-8965", 6, 7, 2006, apHistoryOne, civilWarHistory);
         studentRepo.save(jamesLester);
         apHistoryOne.addStudent(cushmanGrant);
         apHistoryOne.addStudent(williamsAbbey);
