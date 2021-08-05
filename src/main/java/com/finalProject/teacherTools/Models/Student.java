@@ -57,7 +57,7 @@ public class Student {
         return name;
     }
 
-    public String getstudentImage() {
+    public String getStudentImage() {
         return studentImage;
     }
 
