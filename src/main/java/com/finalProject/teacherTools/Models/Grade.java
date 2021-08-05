@@ -3,6 +3,7 @@ package com.finalProject.teacherTools.Models;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.Collection;
 
 @Entity
@@ -15,12 +16,11 @@ public class Grade {
     private double grade;
     private double maximumGrade;
 
-    @OneToOne(mappedBy = "grade")
+    @ManyToOne
     private Assignment assignment;
 
-    @ManyToOne
-    @JsonIgnore
-    private Student students;
+    @ManyToMany
+    private Collection<Student> students;
 
     protected Grade(){};
 
@@ -28,6 +28,7 @@ public class Grade {
         this.assignment = assignment;
         this.grade = grade;
         this.maximumGrade = maximumGrade;
+        this.students = new ArrayList<Student>();
     }
 
     public Long getId() {
@@ -46,7 +47,11 @@ public class Grade {
         return assignment;
     }
 
-    public Student getStudents() {
+    public Collection<Student> getStudents() {
         return students;
+    }
+
+    public void addStudentToGrade(Student student){
+        students.add(student);
     }
 }
