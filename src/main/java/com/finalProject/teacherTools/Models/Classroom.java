@@ -20,6 +20,7 @@ public class Classroom {
     private String semester;
 
     @OneToMany(mappedBy = "classroom")
+    @JsonIgnore
     private Collection<Assignment> assignments;
 
     @ManyToMany
