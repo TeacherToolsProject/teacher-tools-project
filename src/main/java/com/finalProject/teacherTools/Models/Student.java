@@ -1,6 +1,8 @@
 package com.finalProject.teacherTools.Models;
 
 import javax.persistence.*;
+import java.util.ArrayDeque;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Set;
 
@@ -26,7 +28,7 @@ public class Student {
     @ManyToMany(mappedBy = "students")
     private Collection<Assignment> assignments;
 
-    @OneToMany
+    @ManyToMany(mappedBy = "students")
     private Collection<Grade> grades;
 
     @OneToMany
@@ -45,6 +47,7 @@ public class Student {
         this.birthdayMonth = birthdayMonth;
         this.birthdayYear = birthdayYear;
         this.classrooms = Set.of(classrooms);
+        this.grades = new ArrayList<Grade>();
     };
 
     public Long getId() {
@@ -99,7 +102,7 @@ public class Student {
         return notes;
     }
 
-    public void addStudentGrade(Grade grade){
+    public void addGradeToStudent(Grade grade){
         grades.add(grade);
     }
 }

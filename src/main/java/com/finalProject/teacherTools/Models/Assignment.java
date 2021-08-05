@@ -3,6 +3,7 @@ package com.finalProject.teacherTools.Models;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Set;
 
@@ -28,8 +29,8 @@ public class Assignment {
     @ManyToMany
     private Collection<Student> students;
 
-    @OneToOne
-    private Grade grade;
+    @OneToMany(mappedBy = "assignment")
+    private Collection<Grade> grades;
 
     protected Assignment(){};
 
@@ -41,6 +42,7 @@ public class Assignment {
         this.dueDate = dueDate;
         this.pointsWorth = pointsWorth;
         this.students = Set.of(students);
+        this.grades  = new ArrayList<Grade>();
     }
 
     public Long getId() {
@@ -75,7 +77,17 @@ public class Assignment {
         return students;
     }
 
+    public Collection<Grade> getGrades() {
+        return grades;
+    }
+
     public void addStudent(Student student){
         students.add(student);
     }
+
+    public void addGradesToAssignment(Grade grade){
+        grades.add(grade);
+    }
+
+
 }

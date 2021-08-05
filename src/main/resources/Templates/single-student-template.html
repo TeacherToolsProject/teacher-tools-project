@@ -29,8 +29,9 @@
         </div>
         <div class="student-grades">
             <h4>Student Grades:</h4>
-            <ul th:each="grade:${individualStudent.grades}">
-                <li th:text="${grade.assignment + ': ' + grade.grade + '/' + grade.maximumGrade"></li>
+            <ul class="grade-list" th:each="grade:${individualStudent.grades}">
+                <li th:text="${'Assignment Name: ' + grade.assignment.name}"></li>
+                <li th:text="${'Grade: ' + grade.grade + '/' + grade.maximumGrade}"></li>
             </ul>
         </div>
     </main>
