@@ -53,6 +53,14 @@ ul {
   list-style-type: none;
 }
 
+li a{
+  text-decoration: none;
+}
+
+li a:hover{
+  text-decoration: underline;
+}
+
 .nav-bar {
   width: 100%;
   padding: 0px 20px 0px 20px;
