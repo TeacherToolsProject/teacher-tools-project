@@ -140,6 +140,52 @@ li a:hover{
   border-radius: 4px;
 }
 
+.about-profile-boxes {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  background: rgb(242, 103, 34);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /* align-items: center; */
+  justify-content: space-evenly;
+  border-radius: 4px;
+
+}
+
+.about-profile-box {
+  border: 3px solid black;
+  background:hotpink;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: space-evenly; */
+  border-radius: 4px;
+  width: 250px;
+  margin: 3px;
+  font-size: 1em;
+  font-weight: normal;
+  padding: 5px;
+  box-shadow: 5px 5px 1px rgba(0, 0, 0, 0.2);
+
+
+
+}
+
+.about-profile-text {
+padding: 10px;
+margin: 5px;
+}
+
+.about-headshot {
+  margin: 15px;
+  border: 1px solid black;
+  border-radius: 4px;
+  box-shadow: 5px 5px 1px rgba(0, 0, 0, 0.2); 
+
+}
+
+
 .classroom-list, #usrform, .page-title, .student-list, .room-info, .student-info, .teacher-notes, .assignment-info {
   font-size: 1.25em;
   /* padding: top | right | bottom | left; */
