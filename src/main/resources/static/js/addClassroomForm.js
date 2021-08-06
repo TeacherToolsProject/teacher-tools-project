@@ -1,4 +1,6 @@
-const addClassroom = function(classrooms) {
+
+    const addClassroom = function() {
+    const container = document.querySelector(".container");
     const addClassroomDiv = document.createElement("div");
     addClassroomDiv.classList.add("add-classroom");
     const addClassroomHeader = document.createElement("h2");
@@ -46,9 +48,7 @@ const addClassroom = function(classrooms) {
     addClassroomButton.classList.add("form-element");
     addClassroomButton.innerText = "Add a new Classroom";
 
-    addClassroomButton.addEventListener("click", (clickEvent) => {
-        clickEvent.preventDefault();
-        const container = document.querySelector("container");
+    addClassroomButton.addEventListener("click", () => {
         const newClassroomJson = {
             "subject" : subjectInput.value,
             "gradeLevel" : gradeLevelInput.value,
@@ -59,7 +59,7 @@ const addClassroom = function(classrooms) {
         }
 
         if (subjectInput.value !== "" && gradeLevelInput.value !== "" && roomInput.value !== ""&& timeInput.value !== "" && yearInput.value !== "" && semesterInput.value !== "") {
-            fetch("http://localhost:8080/", {
+            fetch("http://localhost:8080/api", {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -67,8 +67,6 @@ const addClassroom = function(classrooms) {
                 body: JSON.stringify(newClassroomJson)
             })
             .then(response => response.json())
-            .then(classrooms => addClassroom(classrooms))
-            .then(classroomElement => container.append(classroomElement))
             .catch(error => console.log(error))
         } else {
             alert("All fields are required to Submit.")
@@ -93,8 +91,6 @@ const addClassroom = function(classrooms) {
     addClassroomDiv.appendChild(addClassroomForm);
     container.appendChild(addClassroomDiv);
 
-    return container;
 }
-export {
-    addClassroomForm
-}
+addClassroom();
+

@@ -23,9 +23,9 @@ public class RestfulApiControllers {
     // @Resource
     // private StudentRepo studentRepo;
 
-    @PostMapping("/")
-    public Iterable<Classroom> addNewClassroom(@RequestBody Classroom classroomToAdd){
+    @PostMapping("/api")
+    public String addNewClassroom(@RequestBody Classroom classroomToAdd){
         classroomRepo.save(classroomToAdd);
-        return classroomRepo.findAll();
+        return "redirect:/";
     }
 }
