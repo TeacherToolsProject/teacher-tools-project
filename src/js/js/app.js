@@ -1,4 +1,4 @@
-import { addClassroom } from "./addClassroomForm.js";
+import { addClassroomForm } from "./addClassroomForm.js";
 
 fetch("http://localhost:8080/",{
     method: 'GET',
@@ -7,6 +7,6 @@ fetch("http://localhost:8080/",{
     }
 })
 .then(response => response.json())
-.then(classrooms => addClassroom(classrooms))
+.then(classrooms => addClassroomForm(classrooms))
 .then(classroomElement => container.append(classroomElement))
 .catch(error => console.log(error));
