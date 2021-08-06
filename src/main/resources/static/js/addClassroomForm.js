@@ -1,4 +1,3 @@
-
     const addClassroom = function() {
     const container = document.querySelector(".container");
     const addClassroomDiv = document.createElement("div");
@@ -37,6 +36,9 @@
     const yearInput = document.createElement("input");
     yearInput.classList.add("form-element");
     yearInput.setAttribute("type", "number");
+    yearInput.setAttribute("min", "1900");
+    yearInput.setAttribute("max", "2100");
+    yearInput.setAttribute("step", "1");
 
     const semesterLabel = document.createElement("label");
     semesterLabel.innerText = "Semester: ";
@@ -58,7 +60,7 @@
             "semester" : semesterInput.value
         }
 
-        if (subjectInput.value !== "" && gradeLevelInput.value !== "" && roomInput.value !== ""&& timeInput.value !== "" && yearInput.value !== "" && semesterInput.value !== "") {
+        if (subjectInput.value !== "" && gradeLevelInput.value !== "" && roomInput.value !== ""&& timeInput.value !== "" && yearInput.value !== "" && yearInput.value >=1900 && yearInput.value <=2100 && semesterInput.value !== "") {
             fetch("http://localhost:8080/api", {
                 method: 'POST',
                 headers: {
@@ -93,4 +95,3 @@
 
 }
 addClassroom();
-
