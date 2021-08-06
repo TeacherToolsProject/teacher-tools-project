@@ -215,8 +215,8 @@ footer {
   align-items: center;
   font-weight: bold;
   box-shadow: 5px 5px 1px rgba(0, 0, 0, 0.2);
+  font-size: 1em;
 }
-
 
 .about-headshot {
   /* box-shadow: 5px 5px 1px rgba(0, 0, 0, 0.2); */
@@ -225,10 +225,24 @@ footer {
   align-items: center;
 }
 
+.about-headshot-text {
+  display: block;
+  margin: 0;
+  margin-bottom: 10px;
+
+  /* margin-block-start: 0px; */
+  /* margin-block-end: 0px; */
+  /* margin-inline-start: 0px; */
+  /* margin-inline-end: 0px; */
+}
+
 .about-profile-text {
-  align-items: center;
-  padding-top: 20px;
-  padding: 10px;
+  display: flex;
+  align-items: center; /* align vertical */
+  font-size: 1em;
+  font-weight: normal;
+  justify-content: center; /* align horizontal */
+  padding: 20px;
 }
 
 .about-links-box {
@@ -242,4 +256,10 @@ footer {
   min-width: 150px;
   padding: 10px;
   box-shadow: 5px 5px 1px rgba(0, 0, 0, 0.2);
+  justify-content: center; /* align horizontal */
+
+}
+
+.about-links-box a {
+padding: 10px;
 }
