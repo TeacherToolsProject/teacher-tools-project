@@ -42,18 +42,27 @@ const addStudent = function () {
     const birthdayDayInput = document.createElement("input");
     birthdayDayInput.classList.add("form-element");
     birthdayDayInput.setAttribute("type", "number");
+    birthdayDayInput.setAttribute("min", "1");
+    birthdayDayInput.setAttribute("max", "31");
+    birthdayDayInput.setAttribute("step", "1");
 
     const birthdayMonthLabel = document.createElement("label");
     birthdayMonthLabel.innerText = "Birthday Month: ";
     const birthdayMonthInput = document.createElement("input");
     birthdayMonthInput.classList.add("form-element");
     birthdayMonthInput.setAttribute("type", "number");
+    birthdayMonthInput.setAttribute("min", "1");
+    birthdayMonthInput.setAttribute("max", "12");
+    birthdayMonthInput.setAttribute("step", "1");
 
     const birthdayYearLabel = document.createElement("label");
     birthdayYearLabel.innerText = "Birthday Year: ";
     const birthdayYearInput = document.createElement("input");
     birthdayYearInput.classList.add("form-element");
     birthdayYearInput.setAttribute("type", "number");
+    birthdayYearInput.setAttribute("min", "1900");
+    birthdayYearInput.setAttribute("max", "2100");
+    birthdayYearInput.setAttribute("step", "1");
 
     const addStudentButton = document.createElement("button");
     addStudentButton.classList.add("form-element");
@@ -71,7 +80,7 @@ const addStudent = function () {
             "birthdayYear": birthdayYearInput.value
         }
 
-        if (studentImageInput.value !== "" && guardianNameInput.value !== "" && guardianEmailInput.value !== "" && guardianPhoneInput.value !== "" && birthdayDayInput.value !== "" && birthdayMonthInput.value !== "" && birthdayYearInput.value !== "") {
+        if (studentImageInput.value !== "" && guardianNameInput.value !== "" && guardianEmailInput.value !== "" && guardianPhoneInput.value !== "" && birthdayDayInput.value !== "" && birthdayDayInput.value > 0  && birthdayDayInput.value <=31 && birthdayMonthInput.value !== "" && birthdayMonthInput.value > 0 && birthdayMonthInput.value <=12 && birthdayYearInput.value !== "" && birthdayYearInput.value >=1900 && birthdayYearInput.value<=2100) {
             fetch("http://localhost:8080/api/students", {
                     method: 'POST',
                     headers: {
