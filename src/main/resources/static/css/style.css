@@ -10,9 +10,8 @@ html {
   /* color: hotpink; */
   color: chartreuse;
   font-weight: bold;
-  text-shadow: 5px 5px 1px rgba(255,105,180,0.5);
+  text-shadow: 5px 5px 1px rgba(255, 105, 180, 0.5);
   margin: 1px;
-
 }
 
 body {
@@ -53,11 +52,11 @@ ul {
   list-style-type: none;
 }
 
-li a{
+li a {
   text-decoration: none;
 }
 
-li a:hover{
+li a:hover {
   text-decoration: underline;
 }
 
@@ -67,7 +66,6 @@ li a:hover{
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  
 }
 
 .navigation-items li,
@@ -140,7 +138,14 @@ li a:hover{
   border-radius: 4px;
 }
 
-.classroom-list, #usrform, .page-title, .student-list, .room-info, .student-info, .teacher-notes, .assignment-info {
+.classroom-list,
+#usrform,
+.page-title,
+.student-list,
+.room-info,
+.student-info,
+.teacher-notes,
+.assignment-info {
   font-size: 1.25em;
   /* padding: top | right | bottom | left; */
   padding: 20px 20px 20px 20px;
@@ -152,14 +157,14 @@ li a:hover{
 .room-info li {
   /* padding: top | right | bottom | left; */
   padding: 20px 20px 20px 20px;
-  font-size: .8em;
+  font-size: 0.8em;
   font-weight: normal;
 }
 
 .assignment-info {
   margin: 10px;
   overflow-wrap: break-word;
-    hyphens: manual;
+  hyphens: manual;
   font-size: 1em;
   font-weight: normal;
 }
@@ -191,8 +196,50 @@ footer {
   justify-content: space-evenly;
 }
 
-.footer-spacer, .header-spacer {
+.footer-spacer,
+.header-spacer {
   width: 225px;
 }
 
-.about 
+.about-profile-box {
+  display: flex;
+  flex-direction: row;
+}
+
+.about-headshot-box {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  border-radius: 4px;
+  margin: 10px;
+  align-items: center;
+  font-weight: bold;
+  box-shadow: 5px 5px 1px rgba(0, 0, 0, 0.2);
+}
+
+
+.about-headshot {
+  /* box-shadow: 5px 5px 1px rgba(0, 0, 0, 0.2); */
+  margin: 10px;
+  margin-bottom: 5px;
+  align-items: center;
+}
+
+.about-profile-text {
+  align-items: center;
+  padding-top: 20px;
+  padding: 10px;
+}
+
+.about-links-box {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  border-radius: 4px;
+  margin: 10px;
+  align-items: center;
+  font-weight: normal;
+  min-width: 150px;
+  padding: 10px;
+  box-shadow: 5px 5px 1px rgba(0, 0, 0, 0.2);
+}
