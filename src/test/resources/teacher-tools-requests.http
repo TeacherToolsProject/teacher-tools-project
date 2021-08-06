@@ -8,4 +8,4 @@ Content-Type: application/json
 POST http://localhost:8080/api/students
 Content-Type: application/json
 
-{"name": "Johnny Newsome", "studentImage": "image", "guardianName": "Mommy newsome", "guardianEmail": "emails@email.com", "guardianPhone": "614-555-2121", "birthdayDay" : 31, "birthdayMonth" : 03, "birthdayYear": 2013}
+{"name": "Johnny Newsome", "studentImage": "image", "guardianName": "Mommy newsome", "guardianEmail": "emails@email.com", "guardianPhone": "614-555-2121", "birthdayDay" : 31, "birthdayMonth" : 3, "birthdayYear": 2013}
