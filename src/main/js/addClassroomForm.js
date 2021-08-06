@@ -96,5 +96,5 @@ const addClassroom = function(classrooms) {
     return container;
 }
 export {
-    addClassroom
+    addClassroomForm
 }
