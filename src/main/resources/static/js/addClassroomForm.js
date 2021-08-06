@@ -1,4 +1,3 @@
-
     const addClassroom = function() {
     const container = document.querySelector(".container");
     const addClassroomDiv = document.createElement("div");
@@ -93,4 +92,3 @@
 
 }
 addClassroom();
-
