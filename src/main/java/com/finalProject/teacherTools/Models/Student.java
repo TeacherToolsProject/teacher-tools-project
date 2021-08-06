@@ -1,6 +1,9 @@
 package com.finalProject.teacherTools.Models;
 
 import javax.persistence.*;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -22,13 +25,16 @@ public class Student {
     private int birthdayMonth;
     private int birthdayYear;
 
-    @ManyToMany (mappedBy = "students" )
+    @ManyToMany(mappedBy = "students")
+    @JsonIgnore
     private Collection<Classroom> classrooms;
 
     @ManyToMany(mappedBy = "students")
+    @JsonIgnore
     private Collection<Assignment> assignments;
 
     @ManyToMany(mappedBy = "students")
+    @JsonIgnore
     private Collection<Grade> grades;
 
     @OneToMany
@@ -104,5 +110,16 @@ public class Student {
 
     public void addGradeToStudent(Grade grade){
         grades.add(grade);
+    }
+
+    public double calculateTotalGrade(){
+        double studentGrade = 0;
+        double maximumStudentGrade = 0;
+        double studentTotalGrade = 0;
+        for(Grade grade: grades){
+            studentGrade += grade.getGrade();
+            maximumStudentGrade += grade.getMaximumGrade();
+            studentTotalGrade = (studentGrade / maximumStudentGrade)*100;
+        } return studentTotalGrade;
     }
 }

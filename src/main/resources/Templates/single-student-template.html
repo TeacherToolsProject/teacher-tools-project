@@ -33,7 +33,9 @@
                 <li th:text="${'Assignment Name: ' + grade.assignment.name}"></li>
                 <li th:text="${'Grade: ' + grade.grade + '/' + grade.maximumGrade}"></li>
             </ul>
+            <h4 class="total-grade" th:text="${'Overall Grade Average: ' + individualStudent.calculateTotalGrade() + '%'}"></h4>
         </div>
+
     </main>
 </div>
 <footer th:insert="general.html :: footer"></footer>
