@@ -89,5 +89,16 @@ public class Assignment {
         grades.add(grade);
     }
 
+    public double calculateAssignmentAverageGrade(){
+        double studentGrades = 0;
+        double totalGrades = grades.size();
+        double averageGrade = 0;
+        for(Grade grade: grades){
+            studentGrades += grade.getGrade();
+            averageGrade = Math.round((studentGrades / totalGrades));
+        } return averageGrade;
+    }
+
+
 
 }
