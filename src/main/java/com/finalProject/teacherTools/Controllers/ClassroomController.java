@@ -2,6 +2,7 @@ package com.finalProject.teacherTools.Controllers;
 
 import com.finalProject.teacherTools.Models.Assignment;
 import com.finalProject.teacherTools.Models.Classroom;
+import com.finalProject.teacherTools.Models.Student;
 import com.finalProject.teacherTools.Repos.AssignmentRepo;
 import com.finalProject.teacherTools.Repos.ClassroomRepo;
 import com.finalProject.teacherTools.Repos.StudentRepo;
@@ -28,6 +29,14 @@ public class ClassroomController {
         Classroom classroom = classroomRepo.findById(id).get();
         model.addAttribute("individualClassroom", classroom);
         return "classroom-template";
+    }
+
+    @GetMapping("/classroom/roll-call")
+    public String getAllStudentsForClassroom(@RequestParam("id")Long id, Model model){
+        Classroom classroom = classroomRepo.findById(id).get();
+        model.addAttribute("individualClassroom", classroom);
+        model.addAttribute("individualStudents", studentRepo.findAllByClassrooms(classroom));
+        return "roll-call-template";
     }
 
 }

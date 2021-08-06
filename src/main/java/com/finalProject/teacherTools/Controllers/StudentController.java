@@ -2,7 +2,6 @@ package com.finalProject.teacherTools.Controllers;
 
 import com.finalProject.teacherTools.Models.Student;
 import com.finalProject.teacherTools.Repos.StudentRepo;
-import org.dom4j.rule.Mode;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;

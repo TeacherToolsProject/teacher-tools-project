@@ -13,6 +13,7 @@
 <div class="container">
   <main class="main-content">
      <h1 th:text="${individualClassroom.subject}"></h1>
+     <h2><a th:each="rollCall:${individualClassroom}" th:href="@{/classroom/roll-call(id=${rollCall.id})}">Take Roll Call</a></h2>
       <h3>Student List: </h3>
         <ul th:each="student:${individualClassroom.students}">
           <li><a class="single-student" th:href="@{/student(id=${student.id})}" th:text="${student.getName()}"></a></li>

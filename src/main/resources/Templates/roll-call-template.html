@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header th:insert="general.html :: header" id="header"></header>
+    <div class="container">
+      <main class="main-content">
+        <h1>Take Roll Call</h1>
+        <h2>Student List:</h2>
+        <ul th:each="student:${individualStudents}">
+          <li class="role-student" th:text="${student.name}">
+          </li>
+        </ul>
+      </main>
+    </div>
+    <footer th:insert="general.html :: footer"></footer>
+  </body>
+</html>
