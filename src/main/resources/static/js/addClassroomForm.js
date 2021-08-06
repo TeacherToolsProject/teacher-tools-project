@@ -33,7 +33,7 @@
     timeInput.setAttribute("type", "text");
 
     const yearLabel = document.createElement("label");
-    yearLabel.innerText = "Time: ";
+    yearLabel.innerText = "Year: ";
     const yearInput = document.createElement("input");
     yearInput.classList.add("form-element");
     yearInput.setAttribute("type", "number");
