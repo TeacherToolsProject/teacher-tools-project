@@ -93,12 +93,10 @@ li a:hover {
 }
 
 .students {
-  /* background-color: chartreuse; */
   border: 5px solid black;
 }
 
 .assignments {
-  /* background-color: aqua; */
   border: 5px solid black;
 }
 
@@ -214,7 +212,6 @@ footer {
 .about-profile-box {
   display: flex;
   flex-direction: column;
-  /* background-color: blueviolet; */
   border: 1px solid black;
   border-radius: 6px;
   margin: 15px;
@@ -222,19 +219,14 @@ footer {
 }
 
 .about-headshot-text-links {
-  /* background-color: blue; */
-  align-items:flex-start;
   border-radius: 4px;
-  /* border: 1px solid black; */
-  /* box-shadow: 5px 5px 1px rgba(0, 0, 0, 0.2); */
   display: flex;
   flex-direction: row;
   font-size: 1em;
   font-weight: bold;
-  margin: 5px;
+  justify-content: space-between;
   margin-top: 0px;
-
-  /* max-height: 255px; */
+  margin: 5px;
 }
 
 .about-headshot.box {
@@ -242,7 +234,6 @@ footer {
   box-shadow: 5px 5px rgba(0, 0, 0, 0.2);
   margin-bottom: 5px;
   margin: 10px;
-  /* border-radius: 100%; */
 }
 
 .about-headshot {
@@ -251,7 +242,6 @@ footer {
   box-shadow: 5px 5px rgba(0, 0, 0, 0.2);
   margin-top: 10px;
   margin-left: 10px;
-
 }
 
 .about-profile-name {
@@ -262,24 +252,20 @@ footer {
   padding: 0px;
   padding-bottom: 2px;
   border-bottom: 2px solid black;
-
-  /* margin-bottom: 10px; */
   font-size: 1.5em;
   font-weight: bold;
 }
 
 .about-text-and-links {
-  /* justify-content: space-between; */
-  /* justify-content: space-evenly; */
-  /* background-color: chartreuse; */
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-top: 0px;
 }
 
 .about-profile-text {
   align-items: center; /* align vertical */
-  /* background-color: crimson; */
   border-radius: 4px;
   border: 1px solid black;
   box-shadow: 5px 5px 1px rgba(0, 0, 0, 0.2);
@@ -287,7 +273,9 @@ footer {
   font-size: 1em;
   font-weight: normal;
   justify-content: center; /* align horizontal */
-  margin: 10px;
+  margin: 0px;
+  margin-left: 10px;
+  margin-right: 10px;
   padding: 10px;
 }
 
@@ -296,17 +284,13 @@ footer {
 }
 
 .about-links-box {
-  /* background-color: aqua; */
-  /* border: 1px solid black; */
-  /* justify-content: space-around; */
-  /* justify-content: space-between; */
+  justify-content: space-between;
   align-items: center;
   border-radius: 4px;
   display: flex;
   flex-direction: row;
   font-size: 0.5em;
   font-weight: normal;
-  justify-content: space-evenly;
   min-width: 150px;
 }
 
@@ -315,9 +299,11 @@ footer {
   display: flex;
   filter: drop-shadow(2px 2px 1px rgba(0, 0, 0, 0.5));
   flex-direction: column;
-  justify-content: space-around;
+  justify-content:space-evenly;
   margin: 0px;
   padding: 0px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .about-links-logos p {
