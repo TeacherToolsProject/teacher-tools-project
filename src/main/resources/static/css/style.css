@@ -125,6 +125,15 @@ li a:hover {
   border-radius: 4px;
 }
 
+.about-left-sidebar {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+  background-image: url(..//images/stack-of-books.jpg);
+  background-size: 300px;
+  border-radius: 4px;
+}
+
+
 .main-content {
   grid-column: 2 / 3;
   grid-row: 2 / 3;
@@ -135,6 +144,23 @@ li a:hover {
   justify-content: space-evenly;
   border-radius: 4px;
 }
+
+
+.about-main-content {
+grid-column: 2 / 3;
+grid-row: 2 / 3;
+background: antiquewhite;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: space-evenly;
+border-radius: 4px;
+/* background-image: url(https://cdn.pixabay.com/photo/2016/01/22/05/45/texture-1155341__340.jpg); */
+/* background-size: 100%; */
+
+}
+
+
 
 .classroom-list,
 #usrform,
@@ -174,12 +200,37 @@ li a:hover {
   text-align: center;
 }
 
+.about-page-title {
+  font-size: 2em;
+  padding: 20px 20px 20px 20px;
+  width: 450px;
+  text-align: center;
+  color: antiquewhite;
+  text-shadow: 3px 3px 1px rgba(0, 0, 0, 0.3);
+border: 2px solid black;
+  background-image: url(https://cdn.pixabay.com/photo/2016/04/19/01/02/green-1337813_960_720.jpg);
+
+  box-shadow: 10px 10px 3px rgba(0, 0, 0, 0.3);
+
+}
+
 .right-sidebar {
   grid-column: 3 / 4;
   grid-row: 2 / 3;
   background: rgb(218, 35, 104);
   border-radius: 4px;
 }
+
+.about-right-sidebar {
+  grid-column: 3 / 4;
+  grid-row: 2 / 3;
+    background-image: url(https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX8426859.jpg);
+  background-size: 300px;
+  
+  border-radius: 4px;
+}
+
+
 
 footer {
   padding: 10px 25px;
@@ -215,7 +266,8 @@ footer {
   border: 1px solid black;
   border-radius: 6px;
   margin: 15px;
-  box-shadow: 5px 5px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.4);
+  background-image: url(https://cdn.pixabay.com/photo/2016/04/19/01/02/green-1337813_960_720.jpg);
 }
 
 .about-headshot-text-links {
@@ -239,7 +291,7 @@ footer {
 .about-headshot {
   border-radius: 2%;
   border: 1px solid black;
-  box-shadow: 5px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 7px 7px 1px rgba(0, 0, 0, 0.4);
   margin-top: 10px;
   margin-left: 10px;
 }
@@ -251,10 +303,14 @@ footer {
   margin-bottom: 5px;
   padding: 0px;
   padding-bottom: 2px;
-  border-bottom: 2px solid black;
-  font-size: 1.5em;
-  font-weight: bold;
+  border-bottom: 2px solid antiquewhite;
+ font-size: 1.5em;
+ font-weight: bold; 
+  color: antiquewhite;
+  /* text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.3); */
+  text-shadow: 2px 2px 2px darkgreen;
 }
+
 
 .about-text-and-links {
   display: flex;
@@ -268,7 +324,7 @@ footer {
   align-items: center; /* align vertical */
   border-radius: 4px;
   border: 1px solid black;
-  box-shadow: 5px 5px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 7px 7px 1px rgba(0, 0, 0, 0.4);
   display: flex;
   font-size: 1em;
   font-weight: normal;
@@ -277,6 +333,8 @@ footer {
   margin-left: 10px;
   margin-right: 10px;
   padding: 10px;
+  color: antiquewhite;
+  background-image: url(https://images.template.net/wp-content/uploads/2016/02/03065942/Free-chalkboard-green.jpg);
 }
 
 .about-profile-text p {
@@ -289,7 +347,7 @@ footer {
   border-radius: 4px;
   display: flex;
   flex-direction: row;
-  font-size: 0.5em;
+  font-size: 0.75em;
   font-weight: normal;
   min-width: 150px;
 }
@@ -308,6 +366,9 @@ footer {
 
 .about-links-logos p {
   margin: 0px;
+  color: antiquewhite;
+  text-shadow: 3px 3px 1px rgba(0, 0, 0, 0.3);
+
 }
 
 .about-links-box a {
