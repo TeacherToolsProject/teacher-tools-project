@@ -1,21 +1,34 @@
 /* styles.css */
+@font-face {
+  font-family: "pencilpete_fontregular";
+  src: url("..//fonts/pencilpetefont-844b-webfont.woff2") format("woff2"),
+    url("..//fonts/pencilpetefont-844b-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 html {
-  background-color: black;
+  /* background-color: black; */
+  background-color: lemonchiffon;
+  background: rgb(123, 124, 126);
+
   box-sizing: border-box;
 }
 
 .teacher-tools {
-  font-size: 3em;
-  padding: 1px 1px 1px 1px;
-  /* color: hotpink; */
-  color: chartreuse;
+  font-size: 4em;
+  /* padding: top | right | bottom | left; */
+  padding: 1px 1px 0px 1px;
+  color: white;
+
   font-weight: bold;
-  text-shadow: 5px 5px 1px rgba(255, 105, 180, 0.5);
+  text-shadow: 5px 5px 1px rgba(0, 0, 0, 0.5);
   margin: 1px;
+  font-family: pencilpete_fontregular, "Times New Roman", Times, serif;
 }
 
 body {
-  background: black;
+  /* background: black; */
   padding: 5px;
   height: 100vh;
   margin: 0;
@@ -36,10 +49,10 @@ body {
 }
 
 header {
-  padding: 10px 50px;
+  padding: 5px 5px;
   grid-column: 1 / 4;
   grid-row: 1 / 2;
-  background: rgb(93, 187, 70);
+  background: rgb(9, 73, 198);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -54,10 +67,14 @@ ul {
 
 li a {
   text-decoration: none;
+  color: antiquewhite;
+  font-size: 1.5em;
 }
 
 li a:hover {
-  text-decoration: underline;
+  /* text-decoration: underline; */
+  font-weight: bold;
+  color: rgb(211, 185, 74);
 }
 
 .nav-bar {
@@ -133,7 +150,6 @@ li a:hover {
   border-radius: 4px;
 }
 
-
 .main-content {
   grid-column: 2 / 3;
   grid-row: 2 / 3;
@@ -145,22 +161,19 @@ li a:hover {
   border-radius: 4px;
 }
 
-
 .about-main-content {
-grid-column: 2 / 3;
-grid-row: 2 / 3;
-background: antiquewhite;
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: space-evenly;
-border-radius: 4px;
-/* background-image: url(https://cdn.pixabay.com/photo/2016/01/22/05/45/texture-1155341__340.jpg); */
-/* background-size: 100%; */
-
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  background-color: lemonchiffon;
+  background: rgb(123, 124, 126);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  border-radius: 4px;
+  /* background-image: url(https://cdn.pixabay.com/photo/2016/01/22/05/45/texture-1155341__340.jpg); */
+  /* background-size: 100%; */
 }
-
-
 
 .classroom-list,
 #usrform,
@@ -201,17 +214,22 @@ border-radius: 4px;
 }
 
 .about-page-title {
-  font-size: 2em;
-  padding: 20px 20px 20px 20px;
-  width: 450px;
-  text-align: center;
-  color: antiquewhite;
-  text-shadow: 3px 3px 1px rgba(0, 0, 0, 0.3);
-border: 2px solid black;
-  background-image: url(https://cdn.pixabay.com/photo/2016/04/19/01/02/green-1337813_960_720.jpg);
-
+  /* background-image: url(https://cdn.pixabay.com/photo/2016/04/19/01/02/green-1337813_960_720.jpg); */
+  background: rgb(196, 235, 253);
+  border: 2px solid black;
   box-shadow: 10px 10px 3px rgba(0, 0, 0, 0.3);
-
+  color: rgb(9, 73, 198);
+  font-family: pencilpete_fontregular, Arial, Helvetica, sans-serif;
+  font-size: 3.5em;
+  font-weight: bold;
+  margin-block-end: 20px;
+  margin-block-start: 20px;
+  margin-inline-end: 0px;
+  margin-inline-start: 0px;
+    /* padding: top | right | bottom | left; */
+  padding: 20px 20px 20px 20px;
+  text-align: center;
+  text-shadow: 3px 3px 1px rgba(0, 0, 0, 0.3);
 }
 
 .right-sidebar {
@@ -224,16 +242,14 @@ border: 2px solid black;
 .about-right-sidebar {
   grid-column: 3 / 4;
   grid-row: 2 / 3;
-    background-image: url(https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX8426859.jpg);
+  background-image: url(https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX8426859.jpg);
   background-size: 300px;
-  
+
   border-radius: 4px;
 }
 
-
-
 footer {
-  padding: 10px 25px;
+  padding: 10px 20px;
   grid-column: 1 / 4;
   grid-row: 3 / 4;
   background: rgb(66, 159, 216);
@@ -267,7 +283,8 @@ footer {
   border-radius: 6px;
   margin: 15px;
   box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.4);
-  background-image: url(https://cdn.pixabay.com/photo/2016/04/19/01/02/green-1337813_960_720.jpg);
+  /* background-image: url(https://cdn.pixabay.com/photo/2016/04/19/01/02/green-1337813_960_720.jpg); */
+  background: lemonchiffon;
 }
 
 .about-headshot-text-links {
@@ -301,16 +318,17 @@ footer {
   margin: 15px;
   margin-top: 5px;
   margin-bottom: 5px;
-  padding: 0px;
-  padding-bottom: 2px;
-  border-bottom: 2px solid antiquewhite;
- font-size: 1.5em;
- font-weight: bold; 
-  color: antiquewhite;
+  /* padding: top | right | bottom | left; */
+  padding: 5px 0px 2px 0px;
+  border-bottom: 2px solid rgb(9, 73, 198);
+  font-size: 2em;
+  /* font-weight: bold;  */
+  color: white;
+  color: rgb(9, 73, 198);
   /* text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.3); */
-  text-shadow: 2px 2px 2px darkgreen;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+  font-family: pencilpete_fontregular, "Times New Roman", Times, serif;
 }
-
 
 .about-text-and-links {
   display: flex;
@@ -326,14 +344,14 @@ footer {
   border: 1px solid black;
   box-shadow: 7px 7px 1px rgba(0, 0, 0, 0.4);
   display: flex;
-  font-size: 1em;
+  font-size: 1.1em;
   font-weight: normal;
   justify-content: center; /* align horizontal */
   margin: 0px;
   margin-left: 10px;
   margin-right: 10px;
   padding: 10px;
-  color: antiquewhite;
+  color: white;
   background-image: url(https://images.template.net/wp-content/uploads/2016/02/03065942/Free-chalkboard-green.jpg);
 }
 
@@ -355,9 +373,9 @@ footer {
 .about-links-logos {
   align-items: center;
   display: flex;
-  filter: drop-shadow(2px 2px 1px rgba(0, 0, 0, 0.5));
+  /* filter: drop-shadow(2px 2px 1px rgba(0, 0, 0, 0.5)); */
   flex-direction: column;
-  justify-content:space-evenly;
+  justify-content: space-evenly;
   margin: 0px;
   padding: 0px;
   margin-left: 10px;
@@ -367,8 +385,7 @@ footer {
 .about-links-logos p {
   margin: 0px;
   color: antiquewhite;
-  text-shadow: 3px 3px 1px rgba(0, 0, 0, 0.3);
-
+  color: rgb(9, 73, 198);
 }
 
 .about-links-box a {
