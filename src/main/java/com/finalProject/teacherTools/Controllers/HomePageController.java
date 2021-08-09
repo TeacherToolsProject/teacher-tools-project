@@ -19,9 +19,8 @@ public class HomePageController {
         return "home-page-template";
     }
 
-    @GetMapping("about-page-template.html")
+    @GetMapping("about-page-template")
     public String displayAboutPage(Model model) {
-
         return "about-page-template";
     }
     
