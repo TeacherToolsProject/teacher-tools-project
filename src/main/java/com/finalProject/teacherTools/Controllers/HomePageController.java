@@ -1,6 +1,5 @@
 package com.finalProject.teacherTools.Controllers;
 
-
 import com.finalProject.teacherTools.Repos.ClassroomRepo;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -19,4 +18,10 @@ public class HomePageController {
         model.addAttribute("classrooms", classroomRepo.findAll());
         return "home-page-template";
     }
+
+    @GetMapping("about-page-template")
+    public String displayAboutPage(Model model) {
+        return "about-page-template";
+    }
+    
 }
