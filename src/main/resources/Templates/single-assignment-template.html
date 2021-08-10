@@ -24,7 +24,7 @@
         <h4>Due Date:</h4>
         <li th:text="${individualAssignment.dueDate}"></li>
         <h4>Total Points:</h4>
-        <li th:text="${individualAssignment.pointsWorth}"></li>
+        <li th:text="${individualAssignment.pointsValue}"></li>
         <h4>Students Assigned:</h4>
         <li th:each="student: ${individualAssignment.students}"><a th:href="@{/student(id=${student.id})}" th:text="${student.name}"></a></li>
 
