@@ -36,9 +36,17 @@ public class RestfulApiControllers {
     }
 
     @PostMapping("/api/students")
-    public String addnewStudent(@RequestBody Student studentToAdd){
+    public String addnewStudent(@RequestBody Student studentToAdd){ 
         studentRepo.save(studentToAdd);
         return "redirect:/students";
     }
+
+    //
+    @PostMapping("api/newAssignment")
+    public String addNewAssignment(@RequestBody Assignment assignmentToAdd){
+        assignmentRepo.save(assignmentToAdd);
+        return "redirect:/assignment";
+    }
+    //
 
 }
