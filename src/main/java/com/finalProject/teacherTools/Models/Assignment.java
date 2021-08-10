@@ -20,7 +20,7 @@ public class Assignment {
     private String description;
     private String assignedDate;
     private String dueDate;
-    private String pointsWorth;
+    private String pointsValue;
 
     @ManyToOne
     @JsonIgnore
@@ -34,13 +34,13 @@ public class Assignment {
 
     protected Assignment(){};
 
-    public Assignment(Classroom classroom, String name, String description, String assignedDate, String dueDate, String pointsWorth, Student... students){
+    public Assignment(Classroom classroom, String name, String description, String assignedDate, String dueDate, String pointsValue, Student... students){
         this.classroom = classroom;
         this.name = name;
         this.description = description;
         this.assignedDate = assignedDate;
         this.dueDate = dueDate;
-        this.pointsWorth = pointsWorth;
+        this.pointsValue = pointsValue;
         this.students = Set.of(students);
         this.grades  = new ArrayList<Grade>();
     }
@@ -65,8 +65,8 @@ public class Assignment {
         return dueDate;
     }
 
-    public String getPointsWorth() {
-        return pointsWorth;
+    public String getPointsValue() {
+        return pointsValue;
     }
 
     public Classroom getClassroom() {
