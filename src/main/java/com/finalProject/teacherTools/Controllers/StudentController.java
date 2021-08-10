@@ -2,7 +2,11 @@ package com.finalProject.teacherTools.Controllers;
 
 import com.finalProject.teacherTools.Models.Note;
 import com.finalProject.teacherTools.Models.Student;
+
+import com.finalProject.teacherTools.Repos.AssignmentRepo;
+
 import com.finalProject.teacherTools.Repos.NoteRepo;
+
 import com.finalProject.teacherTools.Repos.StudentRepo;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -15,12 +19,16 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class StudentController {
     private StudentRepo studentRepo;
+    private AssignmentRepo assignmentRepo;
     private NoteRepo noteRepo;
 
-    public StudentController(StudentRepo studentRepo, NoteRepo noteRepo) {
+    public StudentController(StudentRepo studentRepo, AssignmentRepo assignmentRepo, NoteRepo noteRepo) {
         this.studentRepo = studentRepo;
+        this.assignmentRepo = assignmentRepo;
         this.noteRepo = noteRepo;
+   
     }
+   
 
     @GetMapping("/students")
     public String displayAllStudents(Model model){

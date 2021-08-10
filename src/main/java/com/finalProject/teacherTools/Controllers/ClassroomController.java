@@ -2,14 +2,13 @@ package com.finalProject.teacherTools.Controllers;
 
 import com.finalProject.teacherTools.Models.Assignment;
 import com.finalProject.teacherTools.Models.Classroom;
-import com.finalProject.teacherTools.Models.Student;
 import com.finalProject.teacherTools.Repos.AssignmentRepo;
 import com.finalProject.teacherTools.Repos.ClassroomRepo;
 import com.finalProject.teacherTools.Repos.StudentRepo;
-
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
@@ -37,6 +36,15 @@ public class ClassroomController {
         model.addAttribute("individualClassroom", classroom);
         model.addAttribute("individualStudents", studentRepo.findAllByClassrooms(classroom));
         return "roll-call-template";
+    }
+    @PostMapping("/classroom/newAssignment")
+    public String addNewAssignment(@RequestParam String name, String description, Long classroomId){
+
+        Classroom classroom = classroomRepo.findById(classroomId).get();
+        Assignment assignmentToAdd = new Assignment(classroom,name,description,"Test", "test","test");
+        assignmentRepo.save(assignmentToAdd);
+
+        return "redirect:/classroom?id="+ classroomId;
     }
 
 }
