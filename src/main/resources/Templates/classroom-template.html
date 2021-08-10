@@ -22,18 +22,21 @@
     <ul th:each="assignment:${individualClassroom.assignments}">
       <li><a class="single-assignment" th:href="@{/assignment(id=${assignment.id})}" th:text="${assignment.name}"></a></li>
     </ul>
-<!--    public Assignment(Classroom classroom, String name, String description, String assignedDate, String dueDate, String pointsValue, Student... students){-->
+
     <form action="/classroom/newAssignment" method="POST">
       <input type="hidden" name="classroomId" th:value="${individualClassroom.id}">
-      <label for="name">Name</label><br>
+      <label for="name">Assignment Name: </label><br>
       <input type="text" id="name" name="name"><br>
-      <label for="description">Description</label><br>
+      <label for="description">Description: </label><br>
       <input type="text" id="description" name="description"><br><br>
+      <label for="assignedDate">Date of Assignment: </label><br>
+      <input type="text" id="assignedDate" name="assignedDate"><br>
+      <label for="dueDate">Assignment Due Date: </label><br>
+      <input type="text" id="dueDate" name="dueDate"><br>
+      <label for="pointsValue">Points Value: </label><br>
+      <input type="text" id="pointsValue" name="pointsValue"><br>
       <input type="submit" value="Submit">
-    </form>
-
-
-
+    </form> 
 
   </main>
 </div>
