@@ -38,10 +38,10 @@ public class ClassroomController {
         return "roll-call-template";
     }
     @PostMapping("/classroom/newAssignment")
-    public String addNewAssignment(@RequestParam String name, String description, Long classroomId){
+    public String addNewAssignment(@RequestParam String name, String description, String assignedDate, String dueDate, String pointsValue, Long classroomId){
 
         Classroom classroom = classroomRepo.findById(classroomId).get();
-        Assignment assignmentToAdd = new Assignment(classroom,name,description,"Test", "test","test");
+        Assignment assignmentToAdd = new Assignment(classroom,name,description, assignedDate, dueDate, pointsValue);
         assignmentRepo.save(assignmentToAdd);
 
         return "redirect:/classroom?id="+ classroomId;
