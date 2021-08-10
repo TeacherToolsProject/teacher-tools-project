@@ -35,11 +35,29 @@
             </ul>
             <h4 class="total-grade" th:text="${'Overall Grade Average: ' + individualStudent.calculateTotalGrade() + '%'}"></h4>
         </div>
-
-
+        <div class="student-notes">
+            <ul class="note-list" th:each="note:${individualStudent.notes}">
+                <li th:text="${'Note Title: ' + note.title}"></li>
+                <li th:text="${'Note Date: ' + note.noteDate}"></li>
+                <li th:text="${'Note: ' + note.note}"></li>
+            </ul>
+        </div>
+        <div class="student-note-form">
+            <h2>Leave a Note for this Student: </h2>
+            <form th:action="'/student/'+${individualStudent.id}" id="student-note" method="POST">
+            Title: <input type="text" name="title">
+            Date: <input type="text" name="date">
+            <textarea rows="4" cols="50" name="note" form="student-note">
+            </textarea>
+            <input type="submit">
+            </form>
+                <!-- <textarea rows="4" cols="50" name="noteToAdd" form="usrform">
+                </textarea> -->
+                
+        </div>
     </main>
 </div>
 <footer th:insert="general.html :: footer"></footer>
-
+<script src="/js/addNoteForm.js" type="module"></script>
 </body>
 </html>

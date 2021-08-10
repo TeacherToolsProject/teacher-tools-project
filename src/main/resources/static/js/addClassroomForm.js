@@ -73,6 +73,7 @@
         } else {
             alert("All fields are required to Submit.")
         }
+        window.location.reload();
     })
 
     addClassroomForm.appendChild(addClassroomHeader);
@@ -92,6 +93,6 @@
 
     addClassroomDiv.appendChild(addClassroomForm);
     container.appendChild(addClassroomDiv);
-
+    
 }
 addClassroom();
