@@ -23,6 +23,7 @@
       <li><a class="single-assignment" th:href="@{/assignment(id=${assignment.id})}" th:text="${assignment.name}"></a></li>
     </ul>
 
+    <h3>Add New Assignment:</h3>
     <form action="/classroom/newAssignment" method="POST">
       <input type="hidden" name="classroomId" th:value="${individualClassroom.id}">
       <label for="name">Assignment Name: </label><br>
