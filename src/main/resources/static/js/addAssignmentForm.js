@@ -25,10 +25,10 @@ const assignmentDuedateInput = document.createElement("input");
 assignmentDuedateInput.classList.add("form-element");
 assignmentDuedateInput.setAttribute("type", "number");
 
-const assignmentPointsWorthLabel = document.createElement("label");
-assignmentPointsWorthLabel.innerText = "New Assignment Points Worth: ";
-const assignmentPointsWorthInput = document.createElement("input");
-assignmentPointsWorthInput.classList.add("form-element");
+const assignmentPointsValueLabel = document.createElement("label");
+assignmentPointsValueLabel.innerText = "New Assignment Points Value: ";
+const assignmentPointsValueInput = document.createElement("input");
+assignmentPointsValueInput.classList.add("form-element");
 assignmentDescriptionInput.setAttribute("type", "number");
 
 const assignmentClassroomLabel = document.createElement("label");
@@ -55,11 +55,11 @@ addAssignmentButton.addEventListener("click", () => {
         "name": assignmentNameInput.value,
         "description": assignmentDescriptionInput.value,
         "due date": assignmentDuedateInput.value,
-        "points worth": assignmentPointsWorthInput.value,
+        "points walue": assignmentPointsValueInput.value,
         "classroom": assignmentClassroomInput.value
     }
 
-    if (assignmentNameInput.value !== "" && assignmentDescriptionInput.value !== "" && assignmentDuedateInput.value >=2020 && assignmentPointsWorthInput.value >= 0 && assignmentClassroomInput.value !== ""){
+    if (assignmentNameInput.value !== "" && assignmentDescriptionInput.value !== "" && assignmentDuedateInput.value >=2020 && assignmentPointsValueInput.value >= 0 && assignmentClassroomInput.value !== ""){
         fetch("http://localhost:8080/api/single-student-template",{
             method: 'POST',
             headers:{
@@ -81,8 +81,8 @@ addAssignmentForm.appendChild(assignmentDescriptionLabel);
 addAssignmentForm.appendChild(assignmentDescriptionInput);
 addAssignmentForm.appendChild(assignmentDuedateLabel);
 addAssignmentForm.appendChild(assignmentDuedateInput);
-addAssignmentForm.appendChild(assignmentPointsWorthLabel);
-addAssignmentForm.appendChild(assignmentPointsWorthInput);
+addAssignmentForm.appendChild(assignmentPointsValueLabel);
+addAssignmentForm.appendChild(assignmentPointsValueInput);
 addAssignmentForm.appendChild(assignmentClassroomLabel);
 addAssignmentForm.appendChild(assignmentClassroomInput);
 addAssignmentForm.appendChild(addAssignmentButton);
