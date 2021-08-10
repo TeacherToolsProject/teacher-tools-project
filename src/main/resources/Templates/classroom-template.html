@@ -13,34 +13,41 @@
 <div class="container">
   <main class="main-content">
      <h1 th:text="${individualClassroom.subject}"></h1>
+     <hr>
      <h2><a th:each="rollCall:${individualClassroom}" th:href="@{/classroom/roll-call(id=${rollCall.id})}">Take Roll Call</a></h2>
-      <h3>Student List: </h3>
+     <hr>
+     <h3>Student List: </h3>
         <ul th:each="student:${individualClassroom.students}">
           <li><a class="single-student" th:href="@{/student(id=${student.id})}" th:text="${student.getName()}"></a></li>
         </ul>
+        <hr>
     <h3>Assignments:</h3>
     <ul th:each="assignment:${individualClassroom.assignments}">
       <li><a class="single-assignment" th:href="@{/assignment(id=${assignment.id})}" th:text="${assignment.name}"></a></li>
     </ul>
-
+<hr>
     <h3>Add New Assignment:</h3>
     <form action="/classroom/newAssignment" method="POST">
       <input type="hidden" name="classroomId" th:value="${individualClassroom.id}">
-      <label for="name">Assignment Name: </label><br>
-      <input type="text" id="name" name="name"><br>
-      <label for="description">Description: </label><br>
+      <label for="name">Assignment Name: </label>
+      <input type="text" id="name" name="name">
+      <label for="description">Description: </label>
       <input type="text" id="description" name="description"><br><br>
-      <label for="assignedDate">Date of Assignment: </label><br>
-      <input type="text" id="assignedDate" name="assignedDate"><br>
-      <label for="dueDate">Assignment Due Date: </label><br>
-      <input type="text" id="dueDate" name="dueDate"><br>
+      <label for="assignedDate">Date of Assignment: </label>
+      <input type="text" id="assignedDate" name="assignedDate">
+      <label for="dueDate">Assignment Due Date: </label>
+      <input type="text" id="dueDate" name="dueDate"><br><br>
       <label for="pointsValue">Points Value: </label><br>
-      <input type="text" id="pointsValue" name="pointsValue"><br>
+      <input type="text" id="pointsValue" name="pointsValue">
       <input type="submit" value="Submit">
     </form> 
+    <br>
+    <hr>
+    <h3>Add Student To This Class:</h3>
 
   </main>
 </div>
+<hr>
 </div>
 <footer th:insert="general.html :: footer"></footer>
 
