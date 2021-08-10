@@ -36,19 +36,20 @@ public class StudentController {
     }
 
 
-    // @PostMapping("/student/{id}")
-    // public String addStudentNote(@RequestParam("id") Long id, Model model,@RequestParam String title,@RequestParam String note,@RequestParam String noteDate){
-    //     Student studentToAddNote = studentRepo.findById(id).get();
-    //     Note noteToDisplay = new Note(title, note, noteDate);
-    //     // studentToAddNote.addNoteToStudent(noteToDisplay);
-    //     noteRepo.save(noteToDisplay);
-    //     studentRepo.save(studentToAddNote);
+    @PostMapping("/student/{id}")
+    public String addStudentNote(@RequestParam("id") Long id, Model model,@RequestParam String title,@RequestParam String noteToAdd,@RequestParam String date){
+        Student studentToAddNote = studentRepo.findById(id).get();
+        Note noteToDisplay = new Note(title, noteToAdd, date);
+        studentToAddNote.addNoteToStudent(noteToDisplay);
+        studentRepo.save(studentToAddNote);
+        noteRepo.save(noteToDisplay);
         
-    //     model.addAttribute("note", noteToDisplay);
-    //     model.addAttribute("student", studentToAddNote);
+        
+        model.addAttribute("note", noteToDisplay);
+        model.addAttribute("individualStudent", studentToAddNote);
 
-    //     return "single-student-template";
+        return "home-page-template";
         
 
-    // }
+    }
 }

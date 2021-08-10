@@ -44,7 +44,7 @@
         </div>
         <div class="student-note-form">
             <h2>Leave a Note for this Student: </h2>
-            <form th:action="'/student'+${id}" id="student-note" method="POST">
+            <form th:action="'/student/'+${individualStudent.id}" id="student-note" method="POST">
             Title: <input type="text" name="title">
             Date: <input type="text" name="date">
             <input type="submit">

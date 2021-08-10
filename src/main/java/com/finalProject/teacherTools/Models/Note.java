@@ -18,7 +18,7 @@ public class Note {
     private String noteDate;
 
     @ManyToOne
-    // @JsonIgnore
+    @JsonIgnore
     private Student student;
 
     protected Note(){};
