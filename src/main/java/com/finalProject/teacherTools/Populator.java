@@ -94,7 +94,7 @@ public class Populator implements CommandLineRunner {
         abbeyWilliamsApHistoryGrade.addStudentToGrade(williamsAbbey);
         gradeRepo.save(abbeyWilliamsApHistoryGrade);
 
-        Note grantCushmanNote = new Note("Reminider for Grant", "Remind Grant to cover his text book by next week.", "8/30/2021");
+        Note grantCushmanNote = new Note("Reminder for Grant", "Remind Grant to cover his text book by next week.", "8/30/2021");
 
         cushmanGrant.addNoteToStudent(grantCushmanNote);
         studentRepo.save(cushmanGrant);
