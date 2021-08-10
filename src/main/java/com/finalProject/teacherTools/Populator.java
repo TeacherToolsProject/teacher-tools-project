@@ -3,6 +3,7 @@ package com.finalProject.teacherTools;
 import com.finalProject.teacherTools.Models.Assignment;
 import com.finalProject.teacherTools.Models.Classroom;
 import com.finalProject.teacherTools.Models.Grade;
+import com.finalProject.teacherTools.Models.Note;
 import com.finalProject.teacherTools.Models.Student;
 import com.finalProject.teacherTools.Repos.*;
 import org.springframework.boot.CommandLineRunner;
@@ -96,7 +97,9 @@ public class Populator implements CommandLineRunner {
         abbeyWilliamsApHistoryGrade.addStudentToGrade(williamsAbbey);
         gradeRepo.save(abbeyWilliamsApHistoryGrade);
 
+        Note grantCushmanNote = new Note("Reminider for Grant", "Remind Grant to cover his text book by next week.", "8/30/2021");
 
-
+        cushmanGrant.addNoteToStudent(grantCushmanNote);
+        studentRepo.save(cushmanGrant);
     }
 }

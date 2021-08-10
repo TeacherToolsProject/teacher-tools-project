@@ -37,7 +37,7 @@ public class Student {
     @JsonIgnore
     private Collection<Grade> grades;
 
-    @OneToMany
+    @OneToMany(cascade = CascadeType.ALL)
     private Collection<Note> notes;
 
     protected Student(){};
@@ -54,6 +54,7 @@ public class Student {
         this.birthdayYear = birthdayYear;
         this.classrooms = Set.of(classrooms);
         this.grades = new ArrayList<Grade>();
+        this.notes = new ArrayList<Note>();
     };
 
     public Long getId() {
@@ -108,8 +109,8 @@ public class Student {
         return notes;
     }
 
-    public void addGradeToStudent(Grade grade){
-        grades.add(grade);
+    public void addNoteToStudent(Note note){
+        notes.add(note);
     }
 
     public double calculateTotalGrade(){
