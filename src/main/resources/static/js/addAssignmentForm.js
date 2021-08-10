@@ -37,6 +37,15 @@ const assignmentClassroomInput = document.createElement("input");
 assignmentClassroomInput.classList.add("form-element");
 assignmentClassroomInput.setAttribute("type", "text");
 
+
+
+
+
+
+
+
+
+
 const addAssignmentButton = document.createElement("button");
 addAssignmentButton.classList.add("form-element");
 addAssignmentButton.innerText = "Add New Assignment";
