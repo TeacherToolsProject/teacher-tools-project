@@ -18,15 +18,19 @@ public class Note {
     private String noteDate;
 
     @ManyToOne
-    @JsonIgnore
-    private Student students;
+    // @JsonIgnore
+    private Student student;
 
     protected Note(){};
 
     public Note(String title, String note, String noteDate){
         this.title = title;
         this.note = note;
-        this. noteDate = noteDate;
+        this.noteDate = noteDate;
+    }
+
+    public Long getId() {
+        return id;
     }
 
     public String getTitle() {
@@ -42,6 +46,6 @@ public class Note {
     }
 
     public Student getStudents() {
-        return students;
+        return student;
     }
 }

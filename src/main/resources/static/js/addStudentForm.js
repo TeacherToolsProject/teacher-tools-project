@@ -93,6 +93,7 @@ const addStudent = function () {
         } else {
             alert("All fields are required to Submit.")
         }
+        window.location.reload();
     })
 
     addStudentForm.appendChild(addStudentHeader);

@@ -9,3 +9,10 @@ POST http://localhost:8080/api/students
 Content-Type: application/json
 
 {"name": "Johnny Newsome", "studentImage": "image", "guardianName": "Mommy Newsome", "guardianEmail": "emails@email.com", "guardianPhone": "614-555-2121", "birthdayDay" : 31, "birthdayMonth" : 3, "birthdayYear": 2013}
+
+
+### Add a note to a Student
+PATCH http://localhost:8080/api/student?id=3
+Content-Type: application/json
+
+{"title" : "Does good.", "note" : "Good work Grant.", "noteDate" : "2/3/2021"}
