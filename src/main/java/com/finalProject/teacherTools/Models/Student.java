@@ -120,7 +120,7 @@ public class Student {
         for(Grade grade: grades){
             studentGrade += grade.getGrade();
             maximumStudentGrade += grade.getMaximumGrade();
-            studentTotalGrade = (studentGrade / maximumStudentGrade)*100;
+            studentTotalGrade = Math.round((studentGrade / maximumStudentGrade)*100);
         } return studentTotalGrade;
     }
 }
