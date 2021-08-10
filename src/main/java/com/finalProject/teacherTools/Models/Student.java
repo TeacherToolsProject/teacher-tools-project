@@ -1,10 +1,8 @@
 package com.finalProject.teacherTools.Models;
 
-import javax.persistence.*;
-
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
-import java.util.ArrayDeque;
+import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Set;
@@ -54,6 +52,7 @@ public class Student {
         this.birthdayYear = birthdayYear;
         this.classrooms = Set.of(classrooms);
         this.grades = new ArrayList<Grade>();
+        this.assignments = new ArrayList<Assignment>();
     };
 
     public Long getId() {
@@ -112,7 +111,7 @@ public class Student {
         grades.add(grade);
     }
 
-    public double calculateTotalGrade(){
+   public double calculateTotalGrade(){
         double studentGrade = 0;
         double maximumStudentGrade = 0;
         double studentTotalGrade = 0;

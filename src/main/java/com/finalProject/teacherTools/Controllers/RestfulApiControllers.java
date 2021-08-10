@@ -1,19 +1,13 @@
 package com.finalProject.teacherTools.Controllers;
 
-import javax.annotation.Resource;
-
-import com.finalProject.teacherTools.Models.Assignment;
 import com.finalProject.teacherTools.Models.Classroom;
-import com.finalProject.teacherTools.Models.Grade;
 import com.finalProject.teacherTools.Models.Student;
 import com.finalProject.teacherTools.Repos.*;
-
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
+
+import javax.annotation.Resource;
 
 @RestController
 public class RestfulApiControllers {
@@ -42,11 +36,15 @@ public class RestfulApiControllers {
     }
 
     //
-    @PostMapping("api/newAssignment")
-    public String addNewAssignment(@RequestBody Assignment assignmentToAdd){
-        assignmentRepo.save(assignmentToAdd);
-        return "redirect:/assignment";
-    }
+//    @PostMapping("/api/newAssignment")
+//    public String addNewAssignment(@RequestParam String name, String description, Long classroomId){
+//
+//        Classroom classroom = classroomRepo.findById(classroomId).get();
+//        Assignment assignmentToAdd = new Assignment(classroom,name,description,"Test", "test","test");
+//        assignmentRepo.save(assignmentToAdd);
+//
+//        return "redirect:/classroom?id="+ classroomId;
+//    }
     //
 
 }

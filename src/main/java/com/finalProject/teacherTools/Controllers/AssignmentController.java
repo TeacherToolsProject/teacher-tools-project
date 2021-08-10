@@ -22,4 +22,6 @@ public class AssignmentController {
         model.addAttribute("individualAssignment", assignment);
         return "single-assignment-template";
     }
+
+
 }
