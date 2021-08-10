@@ -47,10 +47,12 @@
             <form th:action="'/student/'+${individualStudent.id}" id="student-note" method="POST">
             Title: <input type="text" name="title">
             Date: <input type="text" name="date">
+            <textarea rows="4" cols="50" name="note" form="student-note">
+            </textarea>
             <input type="submit">
             </form>
-                <textarea rows="4" cols="50" name="noteToAdd" form="usrform">
-                </textarea>
+                <!-- <textarea rows="4" cols="50" name="noteToAdd" form="usrform">
+                </textarea> -->
                 
         </div>
     </main>

@@ -37,7 +37,7 @@ public class Student {
     @JsonIgnore
     private Collection<Grade> grades;
 
-    @OneToMany(mappedBy = "student")
+    @OneToMany(cascade = CascadeType.ALL)
     private Collection<Note> notes;
 
     protected Student(){};

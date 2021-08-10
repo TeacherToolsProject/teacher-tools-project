@@ -8,6 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PatchMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -37,18 +38,17 @@ public class StudentController {
 
 
     @PostMapping("/student/{id}")
-    public String addStudentNote(@RequestParam("id") Long id, Model model,@RequestParam String title,@RequestParam String noteToAdd,@RequestParam String date){
+    public String addStudentNote(@PathVariable("id") Long id, Model model,String title, String note, String date){
         Student studentToAddNote = studentRepo.findById(id).get();
-        Note noteToDisplay = new Note(title, noteToAdd, date);
+        Note noteToDisplay = new Note(title, note, date);
         studentToAddNote.addNoteToStudent(noteToDisplay);
         studentRepo.save(studentToAddNote);
-        noteRepo.save(noteToDisplay);
         
         
         model.addAttribute("note", noteToDisplay);
         model.addAttribute("individualStudent", studentToAddNote);
 
-        return "home-page-template";
+        return "single-student-template";
         
 
     }
