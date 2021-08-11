@@ -17,7 +17,7 @@
         <div class="left-sidebar"></div>
 
         <main class="main-content">
-            <h1>Welcome To Teacher Tools</h1>
+            <p class="page-title">Welcome To Teacher Tools</p>
             <h2>Your Classrooms:</h2>
             <ul class="classroom-list" th:each="classroom:${classrooms}">
                 <li><a class="classroom-items" th:href="@{/classroom(id=${classroom.id})}"
