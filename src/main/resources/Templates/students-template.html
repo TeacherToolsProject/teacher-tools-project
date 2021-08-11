@@ -21,9 +21,27 @@
             </ul>
         </main>
     </div>
+
+    <div class="add-student">
+        <h3>Add a newStudent:</h3>
+        <form th:action="'/students/add'" class="new-student-form" method="post">
+            <label for="name">Student's Name: </label><input id="name" class="form-element" type="text" name="name" required>
+            <label for="studentImage">Image URL: </label><input id="studentImage" class="form-element" type="text" name="studentImage" required>
+            <label for="guardianName">Guardian Name: </label><input id="guardianName" class="form-element" type="text" name="guardianName" required>
+            <label for="guardianEmail">Guardian Email: </label><input id="guardianEmail" class="form-element" type="email" name="guardianEmail" required>
+            <label for="guardianPhone">Guardian Phone: </label><input id="guardianPhone" class="form-element" type="text" name="guardianPhone" required>
+            <label for="birthdayDay">Birth Day: </label><input id="birthdayDay" class="form-element" type="number" name="birthdayDay" min="1" max="31" step="1" required>
+            <label for="birthdayMonth">Birth Month: </label><input id="birthdayMonth" class="form-element" type="number" name="birthdayMonth" min="1" max="12" step="1" required>
+            <label for="birthdayYear">Birth Year: </label><input id="birthdayYear" class="form-element" type="number" name="birthdayYear" min="1900" max="2100" step="1" required>
+
+
+            <input type="submit" value="Add Student">
+        </form>
+    </div>
+
     <footer th:insert="general.html :: footer"></footer>
 
-    <script src="/js/addStudentForm.js" type="module"></script>
+<!--    <script src="/js/addStudentForm.js" type="module"></script>-->
 </body>
 
 </html>
