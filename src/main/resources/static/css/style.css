@@ -407,3 +407,20 @@ li a:hover {
 .about-links-box a {
   padding: 10px;
 }
+
+form{
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  padding: 10px 0px;
+}
+
+form input {
+  margin: 5px 0px;
+}
+
+form input[type=submit]{
+  max-width: 150px;
+  padding: 10px;
+}
+
