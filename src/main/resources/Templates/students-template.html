@@ -15,7 +15,7 @@
     <div class="container">
         <div class="left-sidebar"></div>
         <main class="main-content">
-            <h1>Student List:</h1>
+            <p class="page-title">Student List:</p>
             <ul class="student-list" th:each="student:${students}">
                 <li><a class="individual-student" th:href="@{/student(id=${student.id})}" th:text="${student.name}"></a>
                 </li>

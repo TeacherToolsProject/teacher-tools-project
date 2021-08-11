@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Teacher Tools - Roll Call</title>
-  <link rel="stylesheet" a href="./css/style.css">
+  <link rel="stylesheet" a href="/css/style.css">
   <link rel="stylesheet" href="/css/rollCall.css">
 </head>
 
@@ -16,20 +16,20 @@
     <div class="left-sidebar"></div>
 
     <main class="main-content">
-      <h1>Take Roll Call (Click Student To Remove From List)</h1>
+      <p class="page-title">Take Roll Call</p>
+      <h3>(Click Student To Remove From List)</h3> 
       <h2>Student List:</h2>
       <ul id="student-list">
         <li th:each="student:${individualStudents}" class="roll-student" id="roll-student" th:text="${student.name}">
         </li>
       </ul>
 
+    </main>
     <div class="right-sidebar"></div>
   </div>
-        </main>
 
   <footer th:insert="general.html :: footer"></footer>
-  <script src="/js/rollCall.js">
-  </script>
+  <script src="/js/rollCall.js"></script>
 </body>
 
 </html>

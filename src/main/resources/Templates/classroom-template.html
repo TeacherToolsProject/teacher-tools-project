@@ -15,7 +15,7 @@
 <div class="container">
   <div class="left-sidebar"></div>
   <main class="main-content">
-     <h1 th:text="${individualClassroom.subject}"></h1>
+    <p class="page-title" th:text="${individualClassroom.subject}"></p>
      <hr>
      <h2><a th:each="rollCall:${individualClassroom}" th:href="@{/classroom/roll-call(id=${rollCall.id})}">Take Roll Call</a></h2>
      <hr>
