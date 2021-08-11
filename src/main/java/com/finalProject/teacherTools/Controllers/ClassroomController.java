@@ -1,5 +1,8 @@
 package com.finalProject.teacherTools.Controllers;
 
+import java.util.ArrayList;
+import java.util.Collection;
+
 import com.finalProject.teacherTools.Models.Assignment;
 import com.finalProject.teacherTools.Models.Classroom;
 import com.finalProject.teacherTools.Models.Student;
@@ -28,45 +31,59 @@ public class ClassroomController {
     public String displayClassroomPage(@RequestParam("id") Long id, Model model) {
         Classroom classroom = classroomRepo.findById(id).get();
         model.addAttribute("individualClassroom", classroom);
+        Collection<Student> studentsInClass = (Collection<Student>) studentRepo.findAllByClassrooms(classroom);
         Iterable<Student> allStudents = studentRepo.findAll();
-        model.addAttribute("allStudents", allStudents);
+        Collection<Student> addableStudent = new ArrayList<Student>();
+        for (Student student : allStudents) {
+            if (!studentsInClass.contains(student)){
+                addableStudent.add(student);
+            }
+        }
+        model.addAttribute("allStudents", addableStudent);
+
         return "classroom-template";
     }
 
     @GetMapping("/classroom/roll-call")
-    public String getAllStudentsForClassroom(@RequestParam("id")Long id, Model model){
+    public String getAllStudentsForClassroom(@RequestParam("id") Long id, Model model) {
         Classroom classroom = classroomRepo.findById(id).get();
         model.addAttribute("individualClassroom", classroom);
         model.addAttribute("individualStudents", studentRepo.findAllByClassrooms(classroom));
         return "roll-call-template";
     }
+
     @PostMapping("/classroom/newAssignment")
-    public String addNewAssignment(@RequestParam String name, String description, String assignedDate, String dueDate, String pointsValue, Long classroomId){
+    public String addNewAssignment(@RequestParam String name, String description, String assignedDate, String dueDate,
+            String pointsValue, Long classroomId) {
 
         Classroom classroom = classroomRepo.findById(classroomId).get();
-        Assignment assignmentToAdd = new Assignment(classroom,name,description, assignedDate, dueDate, pointsValue);
+        Assignment assignmentToAdd = new Assignment(classroom, name, description, assignedDate, dueDate, pointsValue);
         assignmentRepo.save(assignmentToAdd);
-        for(Student student: classroom.getStudents()){
+        for (Student student : classroom.getStudents()) {
             assignmentToAdd.addStudent(student);
         }
         assignmentRepo.save(assignmentToAdd);
 
-        return "redirect:/classroom?id="+ classroomId;
+        return "redirect:/classroom?id=" + classroomId;
     }
 
     @PostMapping("/classroom/addStudent")
-    public String addExistingStudent(@RequestParam("id")Long id, Long student, Model model){
+    public String addExistingStudent(@RequestParam("id") Long id, Long student, Model model) {
         Classroom classroom = classroomRepo.findById(id).get();
         model.addAttribute("individualStudents", studentRepo.findAllByClassrooms(classroom));
-
+        Iterable<Assignment> allAssignments = assignmentRepo.findAll();
         Student studentToAdd = studentRepo.findById(student).get();
         classroom.addStudent(studentToAdd);
         classroomRepo.save(classroom);
 
+        for(Assignment assignment: allAssignments){
+            assignment.addStudent(studentToAdd);
+            assignmentRepo.save(assignment);
+        }
+        
 
         return "redirect:/classroom" + "?id=" + classroom.getId();
 
-    
     }
 
 }
