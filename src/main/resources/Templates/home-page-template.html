@@ -1,41 +1,58 @@
 <!doctype html>
-<html lang="en"xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" a href="./css/style.css">
     <title>Teacher Tools - Home</title>
 </head>
+
 <body>
-<header th:insert="general.html :: header" id="header"></header>
-        <div class="container">
-            <main class="main-content">
-                <h1>Welcome To Teacher Tools</h1>
-                <h2>Your Classrooms:</h2>
-                <ul class="classroom-list" th:each="classroom:${classrooms}">
-                   <li><a class="classroom-items" th:href="@{/classroom(id=${classroom.id})}" th:text="${classroom.subject}"></a></li>
-                </ul>
-            </main>
-        </div>
+    <header th:insert="general.html :: header" id="header"></header>
+    <div class="container">
+        <div class="left-sidebar"></div>
 
-<div class="add-classroom">
-    <h3>Add a new Classroom:</h3>
-    <form th:action="'/add-classroom'" class="new-classroom-form" method="post">
-        <label for="subject">Subject: </label><input id="subject" class="form-element" type="text" name="subject" required>
-        <label for="gradeLevel">Grade Level: </label><input id="gradeLevel" class="form-element" type="number" name="gradeLevel" step="1" required>
-        <label for="room">Room: </label><input id="room" class="form-element" type="text" name="room" required>
-        <label for="time">Time: </label><input id="time" class="form-element" type="text" name="time" required>
-        <label for="year">Year: </label><input id="year" class="form-element" type="number" name="year" min="2000" max="2100" step="1"  required>
-        <label for="semester">Semester: </label><input id="semester" class="form-element" type="text" name="semester" required>
-        <input type="submit" value="Add new Classroom">
-    </form>
-</div>
+        <main class="main-content">
+            <h1>Welcome To Teacher Tools</h1>
+            <h2>Your Classrooms:</h2>
+            <ul class="classroom-list" th:each="classroom:${classrooms}">
+                <li><a class="classroom-items" th:href="@{/classroom(id=${classroom.id})}"
+                        th:text="${classroom.subject}"></a></li>
+            </ul>
+            <div class="add-classroom">
+                <h3>Add a new Classroom:</h3>
+                <form th:action="'/add-classroom'" class="new-classroom-form" method="post">
+                    <label for="subject">Subject: </label><input id="subject" class="form-element" type="text" name="subject"
+                        required>
+                    <label for="gradeLevel">Grade Level: </label><input id="gradeLevel" class="form-element" type="number"
+                        name="gradeLevel" step="1" required>
+                    <label for="room">Room: </label><input id="room" class="form-element" type="text" name="room" required>
+                    <label for="time">Time: </label><input id="time" class="form-element" type="text" name="time" required>
+                    <label for="year">Year: </label><input id="year" class="form-element" type="number" name="year" min="2000"
+                        max="2100" step="1" required>
+                    <label for="semester">Semester: </label><input id="semester" class="form-element" type="text"
+                        name="semester" required>
+                    <input type="submit" value="Add new Classroom">
+                </form>
+            </div>
+               
+       
+       
+       
+        </main>
 
-<footer th:insert="general.html :: footer"></footer>
+        <div class="right-sidebar"></div>
 
-<!--<script src="/js/addClassroomForm.js" type="module"></script>-->
+
+    </div>
+
+
+    <footer th:insert="general.html :: footer"></footer>
+
+    <!--<script src="/js/addClassroomForm.js" type="module"></script>-->
 </body>
+
 </html>
