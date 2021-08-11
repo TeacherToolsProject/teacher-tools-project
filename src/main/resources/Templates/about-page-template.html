@@ -11,13 +11,10 @@
 </head>
 
 <body>
-    <div class="about-container">
-
-        <header th:insert="general.html :: header" id="header"></header>
-        <div class="about-left-sidebar">
-            <p>1</p>
-        </div>
-        <main class="about-main-content">
+    <header th:insert="general.html :: header" id="header"></header>
+    <div class="container" id="about-container">
+        <div class="left-sidebar"></div>
+        <main class="main-content">
             <div>
                 <p class="about-page-title">The Development Team</p>
             </div>
@@ -354,12 +351,10 @@
                     </div>
                 </div>
             </section>
-
         </main>
-        <div class="about-right-sidebar"></div>
-
-        <footer th:insert="general.html :: footer"></footer>
+        <div class="right-sidebar"></div>
     </div>
+    <footer th:insert="general.html :: footer"></footer>
 </body>
 
 </html>
