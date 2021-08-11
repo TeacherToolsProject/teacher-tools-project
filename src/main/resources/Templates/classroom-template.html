@@ -44,7 +44,7 @@
     <br>
     <hr>
     <h3>Add Student To This Class:</h3>
-    <form th:action="'/classroom?id='+${individualClassroom.id}+'/addStudent'" method= "POST">
+    <form th:action="'/classroom/addStudent/?id='+${individualClassroom.id}" method= "POST">
     <label for="student">Add Existing Student: </label><select id="student" name="student">
       <option th:each="student:${allStudents}" th:value="${student.id}" name="student"
               th:text="${student.name}"></option>
