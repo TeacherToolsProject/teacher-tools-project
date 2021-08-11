@@ -22,10 +22,11 @@
         <li th:each="student:${individualStudents}" class="roll-student" id="roll-student" th:text="${student.name}">
         </li>
       </ul>
-    </main>
 
     <div class="right-sidebar"></div>
   </div>
+        </main>
+
   <footer th:insert="general.html :: footer"></footer>
   <script src="/js/rollCall.js">
   </script>
