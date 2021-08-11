@@ -10,6 +10,7 @@ import com.finalProject.teacherTools.Repos.NoteRepo;
 import com.finalProject.teacherTools.Repos.StudentRepo;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -57,7 +58,20 @@ public class StudentController {
         model.addAttribute("individualStudent", studentToAddNote);
 
         return "single-student-template";
+        }
+
+    @DeleteMapping("/student/{id}/note")
+    public String deleteStudentNote(@PathVariable("id") Long id, Model model) {
+        Student studentToChange = studentRepo.findById(id).get();
+        Note noteToDelete = noteRepo.findById(id).get();
+        studentToChange.removeNote(noteToDelete);
+        noteRepo.deleteById(id);
+        //studentRepo.save(studentToChange);
+
+        model.addAttribute("individualStudent", noteToDelete);
         
 
+        return "redirect:/student" + "?id=" + studentToChange.getId();
     }
+
 }
