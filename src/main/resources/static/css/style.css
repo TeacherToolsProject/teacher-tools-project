@@ -15,7 +15,9 @@ html {
 
 body {
   padding: 5px;
-  font: 500 100% system-ui, sans-serif;
+  /* font: 500 100% system-ui, sans-serif; */
+  font: normal 100% system-ui, sans-serif;
+
   border: 10px;
   font-size: 1em;
   text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.2);
@@ -53,9 +55,6 @@ body {
   /* border: 5px; */
   /* padding: 10px; */
 }
-
-
-
 
 header {
   grid-column: 1 / 4;
@@ -185,6 +184,22 @@ li a:hover {
   margin: 10px 0px;
 }
 
+.right-sidebar {
+  grid-column: 3 / 4;
+  grid-row: 2 / 3;
+   box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.4);
+  background-image: url(..//images/right-side-artwork.jpg);
+  background-size: 110%;
+  border-radius: 4px;
+    /* margin: top/bottom | right/left */
+    margin: 10px 0px;
+    width: 85%;
+    background-position-x: right;
+    margin-right: 0;
+    margin-left: auto;
+}
+
+
 /* .about-left-sidebar { */
   /* grid-column: 1 / 2; */
   /* grid-row: 2 / 3; */
@@ -198,7 +213,7 @@ li a:hover {
   background-color: rgb(123, 124, 126);
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center;  /* this is causing an issue on some pages */
   justify-content: space-evenly;
   border-radius: 4px;
 }
@@ -219,7 +234,6 @@ li a:hover {
 
 .classroom-list,
 #usrform,
-.page-title,
 .student-list,
 .room-info,
 .student-info,
@@ -231,6 +245,30 @@ li a:hover {
   border-radius: 4px;
   border: 5px solid black;
   box-shadow: 15px 15px 2px rgba(0, 0, 0, 0.2);
+}
+
+.about-page-title, .page-title {
+  /* padding: top | right | bottom | left; */
+  background: rgb(196, 235, 253);
+  border: 2px solid black;
+  box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.4);
+  color: rgb(9, 73, 198);
+  display: grid;
+  font-family: pencilpete_fontregular, Arial, Helvetica, sans-serif;
+  font-size: 3.5em;
+  font-weight: bold;
+  grid-column: 2 / 3;
+  margin-block-end: 0px;
+  margin-block-start: 0px;
+  margin-inline-end: 0px;
+  margin-inline-start: 0px;
+  margin-top: 10px;
+  margin-right: 0;
+  padding: 20px 10px 20px 10px;
+  text-align: center;
+  text-shadow: 3px 3px 1px rgba(0, 0, 0, 0.3);
+  width: 90%;
+
 }
 
 .room-info li {
@@ -246,51 +284,6 @@ li a:hover {
   hyphens: manual;
   font-size: 1em;
   font-weight: normal;
-}
-
-/* .page-title { */
-  /* font-size: 2em; */
-  /* padding: 20px 20px 20px 20px; */
-  /* width: 450px; */
-  /* text-align: center; */
-/* } */
-
-.about-page-title, .page-title {
-  background: rgb(196, 235, 253);
-  border: 2px solid black;
-  box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.4);
-  color: rgb(9, 73, 198);
-  font-family: pencilpete_fontregular, Arial, Helvetica, sans-serif;
-  font-size: 3.5em;
-  font-weight: bold;
-  margin-block-end: 0px;
-  margin-block-start: 0px;
-  margin-inline-end: 0px;
-  margin-inline-start: 0px;
-  /* padding: top | right | bottom | left; */
-  padding: 20px 20px 20px 20px;
-  text-align: center;
-  text-shadow: 3px 3px 1px rgba(0, 0, 0, 0.3);
-  width: 100%;
-}
-
-/* .right-sidebar { */
-  /* grid-column: 3 / 4; */
-  /* grid-row: 2 / 3; */
-  /* background: rgb(218, 35, 104); */
-  /* border-radius: 4px; */
-/* } */
-
-.right-sidebar {
-  grid-column: 3 / 4;
-  grid-row: 2 / 3;
-   box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.4);
-  background-image: url(https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX8426859.jpg);
-  /* background-size: 300px; */
-  background-size: 100%;
-  border-radius: 4px;
-    /* margin: top/bottom | right/left */
-    margin: 10px 0px;
 }
 
 .about-profile-box {
