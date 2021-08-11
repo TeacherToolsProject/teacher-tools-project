@@ -2,6 +2,7 @@ package com.finalProject.teacherTools.Controllers;
 
 import com.finalProject.teacherTools.Models.Assignment;
 import com.finalProject.teacherTools.Models.Classroom;
+import com.finalProject.teacherTools.Models.Student;
 import com.finalProject.teacherTools.Repos.AssignmentRepo;
 import com.finalProject.teacherTools.Repos.ClassroomRepo;
 import com.finalProject.teacherTools.Repos.StudentRepo;
@@ -42,6 +43,10 @@ public class ClassroomController {
 
         Classroom classroom = classroomRepo.findById(classroomId).get();
         Assignment assignmentToAdd = new Assignment(classroom,name,description, assignedDate, dueDate, pointsValue);
+        assignmentRepo.save(assignmentToAdd);
+        for(Student student: classroom.getStudents()){
+            assignmentToAdd.addStudent(student);
+        }
         assignmentRepo.save(assignmentToAdd);
 
         return "redirect:/classroom?id="+ classroomId;
