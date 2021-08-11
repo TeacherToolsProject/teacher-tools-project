@@ -19,6 +19,7 @@ body {
   border: 10px;
   font-size: 1em;
   text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.2);
+  font-family: 'Open Sans', sans-serif;
 }
 
 .teacher-tools {
@@ -406,3 +407,20 @@ li a:hover {
 .about-links-box a {
   padding: 10px;
 }
+
+form{
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  padding: 10px 0px;
+}
+
+form input {
+  margin: 5px 0px;
+}
+
+form input[type=submit]{
+  max-width: 150px;
+  padding: 10px;
+}
+
