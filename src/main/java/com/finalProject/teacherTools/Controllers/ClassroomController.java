@@ -28,6 +28,8 @@ public class ClassroomController {
     public String displayClassroomPage(@RequestParam("id") Long id, Model model) {
         Classroom classroom = classroomRepo.findById(id).get();
         model.addAttribute("individualClassroom", classroom);
+        Iterable<Student> allStudents = studentRepo.findAll();
+        model.addAttribute("allStudents", allStudents);
         return "classroom-template";
     }
 
@@ -50,6 +52,20 @@ public class ClassroomController {
         assignmentRepo.save(assignmentToAdd);
 
         return "redirect:/classroom?id="+ classroomId;
+    }
+
+    @PostMapping("/classroom/addStudent")
+    public String addExistingStudent(@RequestParam("id")Long id, Long student, Model model){
+        Classroom classroom = classroomRepo.findById(id).get();
+        model.addAttribute("individualStudents", studentRepo.findAllByClassrooms(classroom));
+
+        Student studentToAdd = studentRepo.findById(student).get();
+        classroom.addStudent(studentToAdd);
+        classroomRepo.save(classroom);
+
+        return "redirect:/classroom" + "?id=" + classroom.getId();
+
+    
     }
 
 }
