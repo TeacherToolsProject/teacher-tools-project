@@ -30,11 +30,11 @@ body {
   /* background: black; */
   padding: 5px;
   height: 100vh;
-  margin: 0;
   font: 500 100% system-ui, sans-serif;
   border: 10px;
   font-size: 1em;
   text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.2);
+
 }
 
 .container {
@@ -46,22 +46,22 @@ body {
   border: 5px;
   padding: 10px;
 }
+/*  */
+header {
+  grid-column: 1 / 4;
+  grid-row: 1 / 2;
+  }
+/*  */
+  footer {
+    grid-column: 1 / 4;
+    grid-row: 3 / 4;
+  }
+  
+.copyright {
+  color: rgb(9, 73, 198);
+}
 
-/* header { */
-  /* padding: 5px 5px; */
-  /* grid-column: 1 / 4; */
-  /* grid-row: 1 / 2; */
-  /* background: hotpink; */
-  /* border-radius: 4px; */
-  /* box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.4); */
 
-  /* background: rgb(9, 73, 198); */
-  /* display: flex; */
-  /* flex-direction: column; */
-  /* justify-content: space-between; */
-  /* text-align: center; */
-  /* align-items: center; */
-  /* } */
 
 ul {
   list-style-type: none;
@@ -80,30 +80,43 @@ li a:hover {
   color: rgb(211, 185, 74);
 }
 
-.nav-bar {
-  /* padding: 5px 5px; */
+.nav-bar{
   grid-column: 1 / 4;
   grid-row: 1 / 2;
-  background: rgb(9, 73, 198);
   border-radius: 4px;
   box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.4);
-  width: 100%;
+  /* padding: top | right | bottom | left; */
   padding: 0px 20px 0px 20px;
   display: flex;
   flex-direction: row;
   justify-content:space-around;
-  /* justify-content:space-between; */
-  /* justify-content: space-evenly; */
-  /* justify-items: center; */
+}
+/*  */
+#header .nav-bar {
+  background: rgb(9, 73, 198);
+  align-items: center;
+}
+/*  */
+#footer .nav-bar{
+  background: rgb(66, 159, 216);
+  align-items: center;
+  }
+  
+  /*  */
+.footer-spacer,
+.header-spacer {
+  /* width: 225px; */
+width: 25%;
 }
 
+/* do we need this? */
 .navigation-items li,
 .footer-items li {
   /* padding: top | right | bottom | left; */
   padding: 0px 10px 0px 10px;
 justify-content: space-around;
 }
-
+/*  */
 .list-item,
 .header-list-item,
 .footer-list-item {
@@ -262,24 +275,8 @@ justify-content: space-around;
   border-radius: 4px;
 }
 
-footer {
-  padding: 10px 20px;
-  grid-column: 1 / 4;
-  grid-row: 3 / 4;
-  background: rgb(66, 159, 216);
-  text-align: center;
-  border-radius: 4px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-evenly;
-}
 
-.footer-spacer,
-.header-spacer {
-  /* width: 225px; */
-width: 25%;
-}
+
 
 .about-container {
   height: calc(100vh - 10px);
