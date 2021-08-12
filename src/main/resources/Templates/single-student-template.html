@@ -42,11 +42,15 @@
                 <li th:text="${'Note Title: ' + note.title}"></li>
                 <li th:text="${'Note Date: ' + note.noteDate}"></li>
                 <li th:text="${'Note: ' + note.note}"></li>
+                <form th:action="'/student/deletenote/'+${individualStudent.id}" th:method="post">
+                    <input type="hidden" name="noteId" th:value="${note.id}">
+                    <button type="submit" class="button">Delete Note</button>
+                </form>
             </ul>
         </div>
         <div class="student-note-form">
             <h2>Leave a Note for this Student: </h2>
-            <form th:action="'/student/'+${individualStudent.id}" id="student-note" method="POST">
+            <form th:action="'/student/'+${individualStudent.id}" id="student-note" method="post">
             <label for="title">Title: </label> <input id="title" type="text" name="title">
             <label for="date">Date: </label> <input id="date" type="text" name="date">
             <textarea rows="4" cols="50" name="note" form="student-note">
