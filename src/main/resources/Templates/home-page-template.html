@@ -21,19 +21,19 @@
             <section class="home-page-main-box">
 
                 <section class="home-page-classroom-list-box">
-            
+
                     <p class="home-page-classroom-list-title">Your Classrooms:</p>
                     <ul class="home-page-classroom-list" th:each="classroom:${classrooms}">
-                        <li><a class="home-page-classroom-items" th:href="@{/classroom(id=${classroom.id})}"
-                                th:text="${classroom.subject}"></a></li>
+                        <!-- <li><a class="home-page-classroom-items" th:href="@{/classroom(id=${classroom.id})}" -->
+                        <li><a th:href="@{/classroom(id=${classroom.id})}" th:text="${classroom.subject}"></a></li>
                     </ul>
-            
+
                 </section>
 
-                <section class="add-a-new-classroom-box">
+                <section class="home-page-add-a-new-classroom-box">
 
                     <div class="add-classroom">
-                        <p class="add-new-classroom-title">Add A New Classroom:</p>
+                        <p class="home-page-add-new-classroom-title">Add A New Classroom:</p>
                         <form th:action="'/add-classroom'" class="new-classroom-form" method="post">
                             <label for="subject">Subject: </label><input id="subject" class="form-element" type="text"
                                 name="subject" required>
