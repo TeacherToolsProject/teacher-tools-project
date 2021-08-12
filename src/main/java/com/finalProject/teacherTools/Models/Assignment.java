@@ -29,7 +29,7 @@ public class Assignment {
     @ManyToMany
     private Collection<Student> students;
 
-    @OneToMany(mappedBy = "assignment")
+    @OneToMany(mappedBy = "assignment", cascade = CascadeType.ALL)
     private Collection<Grade> grades;
 
     protected Assignment(){};

@@ -12,6 +12,7 @@ import com.finalProject.teacherTools.Repos.StudentRepo;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -84,6 +85,15 @@ public class ClassroomController {
 
         return "redirect:/classroom" + "?id=" + classroom.getId();
 
+    }
+
+    @PostMapping("/classroom/deleteClassroom/{id}")
+    public String deleteStudentClassroom (@PathVariable("id")Long id){
+        Classroom studentClassroomToDelete = classroomRepo.findById(id).get();
+        classroomRepo.deleteById(id);
+       // classroomRepo.save(studentClassroomToDelete);
+
+        return "redirect:/";
     }
 
 }
