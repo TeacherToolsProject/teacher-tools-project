@@ -15,6 +15,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
@@ -60,18 +62,23 @@ public class StudentController {
         return "single-student-template";
         }
 
-    @DeleteMapping("/student/{id}/note")
-    public String deleteStudentNote(@PathVariable("id") Long id, Model model) {
-        Student studentToChange = studentRepo.findById(id).get();
-        Note noteToDelete = noteRepo.findById(id).get();
-        studentToChange.removeNote(noteToDelete);
-        noteRepo.deleteById(id);
-        //studentRepo.save(studentToChange);
+    // @PostMapping("/student/{id}/note")
+    // public String deleteStudentNote(@PathVariable("id") Long id, Model model) {
+    //     Student studentToChange = studentRepo.findById(id).get();
+    //     Note noteToDelete = noteRepo.findById(id).get();
+    //     studentToChange.removeNote(noteToDelete);
+    //     noteRepo.deleteById(id);
+    //     studentRepo.save(studentToChange);
 
-        model.addAttribute("individualStudent", noteToDelete);
+    //     model.addAttribute("individualStudent", noteToDelete);
         
 
-        return "redirect:/student" + "?id=" + studentToChange.getId();
-    }
+    //     return "single-student-template";
+    // }
 
+    @RequestMapping(value="/students/delete/{id}", method = RequestMethod.DELETE)
+    public String deleteNote(@PathVariable Long id) {
+        noteRepo.deleteById(id);
+        return "single-student-template";
+    }
 }
