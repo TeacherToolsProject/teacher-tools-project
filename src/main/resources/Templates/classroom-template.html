@@ -57,18 +57,18 @@
 
       <h3>Add New Assignment:</h3>
       <form action="/classroom/newAssignment" method="POST">
-        <input type="hidden" name="classroomId" th:value="${individualClassroom.id}">
-        <label for="name">Assignment Name: </label>
-        <input type="text" id="name" name="name">
-        <label for="description">Description: </label>
-        <input type="text" id="description" name="description"><br><br>
-        <label for="assignedDate">Date of Assignment: </label>
-        <input type="text" id="assignedDate" name="assignedDate">
-        <label for="dueDate">Assignment Due Date: </label>
-        <input type="text" id="dueDate" name="dueDate"><br><br>
-        <label for="pointsValue">Points Value: </label><br>
-        <input type="text" id="pointsValue" name="pointsValue">
-        <input type="submit" value="Submit Assignment">
+          <input type="hidden" name="classroomId" th:value="${individualClassroom.id}">
+          <label for="name">Assignment Name: </label>
+          <input type="text" id="name" name="name" required>
+          <label for="description">Description: </label>
+          <input type="text" id="description" name="description" required><br><br>
+          <label for="assignedDate">Date of Assignment: </label>
+          <input type="date" id="assignedDate" name="assignedDate" required>
+          <label for="dueDate">Assignment Due Date: </label>
+          <input type="date" id="dueDate" name="dueDate" required><br><br>
+          <label for="pointsValue">Points Value: </label><br>
+          <input type="number" id="pointsValue" name="pointsValue" min="1" step="1" required>
+          <input type="submit" value="Submit Assignment">
       </form>
       <br>
 
