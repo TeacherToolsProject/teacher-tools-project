@@ -76,4 +76,11 @@ public class StudentController {
         return "redirect:/student" + "?id=" +studentToChange.getId();
     }
 
+    @PostMapping("/students/add")
+    public String addNewStudent(String name, String studentImage, String guardianName, String guardianEmail, String guardianPhone, int birthdayDay, int birthdayMonth, int birthdayYear){
+        Student studentToAdd = new Student(name, studentImage, guardianName, guardianEmail, guardianPhone, birthdayDay, birthdayMonth, birthdayYear);
+        studentRepo.save(studentToAdd);
+        return "redirect:/students";
+    }
+
 }

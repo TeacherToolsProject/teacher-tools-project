@@ -8,59 +8,73 @@
 }
 
 html {
-  /* background-color: black; */
   background-color: lemonchiffon;
   background: rgb(123, 124, 126);
   box-sizing: border-box;
 }
 
+body {
+  padding: 5px;
+  /* font: 500 100% system-ui, sans-serif; */
+  font: normal 100% system-ui, sans-serif;
+
+  border: 10px;
+  font-size: 1em;
+  text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.2);
+  font-family: "Open Sans", sans-serif;
+}
+
 .teacher-tools {
   font-size: 4em;
   /* padding: top | right | bottom | left; */
-  padding: 1px 1px 0px 1px;
-  color: white;
+  padding: 20px 1px 0px 1px;
+  color: rgb(196, 235, 253);
   font-weight: bold;
   text-shadow: 5px 5px 1px rgba(0, 0, 0, 0.5);
   margin: 1px;
   font-family: pencilpete_fontregular, "Times New Roman", Times, serif;
-}
-
-body {
-  /* background: black; */
-  padding: 5px;
-  height: 100vh;
-  margin: 0;
-  font: 500 100% system-ui, sans-serif;
-  border: 10px;
-  font-size: 1em;
-  text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.2);
+  width: 25%;
 }
 
 .container {
-  height: calc(100vh - 10px);
+  /* height: calc(100vh - 10px); */
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
-  grid-template-rows: 0.5fr 8fr 0.5fr;
+  /* grid-template-rows: 0.5fr 8fr 0.5fr; */
   gap: 10px;
-  border: 5px;
-  padding: 10px;
+  /* border: 5px; */
+  /* padding: 10px; */
+}
+
+#about-container {
+  /* height: calc(100vh - 10px); */
+  /* display: grid; */
+  grid-template-columns: 0.5fr 2fr 0.5fr;
+  /* grid-template-rows: 0.5fr 8fr 0.5fr; */
+  /* gap: 10px; */
+  /* border: 5px; */
+  /* padding: 10px; */
 }
 
 header {
-  padding: 5px 5px;
   grid-column: 1 / 4;
   grid-row: 1 / 2;
-  background: rgb(9, 73, 198);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  text-align: center;
-  align-items: center;
-  border-radius: 4px;
+}
+
+footer {
+  grid-column: 1 / 4;
+  grid-row: 3 / 4;
+}
+
+.copyright {
+  color: rgb(9, 73, 198);
+  width: 25%;
+  text-align: right;
 }
 
 ul {
   list-style-type: none;
+  padding-inline-start: 0px;
 }
 
 li a {
@@ -76,17 +90,75 @@ li a:hover {
 }
 
 .nav-bar {
-  width: 100%;
+  grid-column: 1 / 4;
+  grid-row: 1 / 2;
+  border-radius: 4px;
+  box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.4);
+  /* padding: top | right | bottom | left; */
   padding: 0px 20px 0px 20px;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-around;
+}
+/*  */
+#header .nav-bar {
+  background: rgb(9, 73, 198);
+  align-items: center;
+}
+/*  */
+#footer .nav-bar {
+  background: rgb(66, 159, 216);
+  align-items: center;
 }
 
-.navigation-items li,
-.footer-items li {
+#footer li a {
+  font-size: 1.15em;
+}
+
+.footer-spacer,
+.header-spacer {
+  width: 25%;
+}
+
+.classroom-list-title {
+  font-size: 2em;
+  font-weight: bold;
+  margin: 0;
+  padding: 10px;
+}
+
+.classroom-list-box {
+  color: whitesmoke;
+  border: 2px solid black;
+  box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.4);
+
+  background-image: url(https://images.template.net/wp-content/uploads/2016/02/03065942/Free-chalkboard-green.jpg);
+  border-radius: 6px;
+  margin: 10px;
+  padding: 5px;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 90%;
+  text-align: center;
+}
+
+.classroom-list {
+  font-size: 1em;
   /* padding: top | right | bottom | left; */
-  padding: 0px 30px 0px 30px;
+  /* padding: 1px auto 1px auto;  */
+  /* border: 2px solid black; */
+  margin: 5px auto; /* adjusts the distance between the classrooms */
+}
+
+.classroom-items {
+  padding: 2px 2px 2px 2px;
+}
+
+.classroom-items li,
+.navigation-items li {
+  /* padding: top | right | bottom | left; */
+  padding: 0px 10px 0px 10px;
+  justify-content: space-around;
 }
 
 .list-item,
@@ -136,47 +208,126 @@ li a:hover {
 .left-sidebar {
   grid-column: 1 / 2;
   grid-row: 2 / 3;
-  background: rgb(218, 35, 104);
-  border-radius: 4px;
-}
-
-.about-left-sidebar {
-  grid-column: 1 / 2;
-  grid-row: 2 / 3;
-  background-image: url(..//images/stack-of-books.jpg);
+  filter: drop-shadow(5px 5px 2px rgba(0, 0, 0, 0.4));
+  background-image: url(..//images/stack-of-books.svg);
   background-size: 100%;
   background-position: left;
-  border-radius: 4px;
+  /* margin: top/bottom | right/left */
+  margin: 10px 0px;
 }
+
+.right-sidebar {
+  grid-column: 3 / 4;
+  grid-row: 2 / 3;
+  box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.4);
+  background-image: url(..//images/right-side-artwork.jpg);
+  background-size: 110%;
+  border-radius: 4px;
+  /* margin: top/bottom | right/left */
+  margin: 10px 0px;
+  width: 85%;
+  background-position-x: right;
+  margin-right: 0;
+  margin-left: auto;
+}
+
+/* .about-left-sidebar { */
+/* grid-column: 1 / 2; */
+/* grid-row: 2 / 3; */
+/* border-radius: 4px; */
+/* } */
 
 .main-content {
   grid-column: 2 / 3;
   grid-row: 2 / 3;
-  background: rgb(242, 103, 34);
+  /* background: rgb(242, 103, 34); */
+  background-color: rgb(123, 124, 126);
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center; /*  this is causing an issue on some pages */
   justify-content: space-evenly;
-  border-radius: 4px;
 }
 
-.about-main-content {
+#about-main-content {
+  align-items: stretch;
+}
+
+.home-page-main-box, .classroom-main-box {
+  /* display: grid; */
+  /* grid-column: 2 / 3; */
+  align-items: center;
+  background: lemonchiffon;
+  border-radius: 6px;
+  border: 2px solid black;
+  box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.4);
+  /* color:whitesmoke; */
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1em;
+  font-weight: bold;
+  margin-block-end: 0px;
+  margin-block-start: 0px;
+  margin-inline-end: 0px;
+  margin-inline-start: 0px;
+  margin: 20px auto;
+  padding: 20px 10px 20px 10px;
+  text-align: center;
+  text-shadow: 3px 3px 1px rgba(0, 0, 0, 0.3);
+  width: 90%;
+}
+
+.add-new-classroom-title {
+  font-size: 1.25em;
+  font-weight: bold;
+  margin: 0;
+  margin-bottom: 5px;
+}
+
+.add-a-new-classroom-box {
+  align-items: center;
+  background-image: url(https://images.template.net/wp-content/uploads/2016/02/03065942/Free-chalkboard-green.jpg);
+  border: 2px solid black;
+  border-radius: 6px;
+  box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.4);
+  color: whitesmoke;
+  display: grid;
   grid-column: 2 / 3;
-  grid-row: 2 / 3;
-  background-color: lemonchiffon;
-  background: rgb(123, 124, 126);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-  border-radius: 4px;
-  /* background-image: url(https://cdn.pixabay.com/photo/2016/01/22/05/45/texture-1155341__340.jpg); */
-  /* background-size: 100%; */
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1em;
+  font-weight: bold;
+  margin-block-end: 0px;
+  margin-block-start: 0px;
+  margin-inline-end: 0px;
+  margin-inline-start: 0px;
+  margin: 20px auto;
+  padding: 20px 10px 20px 10px;
+  text-align: center;
+  text-shadow: 3px 3px 1px rgba(0, 0, 0, 0.3);
+  width: 60%;
 }
 
-.classroom-list,
+.new-classroom-form {
+  color: lemonchiffon;
+  text-align: center;
+  margin: auto;
+  text-shadow: 3px 3px 1px rgba(0, 0, 0, 0.3);
+}
+
+.new-classroom-form .form-element {
+  text-align: center;
+  align-items: center;
+}
+
+.new-classroom-form-button {
+  margin-right: auto;
+  margin-left: auto;
+  background-color: lemonchiffon;
+  text-shadow: 3px 3px 1px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+
 #usrform,
-.page-title,
 .student-list,
 .room-info,
 .student-info,
@@ -187,7 +338,35 @@ li a:hover {
   padding: 20px 20px 20px 20px;
   border-radius: 4px;
   border: 5px solid black;
-  box-shadow: 15px 15px 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 15px 15px 2px rgba(0, 0, 0, 0.2);
+}
+
+.about-page-title,
+.page-title {
+  /* padding: top | right | bottom | left; */
+  background: rgb(196, 235, 253);
+  border: 2px solid black;
+  border-radius: 6px;
+  box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.4);
+  color: rgb(9, 73, 198);
+  display: grid;
+  grid-column: 2 / 3;
+  font-family: pencilpete_fontregular, Arial, Helvetica, sans-serif;
+  font-size: 3.5em;
+  font-weight: bold;
+  margin-block-end: 0px;
+  margin-block-start: 0px;
+  margin-inline-end: 0px;
+  margin-inline-start: 0px;
+  margin: 20px auto;
+  padding: 20px 10px 20px 10px;
+  text-align: center;
+  text-shadow: 3px 3px 1px rgba(0, 0, 0, 0.3);
+  width: 90%;
+}
+
+#about-page-title {
+  width: 100%;
 }
 
 .room-info li {
@@ -205,83 +384,13 @@ li a:hover {
   font-weight: normal;
 }
 
-.page-title {
-  font-size: 2em;
-  padding: 20px 20px 20px 20px;
-  width: 450px;
-  text-align: center;
-}
-
-.about-page-title {
-  /* background-image: url(https://cdn.pixabay.com/photo/2016/04/19/01/02/green-1337813_960_720.jpg); */
-  background: rgb(196, 235, 253);
-  border: 2px solid black;
-  box-shadow: 10px 10px 3px rgba(0, 0, 0, 0.3);
-  color: rgb(9, 73, 198);
-  font-family: pencilpete_fontregular, Arial, Helvetica, sans-serif;
-  font-size: 3.5em;
-  font-weight: bold;
-  margin-block-end: 20px;
-  margin-block-start: 20px;
-  margin-inline-end: 0px;
-  margin-inline-start: 0px;
-  /* padding: top | right | bottom | left; */
-  padding: 20px 20px 20px 20px;
-  text-align: center;
-  text-shadow: 3px 3px 1px rgba(0, 0, 0, 0.3);
-}
-
-.right-sidebar {
-  grid-column: 3 / 4;
-  grid-row: 2 / 3;
-  background: rgb(218, 35, 104);
-  border-radius: 4px;
-}
-
-.about-right-sidebar {
-  grid-column: 3 / 4;
-  grid-row: 2 / 3;
-  background-image: url(https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX8426859.jpg);
-  background-size: 300px;
-
-  border-radius: 4px;
-}
-
-footer {
-  padding: 10px 20px;
-  grid-column: 1 / 4;
-  grid-row: 3 / 4;
-  background: rgb(66, 159, 216);
-  text-align: center;
-  border-radius: 4px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-evenly;
-}
-
-.footer-spacer,
-.header-spacer {
-  width: 225px;
-}
-
-.about-container {
-  height: calc(100vh - 10px);
-  display: grid;
-  grid-template-columns: 0.5fr 2fr 0.5fr;
-  grid-template-rows: 0.5fr 8fr 0.5fr;
-  gap: 10px;
-  border: 5px;
-  padding: 10px;
-}
-
 .about-profile-box {
   display: flex;
   flex-direction: column;
   border: 1px solid black;
   border-radius: 6px;
   margin: 15px;
-  box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.4);
+  box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.4);
   /* background-image: url(https://cdn.pixabay.com/photo/2016/04/19/01/02/green-1337813_960_720.jpg); */
   background: lemonchiffon;
 }
@@ -299,7 +408,7 @@ footer {
 
 .about-headshot.box {
   align-items: center;
-  box-shadow: 5px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.2);
   margin-bottom: 5px;
   margin: 10px;
 }
@@ -322,7 +431,7 @@ footer {
   border-bottom: 2px solid rgb(9, 73, 198);
   font-size: 2em;
   /* font-weight: bold;  */
-  color: white;
+  /* color: white; */
   color: rgb(9, 73, 198);
   /* text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.3); */
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
@@ -389,4 +498,29 @@ footer {
 
 .about-links-box a {
   padding: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  padding: 10px 0px;
+}
+
+form input {
+  margin: 5px 0px;
+}
+
+form input[type="submit"] {
+  max-width: 150px;
+  padding: 10px;
+}
+
+#roll-student {
+  opacity: 1;
+  -webkit-transition: opacity 1000ms linear;
+  transition: opacity 1000ms linear;
+}
+#roll-student {
+  font-size: 18px;
 }

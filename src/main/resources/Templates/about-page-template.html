@@ -6,20 +6,17 @@
     <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" a href="./css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
     <title>Teacher Tools - The Developers</title>
 </head>
 
 <body>
-    <div class="about-container">
-
-        <header th:insert="general.html :: header" id="header"></header>
-        <div class="about-left-sidebar">
-            <p>1</p>
-        </div>
-        <main class="about-main-content">
+    <header th:insert="general.html :: header" id="header"></header>
+    <div class="container" id="about-container">
+        <div class="left-sidebar"></div>
+        <main class="main-content" id="about-main-content" >
             <div>
-                <p class="about-page-title">The Development Team</p>
+                <p class="page-title" id="about-page-title">The Development Team</p>
             </div>
             <section class="about-profile-boxes">
 
@@ -354,12 +351,10 @@
                     </div>
                 </div>
             </section>
-
         </main>
-        <div class="about-right-sidebar"></div>
-
-        <footer th:insert="general.html :: footer"></footer>
+        <div class="right-sidebar"></div>
     </div>
+    <footer th:insert="general.html :: footer"></footer>
 </body>
 
 </html>
