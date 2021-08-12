@@ -19,7 +19,7 @@ public class Classroom {
     private int year;
     private String semester;
 
-    @OneToMany(mappedBy = "classroom")
+    @OneToMany(mappedBy = "classroom", cascade = CascadeType.ALL)
     @JsonIgnore
     private Collection<Assignment> assignments;
 

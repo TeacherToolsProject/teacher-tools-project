@@ -63,6 +63,12 @@
             <input type="submit" value="Add Student" class="single-classroom-page-add-new-student-to-class-button">
           </form>
         </section>
+        <form th:action="'/classroom/deleteClassroom/'+${individualClassroom.id}" method="POST">
+         <button type="submit" class="button">Delete Classroom</button>  
+          </select>
+        </form>
+
+
       </section>
     </main>
     <div class="right-sidebar"></div>

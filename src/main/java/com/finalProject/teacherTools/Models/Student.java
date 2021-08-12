@@ -31,7 +31,7 @@ public class Student {
     @JsonIgnore
     private Collection<Assignment> assignments;
 
-    @ManyToMany(mappedBy = "students")
+    @ManyToMany(mappedBy = "students", cascade = CascadeType.ALL)
     @JsonIgnore
     private Collection<Grade> grades;
 
