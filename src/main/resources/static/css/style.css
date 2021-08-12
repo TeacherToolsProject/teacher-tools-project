@@ -268,7 +268,7 @@ li a:hover {
 
 .home-page-add-new-classroom-title,
 .single-classroom-page-add-new-assignment-title,
-.single-classroom-page-add-new-student-to-class-title {
+.single-classroom-page-add-new-student-to-class-title, .students-page-add-a-student-title {
   font-size: 1.25em;
   font-weight: bold;
   margin: 0;
@@ -277,7 +277,7 @@ li a:hover {
 
 .home-page-add-a-new-classroom-box,
 .single-classroom-page-add-new-assignment-box,
-.single-classroom-page-add-new-student-to-class-box {
+.single-classroom-page-add-new-student-to-class-box, .students-page-add-a-student-box {
   align-items: center;
   background-image: url(..//images/Free-chalkboard-green.jpg);
   border: 2px solid black;
@@ -302,7 +302,7 @@ li a:hover {
 
 .home-page-new-classroom-form,
 .single-classroom-page-add-new-assignment-form,
-.single-classroom-page-add-new-student-to-class-form {
+.single-classroom-page-add-new-student-to-class-form, .students-page-add-a-student-form {
   color: lemonchiffon;
   text-align: center;
   margin: auto;
@@ -312,11 +312,13 @@ li a:hover {
 .form-element {
   text-align: center;
   align-items: center;
+  border-radius: 4px;
+  box-shadow: 3px 3px 1px rgba(0, 0, 0, 0.3);
 }
 
 .home-page-new-classroom-form-button,
 .single-classroom-page-add-new-student-to-class-button,
-.single-classroom-page-add-new-assignment-button {
+.single-classroom-page-add-new-assignment-button, .students-page-add-a-student-button {
   margin-right: auto;
   margin-left: auto;
   background-color: lemonchiffon;
