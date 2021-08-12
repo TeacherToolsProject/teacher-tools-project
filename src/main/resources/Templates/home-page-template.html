@@ -17,44 +17,51 @@
 
         <main class="main-content">
             <p class="page-title">Welcome To Teacher Tools</p>
-            <section class="classroom-list-box">
-            <p class="classroom-list-title">Your Classrooms:</p>
-            <ul class="classroom-list" th:each="classroom:${classrooms}">
-                <li><a class="classroom-items" th:href="@{/classroom(id=${classroom.id})}"
-                        th:text="${classroom.subject}"></a></li>
-            </ul>
-        </section>
-            <div class="add-classroom">
-                <h3>Add a new Classroom:</h3>
-                <form th:action="'/add-classroom'" class="new-classroom-form" method="post">
-                    <label for="subject">Subject: </label><input id="subject" class="form-element" type="text" name="subject"
-                        required>
-                    <label for="gradeLevel">Grade Level: </label><input id="gradeLevel" class="form-element" type="number"
-                        name="gradeLevel" step="1" required>
-                    <label for="room">Room: </label><input id="room" class="form-element" type="text" name="room" required>
-                    <label for="time">Time: </label><input id="time" class="form-element" type="text" name="time" required>
-                    <label for="year">Year: </label><input id="year" class="form-element" type="number" name="year" min="2000"
-                        max="2100" step="1" required>
-                    <label for="semester">Semester: </label><input id="semester" class="form-element" type="text"
-                        name="semester" required>
-                    <input type="submit" value="Add new Classroom">
-                </form>
-            </div>
-               
-       
-       
-       
+
+            <section class="home-page-main-box">
+
+                <section class="classroom-list-box">
+            
+                    <p class="classroom-list-title">Your Classrooms:</p>
+                    <ul class="classroom-list" th:each="classroom:${classrooms}">
+                        <li><a class="classroom-items" th:href="@{/classroom(id=${classroom.id})}"
+                                th:text="${classroom.subject}"></a></li>
+                    </ul>
+            
+                </section>
+
+                <section class="add-a-new-classroom-box">
+
+                    <div class="add-classroom">
+                        <h3>Add a new Classroom:</h3>
+                        <form th:action="'/add-classroom'" class="new-classroom-form" method="post">
+                            <label for="subject">Subject: </label><input id="subject" class="form-element" type="text"
+                                name="subject" required>
+                            <label for="gradeLevel">Grade Level: </label><input id="gradeLevel" class="form-element"
+                                type="number" name="gradeLevel" step="1" required>
+                            <label for="room">Room: </label><input id="room" class="form-element" type="text"
+                                name="room" required>
+                            <label for="time">Time: </label><input id="time" class="form-element" type="text"
+                                name="time" required>
+                            <label for="year">Year: </label><input id="year" class="form-element" type="number"
+                                name="year" min="2000" max="2100" step="1" required>
+                            <label for="semester">Semester: </label><input id="semester" class="form-element"
+                                type="text" name="semester" required>
+                            <input type="submit" class="new-classroom-form-button" value="Add new Classroom">
+                        </form>
+                    </div>
+
+                </section>
+
+            </section>
+
         </main>
 
         <div class="right-sidebar"></div>
 
-
     </div>
-
-
     <footer th:insert="general.html :: footer"></footer>
 
-    <!--<script src="/js/addClassroomForm.js" type="module"></script>-->
 </body>
 
 </html>
