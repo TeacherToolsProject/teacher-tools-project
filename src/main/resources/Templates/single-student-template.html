@@ -17,7 +17,8 @@
         <div class="student-information">
             <p class="page-title">Student Information:</p>
             <h2 th:text="${individualStudent.name}"></h2>
-            <img th:src="${individualStudent.studentImage}" th:alt="${'Photo of ' + individualStudent.name}" width="200px">
+            <img th:src="${individualStudent.studentImage}" th:alt="${'Photo of ' + individualStudent.name}"
+                 width="200px">
             <ul class="student-details">
                 <h4>Guardian Information:</h4>
                 <li th:text="${individualStudent.guardianName}"></li>
@@ -26,7 +27,8 @@
                 <h4>Student's Birthday:</h4>
                 <li th:text="${individualStudent.birthdayMonth + '/' + individualStudent.birthdayDay + '/' + individualStudent.birthdayYear}"></li>
                 <h4>Student's Classes:</h4>
-                <li th:each="classroom: ${individualStudent.classrooms}"><a th:href="@{/classroom(id=${classroom.id})}" th:text="${classroom.subject}"></a></li>
+                <li th:each="classroom: ${individualStudent.classrooms}"><a th:href="@{/classroom(id=${classroom.id})}"
+                                                                            th:text="${classroom.subject}"></a></li>
             </ul>
         </div>
         <div class="student-grades">
@@ -39,7 +41,8 @@
                     <button type="submit" class="button">Delete Grade</button>
                 </form>
             </ul>
-            <h4 class="total-grade" th:text="${'Overall Grade Average: ' + individualStudent.calculateTotalGrade() + '%'}"></h4>
+            <h4 class="total-grade"
+                th:text="${'Overall Grade Average: ' + individualStudent.calculateTotalGrade() + '%'}"></h4>
         </div>
         <div class="student-notes">
             <ul class="note-list" th:each="note:${individualStudent.notes}">
@@ -55,15 +58,14 @@
         <div class="student-note-form">
             <h2>Leave a Note for this Student: </h2>
             <form th:action="'/student/'+${individualStudent.id}" id="student-note" method="post">
-            <label for="title">Title: </label> <input id="title" type="text" name="title">
-            <label for="date">Date: </label> <input id="date" type="text" name="date">
-            <textarea rows="4" cols="50" name="note" form="student-note">
-            </textarea>
-            <input type="submit" value="Add Note">
+                <label for="title">Title: </label> <input id="title" type="text" name="title" required>
+                <label for="date">Date: </label> <input id="date" type="date" name="date" required>
+                <textarea rows="4" cols="50" name="note" form="student-note" required></textarea>
+                <input type="submit" value="Add Note">
             </form>
-                <!-- <textarea rows="4" cols="50" name="noteToAdd" form="usrform">
-                </textarea> -->
-                
+            <!-- <textarea rows="4" cols="50" name="noteToAdd" form="usrform">
+            </textarea> -->
+
         </div>
     </main>
     <div class="right-sidebar"></div>
