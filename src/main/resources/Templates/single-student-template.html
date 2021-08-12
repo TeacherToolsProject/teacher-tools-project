@@ -34,6 +34,10 @@
             <ul class="grade-list" th:each="grade:${individualStudent.grades}">
                 <li th:text="${'Assignment Name: ' + grade.assignment.name}"></li>
                 <li th:text="${'Grade: ' + grade.grade + '/' + grade.maximumGrade}"></li>
+                <form th:action="'/student/deletegrade/'+${individualStudent.id}" th:method="post">
+                    <input type="hidden" name="gradeId" th:value="${grade.id}">
+                    <button type="submit" class="button">Delete Grade</button>
+                </form>
             </ul>
             <h4 class="total-grade" th:text="${'Overall Grade Average: ' + individualStudent.calculateTotalGrade() + '%'}"></h4>
         </div>

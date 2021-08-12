@@ -117,6 +117,10 @@ public class Student {
        notes.remove(note);
     }
 
+    public void removeGrade(Grade grade){
+        grades.remove(grade);
+    }
+
    public double calculateTotalGrade(){
         double studentGrade = 0;
         double maximumStudentGrade = 0;

@@ -1,22 +1,17 @@
 package com.finalProject.teacherTools.Controllers;
 
+import com.finalProject.teacherTools.Models.Grade;
 import com.finalProject.teacherTools.Models.Note;
 import com.finalProject.teacherTools.Models.Student;
-
 import com.finalProject.teacherTools.Repos.AssignmentRepo;
-
+import com.finalProject.teacherTools.Repos.GradeRepo;
 import com.finalProject.teacherTools.Repos.NoteRepo;
-
 import com.finalProject.teacherTools.Repos.StudentRepo;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
@@ -24,11 +19,13 @@ public class StudentController {
     private StudentRepo studentRepo;
     private AssignmentRepo assignmentRepo;
     private NoteRepo noteRepo;
+    private GradeRepo gradeRepo;
 
-    public StudentController(StudentRepo studentRepo, AssignmentRepo assignmentRepo, NoteRepo noteRepo) {
+    public StudentController(StudentRepo studentRepo, AssignmentRepo assignmentRepo, NoteRepo noteRepo, GradeRepo gradeRepo) {
         this.studentRepo = studentRepo;
         this.assignmentRepo = assignmentRepo;
         this.noteRepo = noteRepo;
+        this.gradeRepo = gradeRepo;
    
     }
    
@@ -70,10 +67,18 @@ public class StudentController {
         noteRepo.deleteById(noteId);
         studentRepo.save(studentToChange);
 
-        //model.addAttribute("individualStudent", noteToDelete);
-        
-
         return "redirect:/student" + "?id=" +studentToChange.getId();
+    }
+
+    @PostMapping("/student/deletegrade/{id}")
+    public String deleteStudentGrade(@PathVariable("id") Long id, Long gradeId){
+        Student studentGradeToDelete = studentRepo.findById(id).get();
+        Grade gradeToDelete = gradeRepo.findById(gradeId).get();
+        studentGradeToDelete.removeGrade(gradeToDelete);
+        gradeRepo.deleteById(gradeId);
+        studentRepo.save(studentGradeToDelete);
+
+        return "redirect:/student" + "?id=" + studentGradeToDelete.getId();
     }
 
     @PostMapping("/students/add")
