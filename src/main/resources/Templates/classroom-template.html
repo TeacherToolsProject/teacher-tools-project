@@ -17,7 +17,7 @@
     <main class="main-content">
       <p class="page-title" th:text="${individualClassroom.subject}"></p>
       <section class="classroom-main-box">
-        <h2><a th:each="rollCall:${individualClassroom}" th:href="@{/classroom/roll-call(id=${rollCall.id})}">Take Roll
+        <h2><a class="single-classroom-page-take-roll-call-button" th:each="rollCall:${individualClassroom}" th:href="@{/classroom/roll-call(id=${rollCall.id})}">Take Roll
             Call</a></h2>
         <section class="single-classroom-page-section-box">
           <p class="single-classroom-page-section-title">Student List:</p>
@@ -36,31 +36,31 @@
         </section>
         <section class="single-classroom-page-add-new-assignment-box">
           <p class="single-classroom-page-add-new-assignment-title">Add New Assignment:</p>
-          <form action="/classroom/newAssignment" method="POST">
-            <input type="hidden" name="classroomId" th:value="${individualClassroom.id}">
+          <form action="/classroom/newAssignment" class="single-classroom-page-add-new-assignment-form" method="POST">
+            <input type="hidden" name="classroomId" class="form-element" th:value="${individualClassroom.id}">
             <label for="name">Assignment Name: </label>
-            <input type="text" id="name" name="name" required>
+            <input type="text" id="name" name="name" class="form-element" required>
             <label for="description">Description: </label>
-            <input type="text" id="description" name="description" required><br><br>
+            <input type="text" id="description" name="description" class="form-element" required>
             <label for="assignedDate">Date of Assignment: </label>
-            <input type="date" id="assignedDate" name="assignedDate" required>
+            <input type="date" id="assignedDate" name="assignedDate" class="form-element" required>
             <label for="dueDate">Assignment Due Date: </label>
-            <input type="date" id="dueDate" name="dueDate" required><br><br>
-            <label for="pointsValue">Points Value: </label><br>
-            <input type="number" id="pointsValue" name="pointsValue" min="1" step="1" required>
-            <input type="submit" value="Submit Assignment">
+            <input type="date" id="dueDate" name="dueDate" class="form-element" required>
+            <label for="pointsValue">Points Value: </label>
+            <input type="number" id="pointsValue" name="pointsValue" min="1" step="1" class="form-element" required>
+            <input type="submit" value="Submit Assignment" class="single-classroom-page-add-new-assignment-button">
 
           </form>
         </section>
         <section class="single-classroom-page-add-new-student-to-class-box">
           <p class="single-classroom-page-add-new-student-to-class-title">Add Student To This Class:</p>
-          <form th:action="'/classroom/addStudent/?id='+${individualClassroom.id}" method="POST">
+          <form th:action="'/classroom/addStudent/?id='+${individualClassroom.id}" class="single-classroom-page-add-new-student-to-class-form" method="POST">
             <label for="student">Available Students: </label><select id="student" name="student">
-              <option th:each="student:${allStudents}" th:value="${student.id}" name="student"
+              <option th:each="student:${allStudents}" th:value="${student.id}" name="student" class="form-element"
                 th:text="${student.name}">
               </option>
             </select>
-            <input type="submit" value="Add Student">
+            <input type="submit" value="Add Student" class="single-classroom-page-add-new-student-to-class-button">
           </form>
         </section>
       </section>

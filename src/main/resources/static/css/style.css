@@ -281,7 +281,6 @@ li a:hover {
   font-weight: bold;
   margin: 0;
   margin-bottom: 5px;
-  background-color: hotpink;
 }
 
 .home-page-add-a-new-classroom-box, .single-classroom-page-add-new-assignment-box, .single-classroom-page-add-new-student-to-class-box {
@@ -309,25 +308,38 @@ li a:hover {
   width: 60%;
 }
 
-.new-classroom-form {
+.home-page-new-classroom-form, .single-classroom-page-add-new-assignment-form, .single-classroom-page-add-new-student-to-class-form {
   color: lemonchiffon;
   text-align: center;
   margin: auto;
   text-shadow: 3px 3px 1px rgba(0, 0, 0, 0.3);
 }
 
-.new-classroom-form .form-element {
+.form-element {
   text-align: center;
   align-items: center;
 }
 
-.new-classroom-form-button {
+.home-page-new-classroom-form-button, .single-classroom-page-add-new-student-to-class-button, .single-classroom-page-add-new-assignment-button {
   margin-right: auto;
   margin-left: auto;
   background-color: lemonchiffon;
   text-shadow: 3px 3px 1px rgba(0, 0, 0, 0.1);
   border-radius: 4px;
+  box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.4);
 }
+
+.single-classroom-page-take-roll-call-button {
+  border: 2px solid black;
+  margin: 5px auto;
+  background-color: lemonchiffon;
+  text-shadow: 3px 3px 1px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.4);
+  padding: 15px;
+  background: rgb(196, 235, 253);
+}
+
 
 #usrform,
 .student-list,

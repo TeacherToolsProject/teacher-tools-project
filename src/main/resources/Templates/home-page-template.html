@@ -34,7 +34,7 @@
 
                     <div class="add-classroom">
                         <p class="home-page-add-new-classroom-title">Add A New Classroom:</p>
-                        <form th:action="'/add-classroom'" class="new-classroom-form" method="post">
+                        <form th:action="'/add-classroom'" class="home-page-new-classroom-form" method="post">
                             <label for="subject">Subject: </label><input id="subject" class="form-element" type="text"
                                 name="subject" required>
                             <label for="gradeLevel">Grade Level: </label><input id="gradeLevel" class="form-element"
@@ -47,7 +47,7 @@
                                 name="year" min="2000" max="2100" step="1" required>
                             <label for="semester">Semester: </label><input id="semester" class="form-element"
                                 type="text" name="semester" required>
-                            <input type="submit" class="new-classroom-form-button" value="Add new Classroom">
+                            <input type="submit" class="home-page-new-classroom-form-button" value="Add new Classroom">
                         </form>
                     </div>
 
