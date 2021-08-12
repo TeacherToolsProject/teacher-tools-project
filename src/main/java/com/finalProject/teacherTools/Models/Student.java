@@ -114,7 +114,7 @@ public class Student {
     }
 
     public void removeNote(Note note) {
-        notes.remove(note);
+       notes.remove(note);
     }
 
    public double calculateTotalGrade(){

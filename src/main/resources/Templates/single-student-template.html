@@ -40,7 +40,8 @@
                 <li th:text="${'Note Title: ' + note.title}"></li>
                 <li th:text="${'Note Date: ' + note.noteDate}"></li>
                 <li th:text="${'Note: ' + note.note}"></li>
-                <form th:action="@{'/student/delete/{id}' (id=${note.id})}" th:method="delete">
+                <form th:action="'/student/deletenote/'+${individualStudent.id}" th:method="post">
+                    <input type="hidden" name="noteId" th:value="${note.id}">
                     <button type="submit" class="button">Delete Note</button>
                 </form>
             </ul>

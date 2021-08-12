@@ -62,23 +62,18 @@ public class StudentController {
         return "single-student-template";
         }
 
-    @PostMapping("/student/{id}/note")
-    public String deleteStudentNote(@PathVariable("id") Long id, Model model) {
+    @PostMapping("/student/deletenote/{id}")
+    public String deleteStudentNote(@PathVariable("id") Long id, Long noteId) {
         Student studentToChange = studentRepo.findById(id).get();
-        Note noteToDelete = noteRepo.findById(id).get();
+        Note noteToDelete = noteRepo.findById(noteId).get();
         studentToChange.removeNote(noteToDelete);
-        noteRepo.deleteById(id);
+        noteRepo.deleteById(noteId);
         studentRepo.save(studentToChange);
 
-        model.addAttribute("individualStudent", noteToDelete);
+        //model.addAttribute("individualStudent", noteToDelete);
         
 
-        return "single-student-template";
+        return "redirect:/student" + "?id=" +studentToChange.getId();
     }
 
-    // @RequestMapping(value="/students/delete/{id}", method = RequestMethod.DELETE)
-    // public String deleteNote(@PathVariable Long id) {
-    //     noteRepo.deleteById(id);
-    //     return "single-student-template";
-    // }
 }
