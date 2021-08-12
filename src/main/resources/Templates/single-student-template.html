@@ -27,39 +27,40 @@
                     <div>
                         <div class="single-student-page-text-pic">
                             <!-- <div class="single-student-page-headshot-box"> -->
-                                <img class="single-student-page-headshot" th:src="${individualStudent.studentImage}"
-                                    th:alt="${'Photo of ' + individualStudent.name}" height="200px" width="200px">
+                            <img class="single-student-page-headshot" th:src="${individualStudent.studentImage}"
+                                th:alt="${'Photo of ' + individualStudent.name}" height="200px" width="200px">
                             <!-- </div> -->
                             <div class="single-student-page-text-and-details">
                                 <div class="single-student-page-profile-text">
-
-
-
-                                    <ul >
+                                    <ul>
                                         <p class="single-student-page-guardian-info-title">Guardian Information</p>
                                         <li th:text="${individualStudent.guardianName}"></li>
                                         <li th:text="${individualStudent.guardianPhone}"></li>
                                         <li th:text="${individualStudent.guardianEmail}"></li>
-                                        <h4>Student's Birthday:</h4>
+                                        <p class="single-student-page-student-b-day-title">Student's Birthday:</p>
                                         <li
                                             th:text="${individualStudent.birthdayMonth + '/' + individualStudent.birthdayDay + '/' + individualStudent.birthdayYear}">
                                         </li>
-                                        <h4>Student's Classes:</h4>
-                                        <li th:each="classroom: ${individualStudent.classrooms}"><a
-                                                th:href="@{/classroom(id=${classroom.id})}"
-                                                th:text="${classroom.subject}"></a>
-                                        </li>
                                     </ul>
-
                                 </div>
                             </div>
 
                         </div>
-
                     </div>
+
+
+
+
+
 
                 </div>
 
+                <ul>
+                    <p class="single-student-page-student-classes-title">Student's Classes:</p>
+                    <li th:each="classroom: ${individualStudent.classrooms}"><a
+                            th:href="@{/classroom(id=${classroom.id})}" th:text="${classroom.subject}"></a>
+                    </li>
+                </ul>
 
             </section>
 
@@ -88,10 +89,11 @@
                 </ul>
             </div>
             <div class="student-note-form">
-                <h2>Leave a Note for this Student: </h2>
+                <h2>Notes About This Student</h2>
                 <form th:action="'/student/'+${individualStudent.id}" id="student-note" method="post">
                     <label for="title">Title: </label> <input id="title" type="text" name="title" required>
                     <label for="date">Date: </label> <input id="date" type="date" name="date" required>
+                    <p>Note:</p>
                     <textarea rows="4" cols="50" name="note" form="student-note" required></textarea>
                     <input type="submit" value="Add Note">
                 </form>

@@ -268,7 +268,11 @@ li a:hover {
 
 .home-page-add-new-classroom-title,
 .single-classroom-page-add-new-assignment-title,
-.single-classroom-page-add-new-student-to-class-title, .students-page-add-a-student-title, .single-student-page-guardian-info-title {
+.single-classroom-page-add-new-student-to-class-title, 
+.students-page-add-a-student-title, 
+.single-student-page-guardian-info-title,
+.single-student-page-student-b-day-title,
+.single-student-page-student-classes-title {
   font-size: 1.25em;
   font-weight: bold;
   margin: 0;
