@@ -20,11 +20,11 @@
 
             <section class="home-page-main-box">
 
-                <section class="classroom-list-box">
+                <section class="home-page-classroom-list-box">
             
-                    <p class="classroom-list-title">Your Classrooms:</p>
-                    <ul class="classroom-list" th:each="classroom:${classrooms}">
-                        <li><a class="classroom-items" th:href="@{/classroom(id=${classroom.id})}"
+                    <p class="home-page-classroom-list-title">Your Classrooms:</p>
+                    <ul class="home-page-classroom-list" th:each="classroom:${classrooms}">
+                        <li><a class="home-page-classroom-items" th:href="@{/classroom(id=${classroom.id})}"
                                 th:text="${classroom.subject}"></a></li>
                     </ul>
             
