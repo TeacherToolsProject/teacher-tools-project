@@ -7,7 +7,6 @@
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="/css/style.css">
-    <link href="./static/css/style.css" rel="stylesheet">
     <title>Teacher Tools - Home</title>
 </head>
 
@@ -16,13 +15,15 @@
     <div class="container">
         <div class="left-sidebar"></div>
 
-        <main class="main-content">
+        <main class="main-content" id="main-content-home" >
             <p class="page-title">Welcome To Teacher Tools</p>
-            <h2>Your Classrooms:</h2>
+            <section class="classroom-list-box">
+            <p class="classroom-list-title">Your Classrooms:</p>
             <ul class="classroom-list" th:each="classroom:${classrooms}">
                 <li><a class="classroom-items" th:href="@{/classroom(id=${classroom.id})}"
                         th:text="${classroom.subject}"></a></li>
             </ul>
+        </section>
             <div class="add-classroom">
                 <h3>Add a new Classroom:</h3>
                 <form th:action="'/add-classroom'" class="new-classroom-form" method="post">
