@@ -17,7 +17,7 @@
         <div class="student-information">
             <p class="page-title">Student Information:</p>
             <h2 th:text="${individualStudent.name}"></h2>
-            <img th:src="${individualStudent.studentImage}" th:alt="${'Photo of ' + individualStudent.name}">
+            <img th:src="${individualStudent.studentImage}" th:alt="${'Photo of ' + individualStudent.name}" width="200px">
             <ul class="student-details">
                 <h4>Guardian Information:</h4>
                 <li th:text="${individualStudent.guardianName}"></li>
