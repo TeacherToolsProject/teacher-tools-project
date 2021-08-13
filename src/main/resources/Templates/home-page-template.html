@@ -26,7 +26,6 @@
 
                     <p class="home-page-classroom-list-title">Your Classrooms:</p>
                     <ul class="home-page-classroom-list" th:each="classroom:${classrooms}">
-                        <!-- <li><a class="home-page-classroom-items" th:href="@{/classroom(id=${classroom.id})}" -->
                         <li><a th:href="@{/classroom(id=${classroom.id})}" th:text="${classroom.subject}"></a></li>
                     </ul>
 
