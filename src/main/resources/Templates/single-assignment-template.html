@@ -51,9 +51,9 @@
           </h4>
 
         </section>
+        <p class="single-assignment-page-list-title-normal">Add New Grade:</p>
 
-        <div>
-          <h4>Add New Grade:</h4>
+        <section class="single-assignment-page-list-box">
           <form th:action="'/assignment/' + ${individualAssignment.id}" id="assignment-grade" method="POST">
             <label for="grade">Grade: </label><input id="grade" type="number" name="grade" min="0" step="1" required />
             <label for="maximumGrade">Maximum Grade: </label><input id="maximumGrade"
@@ -65,7 +65,7 @@
             </select>
             <input type="submit" value="Add Grade" />
           </form>
-        </div>
+        </section>
       </section>
     </main>
     <div class="right-sidebar"></div>
