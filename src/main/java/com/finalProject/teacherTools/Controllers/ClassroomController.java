@@ -72,12 +72,13 @@ public class ClassroomController {
     public String addExistingStudent(@RequestParam("id") Long id, Long student, Model model) {
         Classroom classroom = classroomRepo.findById(id).get();
         model.addAttribute("individualStudents", studentRepo.findAllByClassrooms(classroom));
-        Iterable<Assignment> allAssignments = assignmentRepo.findAll();
+        Iterable<Assignment> allAssignments = classroom.getAssignments();
         Student studentToAdd = studentRepo.findById(student).get();
         classroom.addStudent(studentToAdd);
         classroomRepo.save(classroom);
-
+        
         for(Assignment assignment: allAssignments){
+            if(!assignment.getStudents().contains(studentToAdd))
             assignment.addStudent(studentToAdd);
             assignmentRepo.save(assignment);
         }

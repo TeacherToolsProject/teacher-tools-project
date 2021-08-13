@@ -89,6 +89,10 @@ public class Assignment {
         grades.add(grade);
     }
 
+    public void deleteStudent(Student student){
+        students.remove(student);
+    }
+
     public double calculateAssignmentAverageGrade(){
         double studentGrades = 0;
         double totalGrades = grades.size();
