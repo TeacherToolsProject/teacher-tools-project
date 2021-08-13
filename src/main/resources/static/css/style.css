@@ -689,6 +689,10 @@ form input {
   margin: 5px 0px;
 }
 
+form input:hover{
+  cursor:pointer;
+}
+
 form input[type="submit"] {
   max-width: 150px;
   padding: 10px;
