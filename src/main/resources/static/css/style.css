@@ -131,6 +131,7 @@ li a:hover {
   font-weight: normal;
   margin: 0;
   padding: 10px 20px;
+  text-align: left;
 }
 
 
@@ -156,6 +157,7 @@ li a:hover {
 /* this must follow the section above */
 .single-assignment-page-list-box  {
   text-align: left;
+  padding-top: 10px;
 }
 
 .single-assignment-page-add-new-grade-student-and-grade {
@@ -330,19 +332,57 @@ font: normal 90% system-ui, sans-serif;
 .single-student-page-guardian-info-title,
 .single-student-page-student-b-day-title,
 .single-student-page-student-classes-title,
-.single-student-page-notes-add-a-note-about-this-student-title {
-  font-size: 1.25em;
+.single-student-page-notes-add-a-note-about-this-student-title,
+.single-assignment-page-assignment-details-title {
+ font-size: 1.25em;
   font-weight: bold;
   margin: 0;
   margin-bottom: 5px;
 }
 
-
-
-
+/* This must come after the section above */
 .single-student-page-student-b-day-title {
   margin-top: 15px;
 }
+
+/* This must come after the section above */
+.single-student-page-student-b-day-title {
+  margin-top: 15px;
+}
+
+.single-assignment-page-assignment-details-title {
+  color: lemonchiffon;
+}
+
+.single-assignment-page-assignment-details {
+  font-size: 1.25em;
+  font-weight: normal;
+  margin: 0;
+  margin-bottom: 5px;
+    /* padding: top | right | bottom | left; */
+    padding: 10px 10px 10px 0px;
+    overflow-wrap: break-word;
+    hyphens: auto;
+}
+
+.single-assignment-page-assignment-details li {
+  padding-top:10px;
+  padding-bottom: 10px;
+  }
+   
+  .single-assignment-page-assignment-details li a {
+    font-size: 1.25em;
+    font-weight: normal;
+    margin: 0;
+      /* padding: top | right | bottom | left; */
+      padding: 0px 10px 0px 20px;
+    }
+
+    .single-assignment-page-assignment-details-students {
+      margin:0;
+      padding:0;
+      background-color: hotpink;
+    }
 
 
 .home-page-add-a-new-classroom-box,
