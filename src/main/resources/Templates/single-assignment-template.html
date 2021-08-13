@@ -58,6 +58,13 @@
           <form th:action="'/assignment/' + ${individualAssignment.id}" id="assignment-grade" method="POST">
 
             <div>
+              <label for="student">Student: </label><select id="student" name="student">
+                <option th:each="student:${individualAssignment.students}" th:value="${student.id}" name="student"
+                  th:text="${student.name}"></option>
+              </select>
+            </div>
+
+            <div>
               <label for="grade">Grade: </label><input id="grade" type="number" name="grade" min="0" step="1"
                 required />
             </div>
@@ -68,12 +75,6 @@
                 required />
             </div>
 
-            <div>
-              <label for="student">Student: </label><select id="student" name="student">
-                <option th:each="student:${individualAssignment.students}" th:value="${student.id}" name="student"
-                  th:text="${student.name}"></option>
-              </select>
-            </div>
 
             <input type="submit" value="Add Grade" />
 

@@ -160,6 +160,17 @@ li a:hover {
 }
 
 
+.single-assignment-page-list-box-add-a-new-grade form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  padding: 10px 0px;
+}
+
+.single-assignment-page-list-box-add-a-new-grade form #student {
+background-color: hotpink;
+}
+
 .single-student-page-student-grades {
   box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.4);
   border: 2px solid black;
