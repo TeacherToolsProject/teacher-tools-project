@@ -350,6 +350,10 @@ font: normal 90% system-ui, sans-serif;
   margin-top: 15px;
 }
 
+.single-assignment-page-assignment-details-title {
+  color: lemonchiffon;
+}
+
 .single-assignment-page-assignment-details {
   font-size: 1.25em;
   font-weight: normal;

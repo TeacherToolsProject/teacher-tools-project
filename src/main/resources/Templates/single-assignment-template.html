@@ -17,15 +17,13 @@
     <main class="main-content">
       <p class="page-title">Assignment Information</p>
       <section class="single-assignment-page-main-box">
-        <p class="single-assignment-page-assignment-details"
+        <p class="single-assignment-page-list-title-normal"
           th:text="'Class: '+${individualAssignment.classroom.subject}"></p>
 
-        <p class="single-assignment-page-list-title">Assignment Name:</p>
-        <p class="single-assignment-page-list-title-normal" th:text="${individualAssignment.name}"></p>
-
         <section class="single-assignment-page-list-box">
-
-          <!-- <p class="single-assignment-page-assignment-details" th:text="'Class: '+${individualAssignment.classroom.subject}"></p> -->
+          <p class="single-assignment-page-assignment-details-title">Assignment Name:</p>
+          <p class="single-assignment-page-assignment-details" th:text="${individualAssignment.name}"></p>
+  
           <ul class="single-assignment-page-assignment-details">
             <p class="single-assignment-page-assignment-details-title">Assignment Details:</p>
             <li th:text="${individualAssignment.description}"></li>
