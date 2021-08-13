@@ -15,42 +15,58 @@
   <div class="container">
     <div class="left-sidebar"></div>
     <main class="main-content">
-      <div class="assignment-information">
-        <p class="page-title">Assignment Information:</p>
-        <h2 th:text="${individualAssignment.name}"></h2>
-        <h3 th:text="${individualAssignment.classroom.subject}"></h3>
-        <ul class="assignment-details">
-          <h4>Assignment Details:</h4>
-          <li th:text="${individualAssignment.description}"></li>
-          <h4>Assignment Date:</h4>
-          <li th:text="${individualAssignment.assignedDate}"></li>
-          <h4>Due Date:</h4>
-          <li th:text="${individualAssignment.dueDate}"></li>
-          <h4>Total Points:</h4>
-          <li th:text="${individualAssignment.pointsValue}"></li>
-          <h4>Students Assigned:</h4>
-          <li th:each="student: ${individualAssignment.students}">
-            <a th:href="@{/student(id=${student.id})}" th:text="${student.name}"></a>
-          </li>
-        </ul>
-        <h4
-          th:text="${'The Average Grade For This Assignment Is: ' + individualAssignment.calculateAssignmentAverageGrade()}">
-        </h4>
-      </div>
 
-      <div>
-        <h4>Add New Grade:</h4>
-        <form th:action="'/assignment/' + ${individualAssignment.id}" id="assignment-grade" method="POST">
-          <label for="grade">Grade: </label><input id="grade" type="number" name="grade" min="0" step="1" required/>
-          <label for="maximumGrade">Maximum Grade: </label><input id="maximumGrade"
-            th:value="${individualAssignment.pointsValue}" type="number" name="maximumGrade" min="1" step="1" required/>
-          <label for="student">Student: </label><select id="student" name="student">
-            <option th:each="student:${individualAssignment.students}" th:value="${student.id}" name="student"
-              th:text="${student.name}"></option>
-          </select>
-          <input type="submit" value="Add Grade"/>
-        </form>
-      </div>
+      <p class="page-title">Assignment Information</p>
+
+      <section class="single-assignment-page-main-box">
+
+
+
+
+
+        <p class="single-assignment-page-list-title">Assignment Name:</p>
+        <p class="single-assignment-page-list-title-normal" th:text="${individualAssignment.name}"></p>
+
+        <section class="single-assignment-page-list-box">
+
+
+
+          <h3 th:text="'Class: '+${individualAssignment.classroom.subject}"></h3>
+          <ul class="assignment-details">
+            <h4>Assignment Details:</h4>
+            <li th:text="${individualAssignment.description}"></li>
+            <h4>Assignment Date:</h4>
+            <li th:text="${individualAssignment.assignedDate}"></li>
+            <h4>Due Date:</h4>
+            <li th:text="${individualAssignment.dueDate}"></li>
+            <h4>Total Points:</h4>
+            <li th:text="${individualAssignment.pointsValue}"></li>
+            <h4>Students Assigned:</h4>
+            <li th:each="student: ${individualAssignment.students}">
+              <a th:href="@{/student(id=${student.id})}" th:text="${student.name}"></a>
+            </li>
+          </ul>
+          <h4
+            th:text="${'The Average Grade For This Assignment Is: ' + individualAssignment.calculateAssignmentAverageGrade()}">
+          </h4>
+
+        </section>
+
+        <div>
+          <h4>Add New Grade:</h4>
+          <form th:action="'/assignment/' + ${individualAssignment.id}" id="assignment-grade" method="POST">
+            <label for="grade">Grade: </label><input id="grade" type="number" name="grade" min="0" step="1" required />
+            <label for="maximumGrade">Maximum Grade: </label><input id="maximumGrade"
+              th:value="${individualAssignment.pointsValue}" type="number" name="maximumGrade" min="1" step="1"
+              required />
+            <label for="student">Student: </label><select id="student" name="student">
+              <option th:each="student:${individualAssignment.students}" th:value="${student.id}" name="student"
+                th:text="${student.name}"></option>
+            </select>
+            <input type="submit" value="Add Grade" />
+          </form>
+        </div>
+      </section>
     </main>
     <div class="right-sidebar"></div>
 
