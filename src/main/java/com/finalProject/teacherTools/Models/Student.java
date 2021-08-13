@@ -121,6 +121,10 @@ public class Student {
         grades.remove(grade);
     }
 
+    public void deleteAssignment(Assignment assignment){
+        assignments.remove(assignment);
+    }
+
    public double calculateTotalGrade(){
         double studentGrade = 0;
         double maximumStudentGrade = 0;
