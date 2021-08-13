@@ -58,25 +58,26 @@
           <form th:action="'/assignment/' + ${individualAssignment.id}" id="assignment-grade" method="POST">
 
             <div>
-              <label for="student">Student: </label><select id="student" name="student">
-                <option th:each="student:${individualAssignment.students}" th:value="${student.id}" name="student"
-                  th:text="${student.name}"></option>
-              </select>
-            </div>
-
-            <div>
-              <label for="grade">Grade: </label><input id="grade" type="number" name="grade" min="0" step="1"
-                required />
-            </div>
-
-            <div>
               <label for="maximumGrade">Maximum Grade: </label><input id="maximumGrade"
                 th:value="${individualAssignment.pointsValue}" type="number" name="maximumGrade" min="1" step="1"
                 required />
             </div>
+            <div class="single-assignment-page-add-new-grade-student-and-grade">
+              <!-- <div> -->
+                <label for="student">Student: </label><select id="student" name="student">
+                  <option th:each="student:${individualAssignment.students}" th:value="${student.id}" name="student"
+                    th:text="${student.name}"></option>
+                </select>
+              <!-- </div> -->
 
+              <!-- <div> -->
+                <label for="grade">Grade: </label><input id="grade" type="number" name="grade" min="0" step="1"
+                  required />
+              <!-- </div> -->
 
-            <input type="submit" value="Add Grade" />
+            </div>
+
+            <input type="submit" value="Add Grade" class="single-assignment-page-add-new-grade-button" />
 
           </form>
         </section>
