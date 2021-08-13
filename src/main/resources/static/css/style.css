@@ -151,10 +151,19 @@ li a:hover {
 .home-page-classroom-list,
 .single-classroom-page-single-student-list,
 .single-classroom-page-assignment-list,
-.students-page-classroom-list {
+.students-page-classroom-list,
+.roll-call-page-student-list {
   font-size: 1em;
   margin: 5px auto; /* adjusts the distance between the classrooms */
 }
+
+.roll-call-page-student-list li {
+  text-decoration: none;
+  color: whitesmoke;
+  font-size: 1.5em;
+
+}
+
 
 .home-page-classroom-items,
 .single-classroom-page-single-student-items {
@@ -254,7 +263,8 @@ li a:hover {
 .home-page-main-box,
 .classroom-page-main-box,
 .students-page-main-box,
-.single-student-page-main-box {
+.single-student-page-main-box,
+.roll-call-page-main-box {
   align-items: center;
   background: lemonchiffon;
   border-radius: 6px;
@@ -435,7 +445,8 @@ justify-items: center;
   margin-block-start: 0px;
   margin-inline-end: 0px;
   margin-inline-start: 0px;
-  margin: 0px auto;
+  /* margin: top | right | bottom | left; */
+  margin: 20px auto 20px auto;
   /* padding: top | right | bottom | left; */
   padding: 2px 1px 2px 1px;
   text-align: center;

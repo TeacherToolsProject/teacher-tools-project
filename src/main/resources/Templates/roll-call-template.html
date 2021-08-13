@@ -22,13 +22,16 @@
         <p>Take Roll Call</p>
         <p id="roll-call-page-title">(Click Student To Remove From List)</p>
       </div>
-      <div class="roll-call-page-student-list-box">
-        <p class="roll-call-page-student-list-title">Student List:</p>
-        <ul id="student-list">
-          <li th:each="student:${individualStudents}" class="roll-student" id="roll-student" th:text="${student.name}">
-          </li>
-        </ul>
-      </div>
+      <section class="roll-call-page-main-box">
+        <div class="roll-call-page-student-list-box">
+          <p class="roll-call-page-student-list-title">Student List:</p>
+          <ul class="roll-call-page-student-list" id="student-list">
+            <!-- <li th:each="student:${individualStudents}" class="roll-student" id="roll-student" th:text="${student.name}"> -->
+            <li th:each="student:${individualStudents}" id="roll-student" th:text="${student.name}">
+            </li>
+          </ul>
+        </div>
+      </section>
     </main>
     <div class="right-sidebar"></div>
   </div>
