@@ -100,8 +100,6 @@
             </section>
 
             <form th:action="'/classroom/deletestudent/'+${individualStudent.id}" method="POST">
-                <input type="hidden" name="classroomId" th:each="classroom: ${individualStudent.classrooms}" th:value="${classroom.id}">
-                <input type="hidden" name="assignmentId" th:each="assignment: ${individualStudent.assignments}" th:value="${assignment.id}">
                 <button type="submit" class="button">Delete Student</button>
                 </select>
               </form>

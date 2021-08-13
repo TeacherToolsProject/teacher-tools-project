@@ -97,7 +97,7 @@ public class StudentController {
     }
 
     @PostMapping("/classroom/deletestudent/{id}")
-    public String deleteStudentFromClassroom (@PathVariable("id")Long id, Long classroomId, Long assignmentId){
+    public String deleteStudentFromClassroom (@PathVariable("id")Long id){
         Student studentToDelete = studentRepo.findById(id).get();
         Collection<Classroom> studentClassrooms = studentToDelete.getClassrooms();
         Collection<Assignment> studentAssignments = studentToDelete.getAssignments();
@@ -112,7 +112,5 @@ public class StudentController {
 
         return "redirect:/students";
     }
-
-    //randomg comment.
 
 }
