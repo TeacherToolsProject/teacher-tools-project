@@ -117,7 +117,8 @@ li a:hover {
 .home-page-classroom-list-title,
 .single-classroom-page-section-title,
 .students-page-classroom-list-title,
-.single-student-page-list-title {
+.single-student-page-list-title,
+.roll-call-page-student-list-title {
   font-size: 2em;
   font-weight: bold;
   margin: 0;
@@ -632,6 +633,16 @@ form input[type="submit"] {
   -webkit-transition: opacity 1000ms linear;
   transition: opacity 1000ms linear;
 }
-#roll-student {
-  font-size: 18px;
+
+#roll-student:hover {
+  color:red;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+#student-list:hover {
+  cursor: pointer;
+  /* color: red; */
 }
