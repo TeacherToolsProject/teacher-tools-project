@@ -99,6 +99,12 @@
                     <!-- <textarea rows="4" cols="50" name="noteToAdd" form="usrform"></textarea> -->
             </section>
 
+            <form th:action="'/classroom/deletestudent/'+${individualStudent.id}" method="POST">
+                <button type="submit" class="button">Delete Student</button>
+                </select>
+              </form>
+
+
         </main>
         <div class="right-sidebar"></div>
     </div>
