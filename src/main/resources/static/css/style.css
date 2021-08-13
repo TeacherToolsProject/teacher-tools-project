@@ -139,7 +139,8 @@ li a:hover {
 .students-page-classroom-list-box, 
 .single-student-page-list-box,
 .roll-call-page-student-list-box,
-.single-assignment-page-list-box  {
+.single-assignment-page-list-box,
+.single-assignment-page-list-box-add-a-new-grade  {
   color: whitesmoke;
   border: 2px solid black;
   box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.4);
@@ -153,9 +154,9 @@ li a:hover {
   text-align: center;
 }
 
+/* this must follow the section above */
 .single-assignment-page-list-box  {
   text-align: left;
-  background-color: hotpink;
 }
 
 
