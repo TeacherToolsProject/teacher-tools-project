@@ -18,6 +18,7 @@
       <p class="page-title" th:text="${individualClassroom.subject}"></p>
 
       <section class="classroom-page-main-box">
+
         <p class="single-classroom-page-take-roll-call-button">
           <a th:each="rollCall:${individualClassroom}" th:href="@{/classroom/roll-call(id=${rollCall.id})}">Take Roll
             Call</a>
