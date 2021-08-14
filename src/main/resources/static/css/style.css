@@ -43,7 +43,7 @@ body {
   gap: 10px;
 }
 
-#about-container  {
+#about-container {
   /* height: calc(100vh - 10px); */
   /* display: grid; */
   grid-template-columns: 0.5fr 2fr 0.5fr;
@@ -78,7 +78,6 @@ li a {
 }
 
 li a:hover {
-  /* text-decoration: underline; */
   font-weight: bold;
   color: rgb(211, 185, 74);
 }
@@ -134,13 +133,12 @@ li a:hover {
   text-align: left;
 }
 
-
 .home-page-classroom-list-box,
 .single-classroom-page-section-box,
-.students-page-classroom-list-box, 
+.students-page-classroom-list-box,
 .single-student-page-list-box,
 .roll-call-page-student-list-box,
-.single-assignment-page-list-box  {
+.single-assignment-page-list-box {
   color: whitesmoke;
   border: 2px solid black;
   box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.4);
@@ -155,16 +153,15 @@ li a:hover {
 }
 
 /* this must follow the section above */
-.single-assignment-page-list-box  {
+.single-assignment-page-list-box {
   text-align: left;
   padding-top: 10px;
 }
 
 .single-assignment-page-add-new-grade-student-and-grade {
-flex-direction: column;
-justify-content: space-between;
+  flex-direction: column;
+  justify-content: space-between;
 }
-
 
 .single-assignment-page-list-box-add-a-new-grade form {
   display: flex;
@@ -173,12 +170,10 @@ justify-content: space-between;
   padding: 10px 0px;
   margin: 5px auto;
   font: normal 100% system-ui, sans-serif;
-
 }
 
 .single-assignment-page-list-box-add-a-new-grade form #student {
-font: normal 90% system-ui, sans-serif;
-
+  font: normal 90% system-ui, sans-serif;
 }
 
 .single-student-page-student-grades {
@@ -199,7 +194,6 @@ font: normal 90% system-ui, sans-serif;
   text-decoration: none;
   color: whitesmoke;
   font-size: 1.5em;
-
 }
 
 .navigation-items li {
@@ -288,7 +282,8 @@ font: normal 90% system-ui, sans-serif;
   justify-content: space-evenly;
 }
 
-#about-main-content, #single-student-page-main-content {
+#about-main-content,
+#single-student-page-main-content {
   align-items: stretch;
 }
 
@@ -321,20 +316,19 @@ font: normal 90% system-ui, sans-serif;
 
 /* This must come after the section above */
 .single-assignment-page-main-box {
-  align-items:flex-start;
- }
-
+  align-items: flex-start;
+}
 
 .home-page-add-new-classroom-title,
 .single-classroom-page-add-new-assignment-title,
-.single-classroom-page-add-new-student-to-class-title, 
-.students-page-add-a-student-title, 
+.single-classroom-page-add-new-student-to-class-title,
+.students-page-add-a-student-title,
 .single-student-page-guardian-info-title,
 .single-student-page-student-b-day-title,
 .single-student-page-student-classes-title,
 .single-student-page-notes-add-a-note-about-this-student-title,
 .single-assignment-page-assignment-details-title {
- font-size: 1.25em;
+  font-size: 1.25em;
   font-weight: bold;
   margin: 0;
   margin-bottom: 5px;
@@ -359,35 +353,34 @@ font: normal 90% system-ui, sans-serif;
   font-weight: normal;
   margin: 0;
   margin-bottom: 5px;
-    /* padding: top | right | bottom | left; */
-    padding: 10px 10px 10px 0px;
-    overflow-wrap: break-word;
-    hyphens: auto;
+  /* padding: top | right | bottom | left; */
+  padding: 10px 10px 10px 0px;
+  overflow-wrap: break-word;
+  hyphens: auto;
 }
 
 .single-assignment-page-assignment-details li {
-  padding-top:10px;
+  padding-top: 10px;
   padding-bottom: 10px;
-  }
-   
-  .single-assignment-page-assignment-details li a {
-    font-size: 1.25em;
-    font-weight: normal;
-    margin: 0;
-      /* padding: top | right | bottom | left; */
-      padding: 0px 10px 0px 20px;
-    }
+}
 
-    .single-assignment-page-assignment-details-students {
-      margin:0;
-      padding:0;
-      background-color: hotpink;
-    }
+.single-assignment-page-assignment-details li a {
+  font-size: 1.25em;
+  font-weight: normal;
+  margin: 0;
+  /* padding: top | right | bottom | left; */
+  padding: 0px 10px 0px 20px;
+}
 
+.single-assignment-page-assignment-details-students {
+  margin: 0;
+  padding: 0;
+  background-color: hotpink;
+}
 
 .home-page-add-a-new-classroom-box,
 .single-classroom-page-add-new-assignment-box,
-.single-classroom-page-add-new-student-to-class-box, 
+.single-classroom-page-add-new-student-to-class-box,
 .students-page-add-a-student-box,
 .single-student-page-student-note,
 .single-assignment-page-list-box-add-a-new-grade {
@@ -415,7 +408,7 @@ font: normal 90% system-ui, sans-serif;
 
 .home-page-new-classroom-form,
 .single-classroom-page-add-new-assignment-form,
-.single-classroom-page-add-new-student-to-class-form, 
+.single-classroom-page-add-new-student-to-class-form,
 .students-page-add-a-student-form,
 .single-student-page-notes-add-a-note-about-this-student-form {
   color: lemonchiffon;
@@ -435,7 +428,7 @@ font: normal 90% system-ui, sans-serif;
 
 .home-page-new-classroom-form-button,
 .single-classroom-page-add-new-student-to-class-button,
-.single-classroom-page-add-new-assignment-button, 
+.single-classroom-page-add-new-assignment-button,
 .students-page-add-a-student-button,
 .single-student-page-notes-add-a-note-about-this-student-button,
 .single-assignment-page-add-new-grade-button {
@@ -456,73 +449,62 @@ font: normal 90% system-ui, sans-serif;
   border-radius: 4px;
   box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.4);
   padding: 5px 20px;
-justify-items: center;
+  justify-items: center;
 }
 
-.delete-button:hover{
+.delete-button:hover {
   cursor: pointer;
 }
 
-/*.single-classroom-page-take-roll-call-button {
-  border: 2px solid black;
-  margin: 5px auto;
-  background-color: lemonchiffon;
-  text-shadow: 3px 3px 1px rgba(0, 0, 0, 0.1);
-  border-radius: 4px;
-  box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.4);
-  padding: 15px;
-  background: rgb(196, 235, 253);
-}
-*/
-.single-classroom-page-take-roll-call-button{
+.single-classroom-page-take-roll-call-button {
   position: relative;
   display: inline-block;
-  margin: 20px;
+  margin: 15px;
 }
 
-.single-classroom-page-take-roll-call-button a{
-  color:white;
-  font-family:Helvetica, sans-serif;
-  font-weight:bold;
-  font-size:36px;
+.single-classroom-page-take-roll-call-button a {
+  color: white;
+  font-family: Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 1.5em;
   text-align: center;
-  text-decoration:none;
-  background-color:#FFA12B;
-  display:block;
-  position:relative;
-  padding:20px 40px;
-  
+  text-decoration: none;
+  background-color: #ffa12b;
+  display: block;
+  position: relative;
+  padding: 10px 20px;
+
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   text-shadow: 0px 1px 0px #000;
   filter: dropshadow(color=#000, offx=0px, offy=1px);
-  
-  -webkit-box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 #915100;
-  -moz-box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 #915100;
-  box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 #915100;
-  
+
+  -webkit-box-shadow: inset 0 1px 0 #ffe5c4, 0 10px 0 #915100;
+  -moz-box-shadow: inset 0 1px 0 #ffe5c4, 0 10px 0 #915100;
+  box-shadow: inset 0 1px 0 #ffe5c4, 0 10px 0 #915100;
+
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
 }
-.single-classroom-page-take-roll-call-button a:active{
-  top:10px;
-  background-color:#F78900;
-  
-  -webkit-box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3px 0 #915100;
-  -moz-box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3pxpx 0 #915100;
-  box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3px 0 #915100;
+.single-classroom-page-take-roll-call-button a:active {
+  top: 10px;
+  background-color: #f78900;
+
+  -webkit-box-shadow: inset 0 1px 0 #ffe5c4, inset 0 -3px 0 #915100;
+  -moz-box-shadow: inset 0 1px 0 #ffe5c4, inset 0 -3pxpx 0 #915100;
+  box-shadow: inset 0 1px 0 #ffe5c4, inset 0 -3px 0 #915100;
 }
 
-.single-classroom-page-take-roll-call-button:after{
-  content:"";
-  height:100%;
-  width:100%;
-  padding:4px;
+.single-classroom-page-take-roll-call-button:after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  padding: 4px;
   position: absolute;
-  bottom:-15px;
-  left:-4px;
-  z-index:-1;
-  background-color:#2B1800;
+  bottom: -15px;
+  left: -4px;
+  z-index: -1;
+  background-color: #2b1800;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
@@ -566,7 +548,8 @@ justify-items: center;
   width: 90%;
 }
 
-#about-page-title, #single-student-page-title {
+#about-page-title,
+#single-student-page-title {
   width: 100%;
 }
 
@@ -592,26 +575,25 @@ justify-items: center;
   text-align: center;
   text-shadow: 3px 3px 1px rgba(0, 0, 0, 0.3);
   width: 90%;
-  }
-  
-  .roll-call-page-title p {
-    margin-block-end: 0px;
-    margin-block-start: 0px;
-    margin-inline-end: 0px;
-    margin-inline-start: 0px;
-    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.roll-call-page-title p {
+  margin-block-end: 0px;
+  margin-block-start: 0px;
+  margin-inline-end: 0px;
+  margin-inline-start: 0px;
+  text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.2);
   /* padding: top | right | bottom | left; */
   padding: 20px 1px 1px 1px;
-    }
-  
-  
-  #roll-call-page-title {
-    font: normal 30% system-ui, sans-serif;
-    color: black;
+}
+
+#roll-call-page-title {
+  font: normal 30% system-ui, sans-serif;
+  color: black;
   /* padding: top | right | bottom | left; */
   padding: 1px 1px 20px 1px;
-  }
-  
+}
+
 .room-info li {
   /* padding: top | right | bottom | left; */
   padding: 20px 20px 20px 20px;
@@ -628,12 +610,11 @@ justify-items: center;
 }
 
 .single-student-page-profile-boxes {
-border: 2px solid black;
-
-
+  border: 2px solid black;
 }
 
-.about-profile-box, .single-student-page-profile-box {
+.about-profile-box,
+.single-student-page-profile-box {
   display: flex;
   flex-direction: column;
   border: 1px solid black;
@@ -642,28 +623,31 @@ border: 2px solid black;
   padding-bottom: 10px;
   box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.4);
   background: lemonchiffon;
-  width:auto;
+  width: auto;
 }
 
-.about-headshot-text-links, .single-student-page-text-pic {
+.about-headshot-text-links,
+.single-student-page-text-pic {
   border-radius: 4px;
   display: flex;
   flex-direction: row;
   font-size: 1em;
   font-weight: bold;
-  justify-content:first baseline;
+  justify-content: first baseline;
   margin-top: 0px;
   margin: 5px;
 }
 
-.about-headshot-box, .single-student-page-headshot-box {
+.about-headshot-box,
+.single-student-page-headshot-box {
   align-items: center;
   box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.2);
   margin-bottom: 5px;
   margin: 10px;
 }
 
-.about-headshot, .single-student-page-headshot {
+.about-headshot,
+.single-student-page-headshot {
   border-radius: 4px;
   border: 1px solid black;
   box-shadow: 7px 7px 1px rgba(0, 0, 0, 0.4);
@@ -671,7 +655,8 @@ border: 2px solid black;
   margin-left: 10px;
 }
 
-.about-page-profile-name, .single-student-page-profile-name {
+.about-page-profile-name,
+.single-student-page-profile-name {
   display: block;
   margin: 15px;
   margin-top: 5px;
@@ -689,8 +674,8 @@ border: 2px solid black;
   font-family: pencilpete_fontregular, "Times New Roman", Times, serif;
 }
 
-
-.about-text-and-links, .single-student-page-text-and-details {
+.about-text-and-links,
+.single-student-page-text-and-details {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -699,7 +684,8 @@ border: 2px solid black;
   margin-left: 10px;
 }
 
-.about-profile-text, .single-student-page-profile-text {
+.about-profile-text,
+.single-student-page-profile-text {
   align-items: baseline; /* align vertical */
   border-radius: 4px;
   border: 1px solid black;
@@ -727,8 +713,7 @@ border: 2px solid black;
 }
 
 .single-student-page-profile-text ul {
-margin: 5px 10px;
-
+  margin: 5px 10px;
 }
 
 .about-links-box {
@@ -775,21 +760,21 @@ form input {
   margin: 5px 0px;
 }
 
-input#grade, input#maximumGrade {
+input#grade,
+input#maximumGrade {
   width: 5em;
-text-align: center;
+  text-align: center;
 }
 
 select#student {
   width: auto;
-text-align: center;
-padding-right: 1em;
-padding-left: 1em;
+  text-align: center;
+  padding-right: 1em;
+  padding-left: 1em;
 }
 
-
-form input[type="submit"]:hover{
-  cursor:pointer;
+form input[type="submit"]:hover {
+  cursor: pointer;
 }
 
 form input[type="submit"] {
@@ -804,7 +789,7 @@ form input[type="submit"] {
 }
 
 #roll-student:hover {
-  color:red;
+  color: red;
 }
 
 a:hover {
@@ -813,6 +798,4 @@ a:hover {
 
 #student-list:hover {
   cursor: pointer;
-  /* color: red; */
 }
-
