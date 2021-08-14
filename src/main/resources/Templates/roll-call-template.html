@@ -7,7 +7,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Teacher Tools - Roll Call</title>
   <link rel="stylesheet" a href="/css/style.css">
-  <!-- <link rel="stylesheet" href="/css/rollCall.css"> -->
 </head>
 
 <body>
@@ -16,22 +15,21 @@
     <div class="left-sidebar"></div>
 
     <main class="main-content">
-
-
       <div class="roll-call-page-title">
         <p>Take Roll Call</p>
         <p id="roll-call-page-title">(Click Student To Remove From List)</p>
       </div>
+
       <section class="roll-call-page-main-box">
         <div class="roll-call-page-student-list-box">
           <p class="roll-call-page-student-list-title">Student List:</p>
           <ul class="roll-call-page-student-list" id="student-list">
-            <!-- <li th:each="student:${individualStudents}" class="roll-student" id="roll-student" th:text="${student.name}"> -->
             <li th:each="student:${individualStudents}" id="roll-student" th:text="${student.name}">
             </li>
           </ul>
         </div>
       </section>
+
     </main>
     <div class="right-sidebar"></div>
   </div>
