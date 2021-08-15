@@ -282,8 +282,7 @@ li a:hover {
   justify-content: space-evenly;
 }
 
-#about-main-content,
-#single-student-page-main-content {
+#about-main-content, #single-student-page-main-content {
   align-items: stretch;
 }
 
@@ -445,15 +444,28 @@ li a:hover {
   font-weight: bold;
   color: whitesmoke;
   background-color: red;
-  text-shadow: 3px 3px 1px rgba(0, 0, 0, 0.2);
+  /* text-shadow: 3px 3px 1px rgba(0, 0, 0, 0.2); */
   border-radius: 4px;
   box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.4);
   padding: 5px 20px;
-  justify-items: center;
+  /* justify-items: center; */
+
+  /* text-shadow: top right, 
+    bottom-right, 
+    bottom-left, 
+    top-left */
+  text-shadow: 1px -1px 0px rgba(0,0,0,0.3), 
+    1.5px 1.5px 0px rgba(0,0,0,0.3),
+    -1px 1px 0px rgba(0,0,0,0.3), 
+    -1px -1px 0px rgba(0,0,0,0.3);
+
 }
 
 .delete-button:hover {
   cursor: pointer;
+  border-style: inset;
+  font-weight: normal;
+  background-color:rgba(255, 0, 0, 0.9);
 }
 
 /* below commented out while testing differnt button */
@@ -546,17 +558,24 @@ li a:hover {
   margin-block-start: 0px;
   margin-inline-end: 0px;
   margin-inline-start: 0px;
-  margin: 20px auto;
+  margin: 20px;
   padding: 20px 10px 20px 10px;
   text-align: center;
   text-shadow: 3px 3px 1px rgba(0, 0, 0, 0.3);
   width: 90%;
+  
 }
 
-#about-page-title,
-#single-student-page-title {
-  width: 100%;
+/* The following section must follow the section above */
+#about-page-title {
+  width: auto;
 }
+
+/* The following section must follow the section above */
+#single-student-page-title {
+  width: 90%;
+}
+
 
 .roll-call-page-title {
   background: rgb(196, 235, 253);
@@ -614,22 +633,31 @@ li a:hover {
   font-weight: normal;
 }
 
-.single-student-page-profile-boxes {
-  border: 2px solid black;
-}
+/* .single-student-page-profile-boxes { */
+  /* border: 2px solid black; */
+/* } */
 
 .about-profile-box,
 .single-student-page-profile-box {
   display: flex;
   flex-direction: column;
+justify-content: center;
   border: 1px solid black;
   border-radius: 6px;
-  margin: 15px;
+  margin: 20px;
   padding-bottom: 10px;
   box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.4);
   background: lemonchiffon;
   width: auto;
 }
+
+/* The following section must follow the section above */
+.single-student-page-profile-box {
+/* padding: top | right | bottom | left; */
+   margin: 20px 50px 20px 20px;
+   margin: 20px auto;
+}
+
 
 .about-headshot-text-links,
 .single-student-page-text-pic {
@@ -638,7 +666,7 @@ li a:hover {
   flex-direction: row;
   font-size: 1em;
   font-weight: bold;
-  justify-content: first baseline;
+  justify-content:center;
   margin-top: 0px;
   margin: 5px;
 }
@@ -663,9 +691,7 @@ li a:hover {
 .about-page-profile-name,
 .single-student-page-profile-name {
   display: block;
-  margin: 15px;
-  margin-top: 5px;
-  margin-bottom: 5px;
+  margin: 5px 15px;
   /* padding: top | right | bottom | left; */
   padding: 5px 0px 2px 0px;
   border-bottom: 2px solid rgb(9, 73, 198);
@@ -673,6 +699,7 @@ li a:hover {
   color: rgb(9, 73, 198);
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
   font-weight: bold;
+  width:auto;
 }
 
 #about-page-profile-name {
@@ -759,6 +786,8 @@ form {
   flex-direction: column;
   max-width: 300px;
   padding: 10px 0px;
+  /* Changes width of items in form boxes */
+  /* align-items: center;   */
 }
 
 form input {
@@ -780,6 +809,9 @@ select#student {
 
 form input[type="submit"]:hover {
   cursor: pointer;
+  border-style: inset;
+  /* lemonchiffon */
+  background-color: rgba(255,250,205,0.9);
 }
 
 form input[type="submit"] {
@@ -803,6 +835,10 @@ a:hover {
 
 #student-list:hover {
   cursor: pointer;
+  border-style: inset;
+  /* lemonchiffon */
+  background-color: rgba(255,250,205,0.9);
+
 }
 
 .single-classroom-page-take-roll-call-button {
@@ -829,8 +865,12 @@ a:hover {
   position: relative;
   padding: 10px 20px;
 
-  text-shadow: 1px -1px 2px rgba(0, 0, 0, 0.2), 2px 2px 2px rgba(0, 0, 0, 0.8),
-    -1px 1px 2px rgba(0, 0, 0, 0.2), -1px -1px 2px rgba(0, 0, 0, 0.1);
+
+/* top right, bottom-right, bottom-left, top-left */
+  text-shadow: 1px -1px 2px rgba(0, 0, 0, 0.2), 
+    2px 2px 2px rgba(0, 0, 0, 0.8), 
+    -1px 1px 2px rgba(0, 0, 0, 0.2), 
+    -1px -1px 2px rgba(0, 0, 0, 0.1);
 
   box-shadow: inset 2px 2px 1px rgb(211, 185, 56),
     6px 6px 1px rgba(0, 0, 0, 0.3);
@@ -897,6 +937,7 @@ a:hover {
   border-radius: 10px;
 }
 
+/* Part of roll-call-button animation */
 @keyframes glowing {
   0% {
     background-position: 0 0;
@@ -908,3 +949,9 @@ a:hover {
     background-position: 0 0;
   }
 }
+
+/* button { */
+  /* align-items:center; */
+  /* display: flex; */
+  /* box-sizing: unset; */
+/* } */

@@ -16,42 +16,42 @@
         <div class="left-sidebar"></div>
         <main class="main-content" id="single-student-page-main-content">
             <div>
-                <p class="page-title" id="single-student-page-title">Student Information</p>
+                <p class="page-title">Student Information</p>
             </div>
 
 
             <div class="single-student-page-profile-box">
                 <p class="single-student-page-profile-name" th:text="${individualStudent.name}"></p>
-                <div>
-                    <div class="single-student-page-text-pic">
-                        <!-- <div class="single-student-page-headshot-box"> -->
-                        <img class="single-student-page-headshot" th:src="${individualStudent.studentImage}"
-                            th:alt="${'Photo of ' + individualStudent.name}" height="200px" width="200px">
-                        <!-- </div> -->
-                        <div class="single-student-page-text-and-details">
-                            <div class="single-student-page-profile-text">
-                                <ul>
-                                    <p class="single-student-page-guardian-info-title">Guardian Information</p>
-                                    <li th:text="${individualStudent.guardianName}"></li>
-                                    <li th:text="${individualStudent.guardianPhone}"></li>
-                                    <li th:text="${individualStudent.guardianEmail}"></li>
-                                    <p class="single-student-page-student-b-day-title">Student's Birthday</p>
-                                    <li
-                                        th:text="${individualStudent.birthdayMonth + '/' + individualStudent.birthdayDay + '/' + individualStudent.birthdayYear}">
-                                    </li>
-                                </ul>
-                            </div>
+                <!-- <div> -->
+                <div class="single-student-page-text-pic">
+                    <!-- <div class="single-student-page-headshot-box"> -->
+                    <img class="single-student-page-headshot" th:src="${individualStudent.studentImage}"
+                        th:alt="${'Photo of ' + individualStudent.name}" height="200px" width="200px">
+                    <!-- </div> -->
+                    <div class="single-student-page-text-and-details">
+                        <div class="single-student-page-profile-text">
+                            <ul>
+                                <p class="single-student-page-guardian-info-title">Guardian Information</p>
+                                <li th:text="${individualStudent.guardianName}"></li>
+                                <li th:text="${individualStudent.guardianPhone}"></li>
+                                <li th:text="${individualStudent.guardianEmail}"></li>
+                                <p class="single-student-page-student-b-day-title">Student's Birthday</p>
+                                <li
+                                    th:text="${individualStudent.birthdayMonth + '/' + individualStudent.birthdayDay + '/' + individualStudent.birthdayYear}">
+                                </li>
+                            </ul>
                         </div>
-
                     </div>
+
                 </div>
+                <!-- </div> -->
 
             </div>
             <section class="single-student-page-main-box">
                 <ul>
                     <p class="single-student-page-student-classes-title">Student's Classes:</p>
-                    
-                        <li th:each="classroom: ${individualStudent.classrooms}"><a
+
+                    <li th:each="classroom: ${individualStudent.classrooms}"><a
                             th:href="@{/classroom(id=${classroom.id})}" th:text="${classroom.subject}"></a>
                     </li>
                 </ul>
@@ -60,13 +60,13 @@
                     <h4>Student Grades:</h4>
                     <ul class="grade-list" th:each="grade:${individualStudent.grades}">
                         <div class="single-student-page-list-box">
-                        <li th:text="${'Assignment Name: ' + grade.assignment.name}"></li>
-                        <li th:text="${'Grade: ' + grade.grade + '/' + grade.maximumGrade}"></li>
+                            <li th:text="${'Assignment Name: ' + grade.assignment.name}"></li>
+                            <li th:text="${'Grade: ' + grade.grade + '/' + grade.maximumGrade}"></li>
                             <form th:action="'/student/deletegrade/'+${individualStudent.id}" th:method="post">
-                            <input type="hidden" name="gradeId" th:value="${grade.id}">
-                            <button type="submit" class="delete-button">Delete Grade</button>
-                        </form>
-                    </div>
+                                <input type="hidden" name="gradeId" th:value="${grade.id}">
+                                <button type="submit" class="delete-button">Delete Grade</button>
+                            </form>
+                        </div>
                     </ul>
                     <h4 class="total-grade"
                         th:text="${'Overall Grade Average: ' + individualStudent.calculateTotalGrade() + '%'}"></h4>
@@ -89,21 +89,26 @@
                 <div class="single-student-page-student-note">
                     <p class="single-student-page-notes-add-a-note-about-this-student-title">Add A Note About This
                         Student</p>
-                    <form th:action="'/student/'+${individualStudent.id}" class="single-student-page-notes-add-a-note-about-this-student-form" id="student-note" method="post">
-                        <label for="title">Title: </label> <input class="form-element" id="title" type="text" name="title" required>
-                        <label for="date">Date: </label> <input class="form-element"  id="date" type="date" name="date" required>
+                    <form th:action="'/student/'+${individualStudent.id}"
+                        class="single-student-page-notes-add-a-note-about-this-student-form" id="student-note"
+                        method="post">
+                        <label for="title">Title: </label> <input class="form-element" id="title" type="text"
+                            name="title" required>
+                        <label for="date">Date: </label> <input class="form-element" id="date" type="date" name="date"
+                            required>
                         <p>Note:</p>
-                        <textarea  class="form-element" rows="4" cols="50" name="note" form="student-note" required></textarea>
-                        <input type="submit" value="Add Note" class="single-student-page-notes-add-a-note-about-this-student-button">
+                        <textarea class="form-element" rows="4" cols="50" name="note" form="student-note"
+                            required></textarea>
+                        <input type="submit" value="Add Note"
+                            class="single-student-page-notes-add-a-note-about-this-student-button">
+                    </form>
+
+                    <form th:action="'/classroom/deletestudent/'+${individualStudent.id}" method="POST">
+                        <button type="submit" class="delete-button">Delete Student</button>
+                        </select>
                     </form>
                 </div>
             </section>
-
-            <form th:action="'/classroom/deletestudent/'+${individualStudent.id}" method="POST">
-                <button type="submit" class="button">Delete Student</button>
-                </select>
-              </form>
-
 
         </main>
         <div class="right-sidebar"></div>
