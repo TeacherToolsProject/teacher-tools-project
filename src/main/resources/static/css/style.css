@@ -445,15 +445,28 @@ li a:hover {
   font-weight: bold;
   color: whitesmoke;
   background-color: red;
-  text-shadow: 3px 3px 1px rgba(0, 0, 0, 0.2);
+  /* text-shadow: 3px 3px 1px rgba(0, 0, 0, 0.2); */
   border-radius: 4px;
   box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.4);
   padding: 5px 20px;
   justify-items: center;
+
+  /* text-shadow: top right, 
+    bottom-right, 
+    bottom-left, 
+    top-left */
+  text-shadow: 1px -1px 0px rgba(0,0,0,0.3), 
+    1.5px 1.5px 0px rgba(0,0,0,0.3),
+    -1px 1px 0px rgba(0,0,0,0.3), 
+    -1px -1px 0px rgba(0,0,0,0.3);
+
 }
 
 .delete-button:hover {
   cursor: pointer;
+  border-style: inset;
+  font-weight: normal;
+  background-color:rgba(255, 0, 0, 0.9);
 }
 
 /* below commented out while testing differnt button */
@@ -780,6 +793,9 @@ select#student {
 
 form input[type="submit"]:hover {
   cursor: pointer;
+  border-style: inset;
+  /* lemonchiffon */
+  background-color: rgba(255,250,205,0.9);
 }
 
 form input[type="submit"] {
@@ -829,8 +845,12 @@ a:hover {
   position: relative;
   padding: 10px 20px;
 
-  text-shadow: 1px -1px 2px rgba(0, 0, 0, 0.2), 2px 2px 2px rgba(0, 0, 0, 0.8),
-    -1px 1px 2px rgba(0, 0, 0, 0.2), -1px -1px 2px rgba(0, 0, 0, 0.1);
+
+/* top right, bottom-right, bottom-left, top-left */
+  text-shadow: 1px -1px 2px rgba(0, 0, 0, 0.2), 
+    2px 2px 2px rgba(0, 0, 0, 0.8), 
+    -1px 1px 2px rgba(0, 0, 0, 0.2), 
+    -1px -1px 2px rgba(0, 0, 0, 0.1);
 
   box-shadow: inset 2px 2px 1px rgb(211, 185, 56),
     6px 6px 1px rgba(0, 0, 0, 0.3);
@@ -897,6 +917,7 @@ a:hover {
   border-radius: 10px;
 }
 
+/* Part of roll-call-button animation */
 @keyframes glowing {
   0% {
     background-position: 0 0;

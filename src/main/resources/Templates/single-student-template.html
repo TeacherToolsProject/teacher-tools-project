@@ -96,14 +96,14 @@
                         <textarea  class="form-element" rows="4" cols="50" name="note" form="student-note" required></textarea>
                         <input type="submit" value="Add Note" class="single-student-page-notes-add-a-note-about-this-student-button">
                     </form>
+
+                    <form th:action="'/classroom/deletestudent/'+${individualStudent.id}" method="POST">
+                        <button type="submit" class="delete-button">Delete Student</button>
+                        </select>
+                      </form>
+
                 </div>
             </section>
-
-            <form th:action="'/classroom/deletestudent/'+${individualStudent.id}" method="POST">
-                <button type="submit" class="button">Delete Student</button>
-                </select>
-              </form>
-
 
         </main>
         <div class="right-sidebar"></div>
