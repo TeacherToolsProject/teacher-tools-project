@@ -30,7 +30,7 @@ public class Populator implements CommandLineRunner {
     private StudentRepo studentRepo;
 
     @Override
-    public void run(String... args) throws Exception{
+    public void run(String... args) throws Exception {
 
         Classroom apHistoryOne = new Classroom("AP History One", 11, "402A", "8:30", 2021, "Fall");
         classroomRepo.save(apHistoryOne);
@@ -43,33 +43,95 @@ public class Populator implements CommandLineRunner {
         Classroom apIntroComputerScience = new Classroom("AP Intro to Computer Science", 9, "110", "2:30", 2021, "Summer");
         classroomRepo.save(apIntroComputerScience);
 
-        Student cushmanGrant = new Student("Grant Cushman", 
-        "..//images/student-grant-cushman.jpg", 
-        "Shari Little", "sharilittle123@gmail.com", "614-867-5309", 19, 5, 1979, apHistoryOne);
-        studentRepo.save(cushmanGrant);
+        Student jonesBobby = new Student("Bobby Jones",
+                "..//images/student-bobby-jones.jpg",
+                "Shari Jones", "sharijones123@gmail.com", "614-867-5309", 19, 5, 2006, apHistoryOne);
+        studentRepo.save(jonesBobby);
         Student fongGary = new Student("Gary Fong",
-        "..//images/student-gary-fong.jfif",
-         "Ben Fong", "ben_fong@nomail.com", "614-555-1212", 1, 3, 2006, civilWarHistory);
+                "..//images/student-gary-fong.jfif",
+                "Ben Fong", "ben_fong@nomail.com", "614-555-1212", 1, 3, 2006, civilWarHistory);
         studentRepo.save(fongGary);
         Student williamsAbbey = new Student("Abbey Williams",
-        "..//images/student-abbey-williams.jfif", 
-        "Trent Williams", "trentman123@nomail.com", "780-555-1212", 6, 10, 2006, apHistoryOne);
+                "..//images/student-abbey-williams.jfif",
+                "Trent Williams", "trentman123@nomail.com", "780-555-1212", 6, 10, 2006, apHistoryOne);
         studentRepo.save(williamsAbbey);
         Student stevensWendy = new Student("Wendy Stevens",
-        "..//images/student-wendy-stevens.jfif", 
-        "Martha Stevens", "marthas123@nomail.com", "580-555-6985", 9, 12, 2005, civilWarHistory);
+                "..//images/student-wendy-stevens.jfif",
+                "Martha Stevens", "marthas123@nomail.com", "580-555-6985", 9, 12, 2005, civilWarHistory);
         studentRepo.save(stevensWendy);
-        Student jamesLester = new Student("Lester James","..//images/student-lester-james.jfif",
-        "Agatha James", "agathajames@nomail.com", "614-532-8965", 6, 7, 2006, apHistoryOne, civilWarHistory);
+        Student jamesLester = new Student("Lester James", "..//images/student-lester-james.jfif",
+                "Agatha James", "agathajames@nomail.com", "614-532-8965", 6, 7, 2006, apHistoryOne, civilWarHistory);
         studentRepo.save(jamesLester);
-        apHistoryOne.addStudent(cushmanGrant);
+        Student sanghaAdi = new Student("Adi Sangha",
+                "..//images/adi-sangha.png",
+                "Addhira Sangha", "misssangha@gmail.com", "740-455-2555", 12, 6, 2007, apCalculus);
+        studentRepo.save(sanghaAdi);
+        Student bahramAlliyah = new Student("Alliyah Bahram",
+                "..//images/alliyah-bahram.png",
+                "Hfaf Bahram", "hbahram5@gmail.com", "614-525-2115", 20, 8, 2006, apCalculus, apIntroComputerScience);
+        studentRepo.save(bahramAlliyah);
+        Student williamsMarcus = new Student("Marcus Williams",
+                "..//images/marcus-williams.png",
+                "Mark Williams", "mlwilliams1@gmail.com", "614-558-5654", 29, 2, 2005, apCalculus);
+        studentRepo.save(williamsMarcus);
+        Student pattersonBecky = new Student("Becky Patterson",
+                "..//images/becky-patterson.png",
+                "Janet Patterson", "janet_patterson@gmail.com", "614-325-2125", 1, 8, 2005, earthScience, apHistoryOne);
+        studentRepo.save(pattersonBecky);
+        Student petersonBrian = new Student("Brian Peterson",
+                "..//images/brian-peterson.png",
+                "Dustin Peterson", "peterson1529@gmail.com", "740-825-1222", 17, 1, 2006, earthScience);
+        studentRepo.save(petersonBrian);
+        Student wongMichael = new Student("Michael Wong",
+                "..//images/michael-wong.png",
+                "Sue Wong", "sw86_d@gmail.com", "614-852-9678", 05, 12, 2007, earthScience);
+        studentRepo.save(wongMichael);
+        Student mccoyDamien = new Student("Damien McCoy",
+                "..//images/damien-mccoy.png",
+                "Sara McCoy", "smccoy98@gmail.com", "740-533-8574", 1, 8, 2007, apIntroComputerScience);
+        studentRepo.save(mccoyDamien);
+        Student askerJennifer = new Student("Jennifer Asker",
+                "..//images/jennifer-asker.png",
+                "Thomas Asker", "tasker_12@gmail.com", "614-857-5563", 10, 4, 2006, apIntroComputerScience);
+        studentRepo.save(askerJennifer);
+        Student novikJoey = new Student("Joey Novik",
+                "..//images/joey-novik.png",
+                "Joseph Novik", "novikj_098@gmail.com", "614-565-4893", 16, 4, 2005, apIntroComputerScience);
+        studentRepo.save(novikJoey);
+        Student changSarah = new Student("Sarah Chang",
+                "..//images/sarah_chang.png",
+                "Tom Chang", "tc1979@gmail.com", "614-562-8379", 27, 3, 2006, apIntroComputerScience, earthScience);
+        studentRepo.save(changSarah);
+
+        apHistoryOne.addStudent(jonesBobby);
         apHistoryOne.addStudent(williamsAbbey);
         apHistoryOne.addStudent(jamesLester);
+        apHistoryOne.addStudent(pattersonBecky);
         classroomRepo.save(apHistoryOne);
+
         civilWarHistory.addStudent(fongGary);
         civilWarHistory.addStudent(stevensWendy);
         civilWarHistory.addStudent(jamesLester);
         classroomRepo.save(civilWarHistory);
+
+        apCalculus.addStudent(sanghaAdi);
+        apCalculus.addStudent(bahramAlliyah);
+        apCalculus.addStudent(williamsMarcus);
+        classroomRepo.save(apCalculus);
+
+        earthScience.addStudent(pattersonBecky);
+        earthScience.addStudent(petersonBrian);
+        earthScience.addStudent(wongMichael);
+        earthScience.addStudent(changSarah);
+        classroomRepo.save(earthScience);
+
+        apIntroComputerScience.addStudent(mccoyDamien);
+        apIntroComputerScience.addStudent(askerJennifer);
+        apIntroComputerScience.addStudent(novikJoey);
+        apIntroComputerScience.addStudent(changSarah);
+        apIntroComputerScience.addStudent(sanghaAdi);
+        classroomRepo.save(apIntroComputerScience);
+
 
         Assignment apHistoryOneFirstAssignment = new Assignment(apHistoryOne, "Favorite Ancient Civilization", "Write a one page paper detailing your favorite ancient civilization, where it was located, " +
                 "what tools they used, what languages they spoke, and any interesting achievements or conflicts they were involved in.", "08/28/2021", "09/02/2021", "100");
@@ -78,7 +140,7 @@ public class Populator implements CommandLineRunner {
                 "including major victories and areas he fought in.", "08/28/2021", "09/03/2021", "50");
         assignmentRepo.save(civilWarHistoryFirstAssignment);
 
-        apHistoryOneFirstAssignment.addStudent(cushmanGrant);
+        apHistoryOneFirstAssignment.addStudent(jonesBobby);
         apHistoryOneFirstAssignment.addStudent(williamsAbbey);
         apHistoryOneFirstAssignment.addStudent(jamesLester);
         assignmentRepo.save(apHistoryOneFirstAssignment);
@@ -88,11 +150,11 @@ public class Populator implements CommandLineRunner {
         civilWarHistoryFirstAssignment.addStudent(jamesLester);
         assignmentRepo.save(civilWarHistoryFirstAssignment);
 
-        Grade grantCushmanApHistoryGrade = new Grade(apHistoryOneFirstAssignment, 97, 100);
-        gradeRepo.save(grantCushmanApHistoryGrade);
+        Grade bobbyJonesApHistoryGrade = new Grade(apHistoryOneFirstAssignment, 97, 100);
+        gradeRepo.save(bobbyJonesApHistoryGrade);
 
-        grantCushmanApHistoryGrade.addStudentToGrade(cushmanGrant);
-        gradeRepo.save(grantCushmanApHistoryGrade);
+        bobbyJonesApHistoryGrade.addStudentToGrade(jonesBobby);
+        gradeRepo.save(bobbyJonesApHistoryGrade);
 
         Grade abbeyWilliamsApHistoryGrade = new Grade(apHistoryOneFirstAssignment, 95, 100);
         gradeRepo.save(abbeyWilliamsApHistoryGrade);
@@ -100,9 +162,9 @@ public class Populator implements CommandLineRunner {
         abbeyWilliamsApHistoryGrade.addStudentToGrade(williamsAbbey);
         gradeRepo.save(abbeyWilliamsApHistoryGrade);
 
-        Note grantCushmanNote = new Note("Reminder for Grant", "Remind Grant to cover his text book by next week.", "8/30/2021");
+        Note bobbyJonesNote = new Note("Reminder for Bobby", "Remind Bobby to cover his text book by next week.", "8/30/2021");
 
-        cushmanGrant.addNoteToStudent(grantCushmanNote);
-        studentRepo.save(cushmanGrant);
+        jonesBobby.addNoteToStudent(bobbyJonesNote);
+        studentRepo.save(jonesBobby);
     }
 }
