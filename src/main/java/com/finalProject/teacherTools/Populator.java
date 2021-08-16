@@ -158,39 +158,67 @@ public class Populator implements CommandLineRunner {
         Assignment apHistoryOneFirstAssignment = new Assignment(apHistoryOne, "Favorite Ancient Civilization", "Write a one page paper detailing your favorite ancient civilization, where it was located, " +
                 "what tools they used, what languages they spoke, and any interesting achievements or conflicts they were involved in.", "08/28/2021", "09/02/2021", "100");
         assignmentRepo.save(apHistoryOneFirstAssignment);
+        Assignment apHistoryOneSecondAssignment = new Assignment(apHistoryOne, "Least-Liked Ancient Civilization", "Write a five paragraph essay discussing why the ancient civilization that you chose is " +
+        "your least favorite.", "09/05/2021", "09/10/2021", "100");
+        assignmentRepo.save(apHistoryOneSecondAssignment);
+
+
+
+
         Assignment civilWarHistoryFirstAssignment = new Assignment(civilWarHistory, "Summarize the accomplishment of a famous Civil War general", "Choose any Civil War general and summarize the accomplishments of that general, " +
                 "including major victories and areas he fought in.", "08/28/2021", "09/03/2021", "50");
         assignmentRepo.save(civilWarHistoryFirstAssignment);
+
+
         Assignment apCalculusFirstAssignment = new Assignment(apCalculus, "Calculus Quiz 2", "This quiz consists of 25 problems. Click on “Begin Quiz”, then read each problem carefully. " +
                 "Then work the problem on a separate sheet of paper and click on the box next to the correct choice.", "08/30/2021", "08/31/2021", "100");
         assignmentRepo.save(apCalculusFirstAssignment);
+
+
         Assignment earthScienceFirstAssignment = new Assignment(earthScience, "Theory of Plate Tectonics", "You will complete a written analysis (about 5-6 pages) investigating the development of the Theory of Plate Tectonics as it relates to the scientific disciplines of geology, oceanography, meteorology and astronomy.\n" +
                 "\n", "08/20/2021", "08/28/2021", "100");
         assignmentRepo.save(earthScienceFirstAssignment);
 
+
+
         Assignment apIntroComputerScienceFirstAssignment = new Assignment(apIntroComputerScience, "Hello World!", "Write \"Hello World!\" in Java", "08/28/2021", "08/28/2021", "10");
         assignmentRepo.save(apIntroComputerScienceFirstAssignment);
+
 
         apHistoryOneFirstAssignment.addStudent(jonesBobby);
         apHistoryOneFirstAssignment.addStudent(williamsAbbey);
         apHistoryOneFirstAssignment.addStudent(jamesLester);
         apHistoryOneFirstAssignment.addStudent(pattersonBecky);
+        apHistoryOneFirstAssignment.addStudent(stevensWendy);
         assignmentRepo.save(apHistoryOneFirstAssignment);
+
+        apHistoryOneSecondAssignment.addStudent(jonesBobby);
+        apHistoryOneSecondAssignment.addStudent(williamsAbbey);
+        apHistoryOneSecondAssignment.addStudent(jamesLester);
+        apHistoryOneSecondAssignment.addStudent(pattersonBecky);
+        apHistoryOneSecondAssignment.addStudent(stevensWendy);
+        assignmentRepo.save(apHistoryOneSecondAssignment);
 
         civilWarHistoryFirstAssignment.addStudent(fongGary);
         civilWarHistoryFirstAssignment.addStudent(stevensWendy);
         civilWarHistoryFirstAssignment.addStudent(jamesLester);
+        civilWarHistoryFirstAssignment.addStudent(williamsAbbey);
         assignmentRepo.save(civilWarHistoryFirstAssignment);
 
         apCalculusFirstAssignment.addStudent(sanghaAdi);
         apCalculusFirstAssignment.addStudent(bahramAlliyah);
         apCalculusFirstAssignment.addStudent(williamsMarcus);
+        apCalculusFirstAssignment.addStudent(jamesLester);
+        apCalculusFirstAssignment.addStudent(stevensWendy);
+        apCalculusFirstAssignment.addStudent(williamsAbbey);
         assignmentRepo.save(apCalculusFirstAssignment);
 
         earthScienceFirstAssignment.addStudent(pattersonBecky);
         earthScienceFirstAssignment.addStudent(petersonBrian);
         earthScienceFirstAssignment.addStudent(wongMichael);
         earthScienceFirstAssignment.addStudent(changSarah);
+        earthScienceFirstAssignment.addStudent(stevensWendy);
+        earthScienceFirstAssignment.addStudent(jamesLester);
         assignmentRepo.save(earthScienceFirstAssignment);
 
         apIntroComputerScienceFirstAssignment.addStudent(bahramAlliyah);
@@ -198,6 +226,8 @@ public class Populator implements CommandLineRunner {
         apIntroComputerScienceFirstAssignment.addStudent(askerJennifer);
         apIntroComputerScienceFirstAssignment.addStudent(novikJoey);
         apIntroComputerScienceFirstAssignment.addStudent(changSarah);
+        apIntroComputerScienceFirstAssignment.addStudent(sanghaAdi);
+        apIntroComputerScienceFirstAssignment.addStudent(jamesLester);
         assignmentRepo.save(apIntroComputerScienceFirstAssignment);
 
         Grade bobbyJonesApHistoryGrade = new Grade(apHistoryOneFirstAssignment, 97, 100);
