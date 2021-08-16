@@ -134,10 +134,13 @@ li a:hover {
 }
 
 .single-student-page-list-box-arround-student-notes-and-add-a-note {
-  color: whitesmoke;
+  /* color: whitesmoke; */
   border: 2px solid black;
+  background-image: url(..//images/free-chalkboard-black.jpg);
+  background-size: 100%;
+  background-position:center;
+
   box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.4);
-  background-image: url(..//images/free-chalkboard-green.jpg);
   border-radius: 6px;
   margin: 10px;
   padding: 5px 20px;
@@ -145,7 +148,8 @@ li a:hover {
   /* justify-content: space-around; */
   width: 90%;
   /* text-align: center; */
-
+/* justify-items: center; */
+align-items: center;
 }
 
 
@@ -155,18 +159,22 @@ li a:hover {
 .students-page-classroom-list-box,
 .single-student-page-list-box,
 .roll-call-page-student-list-box,
-.single-assignment-page-list-box {
+.single-assignment-page-list-box,
+.note-list {
   color: whitesmoke;
   border: 2px solid black;
   box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.4);
   background-image: url(..//images/free-chalkboard-green.jpg);
   border-radius: 6px;
-  margin: 10px;
+  margin: 10px auto;
   padding: 5px 20px;
+  display: flex;
   flex-direction: column;
   justify-content: space-around;
   width: 90%;
   text-align: center;
+  align-items: center;
+
 }
 
 /* this must follow the section above */
@@ -401,6 +409,7 @@ li a:hover {
 .single-student-page-student-note,
 .single-assignment-page-list-box-add-a-new-grade {
   align-items: center;
+  
   background-image: url(..//images/free-chalkboard-green.jpg);
   border: 2px solid black;
   border-radius: 6px;
@@ -426,11 +435,13 @@ li a:hover {
 .single-classroom-page-add-new-assignment-form,
 .single-classroom-page-add-new-student-to-class-form,
 .students-page-add-a-student-form,
-.single-student-page-notes-add-a-note-about-this-student-form {
+.single-student-page-notes-add-a-note-about-this-student-form
+.delete-student-grade {
   color: lemonchiffon;
   text-align: center;
   margin: auto;
   text-shadow: 3px 3px 1px rgba(0, 0, 0, 0.3);
+  align-items: center;
 }
 
 .form-element {
@@ -456,16 +467,25 @@ li a:hover {
   box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.4);
 }
 
+/* .delete-student-grade { */
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* align-items: center; */
+  /* margin: 0 auto; */
+/* } */
+
+
 .delete-button {
-  font-size: 1em;
+    font-size: 1em;
   font-weight: bold;
   color: whitesmoke;
   background-color: red;
-  /* text-shadow: 3px 3px 1px rgba(0, 0, 0, 0.2); */
   border-radius: 4px;
   box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.4);
   padding: 5px 20px;
-  /* justify-items: center; */
+  justify-items: center;
+  align-items: center;
+  margin: 0 auto;
 
   /* text-shadow: top right, 
     bottom-right, 
@@ -809,6 +829,7 @@ form {
 
 form input {
   margin: 5px 0px;
+  align-items: center;
 }
 
 input#grade,
