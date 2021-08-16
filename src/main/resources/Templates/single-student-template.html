@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <header th:insert="general.html :: header" id="header"></header>
+    <header th:insert="general.html::header" id="header"></header>
     <div class="container">
         <div class="left-sidebar"></div>
         <main class="main-content" id="single-student-page-main-content">
@@ -24,7 +24,6 @@
                 <p class="single-student-page-profile-name" th:text="${individualStudent.name}"></p>
                 <!-- <div> -->
                 <div class="single-student-page-text-pic">
-                    <!-- <div class="single-student-page-headshot-box"> -->
                     <img class="single-student-page-headshot" th:src="${individualStudent.studentImage}"
                         th:alt="${'Photo of ' + individualStudent.name}" height="200px" width="200px">
                     <!-- </div> -->
@@ -44,34 +43,36 @@
                     </div>
 
                 </div>
-                <!-- </div> -->
-
             </div>
+
             <section class="single-student-page-main-box">
-                <ul>
-                    <p class="single-student-page-student-classes-title">Student's Classes:</p>
+                <div class="single-student-page-classes-and-grades-box">
+                    <ul>
+                        <p class="single-student-page-student-classes-title">Student's Classes:</p>
 
-                    <li th:each="classroom: ${individualStudent.classrooms}"><a
-                            th:href="@{/classroom(id=${classroom.id})}" th:text="${classroom.subject}"></a>
-                    </li>
-                </ul>
-
-                <div class="single-student-page-student-grades">
-                    <h4>Student Grades:</h4>
-                    <ul class="grade-list" th:each="grade:${individualStudent.grades}">
-                        <div class="single-student-page-list-box">
-                            <li th:text="${'Assignment Name: ' + grade.assignment.name}"></li>
-                            <li th:text="${'Grade: ' + grade.grade + '/' + grade.maximumGrade}"></li>
-                            <form class="" th:action="'/student/deletegrade/'+${individualStudent.id}" th:method="post">
-                                <input type="hidden" name="gradeId" th:value="${grade.id}">
-                                <button type="submit" class="delete-button">Delete Grade</button>
-                            </form>
-                        </div>
+                        <li th:each="classroom: ${individualStudent.classrooms}"><a
+                                th:href="@{/classroom(id=${classroom.id})}" th:text="${classroom.subject}"></a>
+                        </li>
                     </ul>
-                    <h4 class="total-grade"
-                        th:text="${'Overall Grade Average: ' + individualStudent.calculateTotalGrade() + '%'}"></h4>
+
+                    <div class="single-student-page-student-grades">
+                        <h4>Student Grades:</h4>
+                        <ul class="grade-list" th:each="grade:${individualStudent.grades}">
+                            <div class="single-student-page-list-box">
+                                <li th:text="${'Assignment Name: ' + grade.assignment.name}"></li>
+                                <li th:text="${'Grade: ' + grade.grade + '/' + grade.maximumGrade}"></li>
+                                <form class="" th:action="'/student/deletegrade/'+${individualStudent.id}"
+                                    th:method="post">
+                                    <input type="hidden" name="gradeId" th:value="${grade.id}">
+                                    <button type="submit" class="delete-button">Delete Grade</button>
+                                </form>
+                            </div>
+                        </ul>
+                        <h4 class="total-grade"
+                            th:text="${'Overall Grade Average: ' + individualStudent.calculateTotalGrade() + '%'}"></h4>
+                    </div>
                 </div>
-                <!-- <div> -->
+
                 <Section class="single-student-page-list-box-arround-student-notes-and-add-a-note">
 
                     <div class="single-student-page-list-box">
@@ -80,7 +81,8 @@
                             <li th:text="${'Note Title: ' + note.title}"></li>
                             <li th:text="${'Note Date: ' + note.noteDate}"></li>
                             <li th:text="${'Note: ' + note.note}"></li>
-                            <form class="single-student-page-notes-add-a-note-about-this-student-form" th:action="'/student/deletenote/'+${individualStudent.id}" th:method="post">
+                            <form class="single-student-page-notes-add-a-note-about-this-student-form"
+                                th:action="'/student/deletenote/'+${individualStudent.id}" th:method="post">
                                 <input type="hidden" name="noteId" th:value="${note.id}">
                                 <button type="submit" class="delete-button">Delete Note</button>
                             </form>
@@ -89,8 +91,7 @@
 
                     <div class="single-student-page-student-note">
                         <p class="single-student-page-notes-add-a-note-about-this-student-title">Add A Note About
-                            This
-                            Student</p>
+                            This Student</p>
                         <form th:action="'/student/'+${individualStudent.id}"
                             class="single-student-page-notes-add-a-note-about-this-student-form" id="student-note"
                             method="post">
@@ -112,14 +113,14 @@
                     </div>
 
                 </Section>
-                <!-- </div> -->
+
             </section>
 
         </main>
         <div class="right-sidebar"></div>
     </div>
     <footer th:insert="general.html :: footer"></footer>
-    
+
 </body>
 
 </html>
