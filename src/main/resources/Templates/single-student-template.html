@@ -58,18 +58,18 @@
                     <div class="single-student-page-student-grades">
                         <p class="single-student-page-student-grades-title">Student Grades:</p>
                         <ul class="single-student-page-student-grade-list" th:each="grade:${individualStudent.grades}">
-                            <div class="single-student-page-list-box">
+                            <div class="single-student-page-grade-box">
                                 <li th:text="${'Assignment Name: ' + grade.assignment.name}"></li>
                                 <li th:text="${'Grade: ' + grade.grade + '/' + grade.maximumGrade}"></li>
-                                <form class="single-student-page-student-grade-list" th:action="'/student/deletegrade/'+${individualStudent.id}"
-                                    th:method="post">
+                                <form class="single-student-page-student-grade-list"
+                                    th:action="'/student/deletegrade/'+${individualStudent.id}" th:method="post">
                                     <input type="hidden" name="gradeId" th:value="${grade.id}">
                                     <button type="submit" class="delete-button">Delete Grade</button>
                                 </form>
                             </div>
                         </ul>
-                        <h4 class="single-student-page-student-grade-list"
-                            th:text="${'Overall Grade Average: ' + individualStudent.calculateTotalGrade() + '%'}"></h4>
+                        <p class="single-student-page-student-grade-list"
+                            th:text="${'Overall Grade Average: ' + individualStudent.calculateTotalGrade() + '%'}"></p>
                     </div>
                 </div>
 
@@ -114,7 +114,7 @@
                     <button type="submit" class="delete-button">Delete Student</button>
                     </select>
                 </form>
-    
+
             </section>
 
 

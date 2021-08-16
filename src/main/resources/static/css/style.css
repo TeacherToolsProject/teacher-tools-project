@@ -148,15 +148,10 @@ li a:hover {
 align-items: center;
 }
 
-/* The following section must follow the section above */
-.single-student-page-list-box-around-student-notes-and-add-a-note {
-display: flex;
-flex-direction: row;
-flex-wrap: wrap;
-padding: 5px;
-}
-
-
+/* The following section needs to follow the section above */
+/* .single-student-page-classes-and-grades-box { */
+/* width: 90%; */
+/* } */
 
 .home-page-classroom-list-box,
 .single-classroom-page-section-box,
@@ -184,6 +179,20 @@ padding: 5px;
   text-align: left;
   padding-top: 10px;
 }
+
+/* this must follow the section above */
+.single-student-page-grade-box {
+  text-shadow: none;
+  font-weight: normal;
+  color: black;
+  background-color: lemonchiffon;
+  background-image: none;
+  margin: 10px 10px;
+  padding: 5px 10px;
+
+
+}
+
 
 .single-student-page-note-list, .single-student-page-student-note {
   text-shadow: none;
@@ -216,6 +225,7 @@ padding: 5px;
 
 .single-student-page-student-grade-list{
   color: lemonchiffon;
+  margin: 20px auto;
 }
 
 .single-assignment-page-add-new-grade-student-and-grade {
@@ -239,6 +249,16 @@ padding: 5px;
 .single-student-page-student-grades {
   box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.4);
   border: 2px solid black;
+  background-image: url(..//images/free-chalkboard-green.jpg);
+  border-radius: 6px;
+  padding: auto;
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* justify-content: space-evenly; */
+  width: 90%;
+  text-align: center;
+  /* align-items: center; */
+  margin:auto;
 }
 
 .home-page-classroom-list,
@@ -440,7 +460,6 @@ color: lemonchiffon;
 .single-assignment-page-assignment-details-students {
   margin: 0;
   padding: 0;
-  background-color: hotpink;
 }
 
 .home-page-add-a-new-classroom-box,
