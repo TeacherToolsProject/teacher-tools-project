@@ -34,6 +34,8 @@
                     <div>  <!--Take this div out to shorten the length of the input boxes-->
 
                         <p class="home-page-add-new-classroom-title">Add A New Classroom:</p>
+                        <button onclick="hideShowNewClassroom()">Hide and Show</button>
+                        <div id="hideToggleAddNewClassroom">
                         <form th:action="'/add-classroom'" class="home-page-new-classroom-form" method="post">
                             <label for="subject">Subject: </label><input id="subject" class="form-element" type="text"
                                 name="subject" required>
@@ -50,6 +52,7 @@
                             <input type="submit" class="home-page-new-classroom-form-button" value="Add New Classroom">
                         </form>
                     </div>
+                </div>
 
                 </section>
 
@@ -61,7 +64,7 @@
 
     </div>
     <footer th:insert="general.html :: footer"></footer>
-
+    <script src="/js/addHideToggle.js"></script>
 </body>
 
 </html>
