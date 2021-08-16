@@ -20,7 +20,7 @@ public class AssignmentController {
         this.assignmentRepo = assignmentRepo;
     }
 
-    //Got lost here
+    
     @GetMapping("/assignment")
     public String displayAssignmentPage(@RequestParam("id") Long id, Model model){
         Assignment assignment = assignmentRepo.findById(id).get();

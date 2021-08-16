@@ -92,7 +92,6 @@ public class ClassroomController {
     public String deleteStudentClassroom (@PathVariable("id")Long id){
         Classroom studentClassroomToDelete = classroomRepo.findById(id).get();
         classroomRepo.deleteById(id);
-       // classroomRepo.save(studentClassroomToDelete);
 
         return "redirect:/";
     }
