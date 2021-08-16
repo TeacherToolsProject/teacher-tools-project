@@ -32,10 +32,16 @@ public class Populator implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception{
 
-        Classroom apHistoryOne = new Classroom("AP History One", 9, "402A", "8:30", 2021, "Fall");
+        Classroom apHistoryOne = new Classroom("AP History One", 11, "402A", "8:30", 2021, "Fall");
         classroomRepo.save(apHistoryOne);
         Classroom civilWarHistory = new Classroom("Civil War History", 10, "Zoom Id: 12354-78", "10:00", 2021, "Fall");
         classroomRepo.save(civilWarHistory);
+        Classroom apCalculus = new Classroom("AP Calculus", 12, "410", "11:30", 2021, "Winter");
+        classroomRepo.save(apCalculus);
+        Classroom earthScience = new Classroom("Earth Science", 9, "312", "1:30", 2021, "Summer");
+        classroomRepo.save(earthScience);
+        Classroom apIntroComputerScience = new Classroom("AP Intro to Computer Science", 9, "110", "2:30", 2021, "Summer");
+        classroomRepo.save(apIntroComputerScience);
 
         Student cushmanGrant = new Student("Grant Cushman", 
         "..//images/student-grant-cushman.jpg", 
