@@ -44,16 +44,4 @@ public class RestfulApiControllers {
         return "redirect:/students";
     }
 
-    //
-//    @PostMapping("/api/newAssignment")
-//    public String addNewAssignment(@RequestParam String name, String description, Long classroomId){
-//
-//        Classroom classroom = classroomRepo.findById(classroomId).get();
-//        Assignment assignmentToAdd = new Assignment(classroom,name,description,"Test", "test","test");
-//        assignmentRepo.save(assignmentToAdd);
-//
-//        return "redirect:/classroom?id="+ classroomId;
-//    }
-    //
-
 }

@@ -67,6 +67,10 @@
 
       </section>
 
+      <form th:action="'/assignment/deleteassignment/'+${individualAssignment.id}" method="POST">
+        <button type="submit" class="button">Delete Assignment</button>
+      </form>
+
     </main>
     <div class="right-sidebar"></div>
 
