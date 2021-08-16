@@ -71,43 +71,48 @@
                     <h4 class="total-grade"
                         th:text="${'Overall Grade Average: ' + individualStudent.calculateTotalGrade() + '%'}"></h4>
                 </div>
-                <div class="single-student-page-list-box">
-                    <p class="single-student-page-list-title">Notes About This Student</p>
-                    <ul class="note-list" th:each="note:${individualStudent.notes}">
-                        <li th:text="${'Note Title: ' + note.title}"></li>
-                        <li th:text="${'Note Date: ' + note.noteDate}"></li>
-                        <li th:text="${'Note: ' + note.note}"></li>
-                        <form th:action="'/student/deletenote/'+${individualStudent.id}" th:method="post">
-                            <input type="hidden" name="noteId" th:value="${note.id}">
-                            <button type="submit" class="delete-button">Delete Note</button>
+
+                <Section class="single-student-page-list-box-arround-student-notes-and-add-a-note">
+                    <!-- <div> -->
+                    <div class="single-student-page-list-box">
+                        <p class="single-student-page-list-title">Notes About This Student</p>
+                        <ul class="note-list" th:each="note:${individualStudent.notes}">
+                            <li th:text="${'Note Title: ' + note.title}"></li>
+                            <li th:text="${'Note Date: ' + note.noteDate}"></li>
+                            <li th:text="${'Note: ' + note.note}"></li>
+                            <form th:action="'/student/deletenote/'+${individualStudent.id}" th:method="post">
+                                <input type="hidden" name="noteId" th:value="${note.id}">
+                                <button type="submit" class="delete-button">Delete Note</button>
+                            </form>
+                        </ul>
+                    </div>
+
+                    <div class="single-student-page-student-note">
+                        <p class="single-student-page-notes-add-a-note-about-this-student-title">Add A Note About
+                            This
+                            Student</p>
+                        <form th:action="'/student/'+${individualStudent.id}"
+                            class="single-student-page-notes-add-a-note-about-this-student-form" id="student-note"
+                            method="post">
+                            <label for="title">Title: </label> <input class="form-element" id="title" type="text"
+                                name="title" required>
+                            <label for="date">Date: </label> <input class="form-element" id="date" type="date"
+                                name="date" required>
+                            <p>Note:</p>
+                            <textarea class="form-element" rows="4" cols="50" name="note" form="student-note"
+                                required></textarea>
+                            <input type="submit" value="Add Note"
+                                class="single-student-page-notes-add-a-note-about-this-student-button">
                         </form>
-                    </ul>
-                </div>
 
+                        <form th:action="'/classroom/deletestudent/'+${individualStudent.id}" method="POST">
+                            <button type="submit" class="delete-button">Delete Student</button>
+                            </select>
+                        </form>
+                    </div>
+                    <!-- </div> -->
+                </Section>
 
-
-                <div class="single-student-page-student-note">
-                    <p class="single-student-page-notes-add-a-note-about-this-student-title">Add A Note About This
-                        Student</p>
-                    <form th:action="'/student/'+${individualStudent.id}"
-                        class="single-student-page-notes-add-a-note-about-this-student-form" id="student-note"
-                        method="post">
-                        <label for="title">Title: </label> <input class="form-element" id="title" type="text"
-                            name="title" required>
-                        <label for="date">Date: </label> <input class="form-element" id="date" type="date" name="date"
-                            required>
-                        <p>Note:</p>
-                        <textarea class="form-element" rows="4" cols="50" name="note" form="student-note"
-                            required></textarea>
-                        <input type="submit" value="Add Note"
-                            class="single-student-page-notes-add-a-note-about-this-student-button">
-                    </form>
-
-                    <form th:action="'/classroom/deletestudent/'+${individualStudent.id}" method="POST">
-                        <button type="submit" class="delete-button">Delete Student</button>
-                        </select>
-                    </form>
-                </div>
             </section>
 
         </main>
