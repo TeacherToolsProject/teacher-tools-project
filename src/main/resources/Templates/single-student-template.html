@@ -62,7 +62,7 @@
                         <div class="single-student-page-list-box">
                             <li th:text="${'Assignment Name: ' + grade.assignment.name}"></li>
                             <li th:text="${'Grade: ' + grade.grade + '/' + grade.maximumGrade}"></li>
-                            <form th:action="'/student/deletegrade/'+${individualStudent.id}" th:method="post">
+                            <form class="" th:action="'/student/deletegrade/'+${individualStudent.id}" th:method="post">
                                 <input type="hidden" name="gradeId" th:value="${grade.id}">
                                 <button type="submit" class="delete-button">Delete Grade</button>
                             </form>
@@ -71,16 +71,16 @@
                     <h4 class="total-grade"
                         th:text="${'Overall Grade Average: ' + individualStudent.calculateTotalGrade() + '%'}"></h4>
                 </div>
-
+                <!-- <div> -->
                 <Section class="single-student-page-list-box-arround-student-notes-and-add-a-note">
-                    <!-- <div> -->
+
                     <div class="single-student-page-list-box">
                         <p class="single-student-page-list-title">Notes About This Student</p>
                         <ul class="note-list" th:each="note:${individualStudent.notes}">
                             <li th:text="${'Note Title: ' + note.title}"></li>
                             <li th:text="${'Note Date: ' + note.noteDate}"></li>
                             <li th:text="${'Note: ' + note.note}"></li>
-                            <form th:action="'/student/deletenote/'+${individualStudent.id}" th:method="post">
+                            <form class="single-student-page-notes-add-a-note-about-this-student-form" th:action="'/student/deletenote/'+${individualStudent.id}" th:method="post">
                                 <input type="hidden" name="noteId" th:value="${note.id}">
                                 <button type="submit" class="delete-button">Delete Note</button>
                             </form>
@@ -110,9 +110,9 @@
                             </select>
                         </form>
                     </div>
-                    <!-- </div> -->
-                </Section>
 
+                </Section>
+                <!-- </div> -->
             </section>
 
         </main>
