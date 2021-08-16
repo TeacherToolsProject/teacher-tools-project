@@ -50,21 +50,21 @@ public class Populator implements CommandLineRunner {
 
         Student fongGary = new Student("Gary Fong",
                 "..//images/student-gary-fong.jfif",
-                "Ben Fong", "ben_fong@nomail.com", "614-555-1212", 1, 3, 2006, civilWarHistory);
+                "Ben Fong", "ben_fong@nomail.com", "614-555-1212", 1, 3, 2006, apHistoryOne, civilWarHistory);
         studentRepo.save(fongGary);
 
         Student williamsAbbey = new Student("Abbey Williams",
                 "..//images/student-abbey-williams.jfif",
-                "Trent Williams", "trentman123@nomail.com", "780-555-1212", 6, 10, 2006, apHistoryOne);
+                "Trent Williams", "trentman123@nomail.com", "780-555-1212", 6, 10, 2006, apHistoryOne, civilWarHistory, apCalculus);
         studentRepo.save(williamsAbbey);
 
         Student stevensWendy = new Student("Wendy Stevens",
                 "..//images/student-wendy-stevens.jfif",
-                "Martha Stevens", "marthas123@nomail.com", "580-555-6985", 9, 12, 2005, civilWarHistory);
+                "Martha Stevens", "marthas123@nomail.com", "580-555-6985", 9, 12, 2005, apHistoryOne, civilWarHistory, apCalculus, earthScience);
         studentRepo.save(stevensWendy);
 
         Student jamesLester = new Student("Lester James", "..//images/student-lester-james.jfif",
-                "Agatha James", "agathajames@nomail.com", "614-532-8965", 6, 7, 2006, apHistoryOne, civilWarHistory);
+                "Agatha James", "agathajames@nomail.com", "614-532-8965", 6, 7, 2006, apHistoryOne, civilWarHistory, apCalculus, earthScience, apIntroComputerScience);
         studentRepo.save(jamesLester);
 
         Student sanghaAdi = new Student("Adi Sangha",
@@ -121,22 +121,29 @@ public class Populator implements CommandLineRunner {
         apHistoryOne.addStudent(williamsAbbey);
         apHistoryOne.addStudent(jamesLester);
         apHistoryOne.addStudent(pattersonBecky);
+        apHistoryOne.addStudent(stevensWendy);
         classroomRepo.save(apHistoryOne);
 
         civilWarHistory.addStudent(fongGary);
         civilWarHistory.addStudent(stevensWendy);
         civilWarHistory.addStudent(jamesLester);
+        civilWarHistory.addStudent(williamsAbbey);
         classroomRepo.save(civilWarHistory);
 
         apCalculus.addStudent(sanghaAdi);
         apCalculus.addStudent(bahramAlliyah);
+        apCalculus.addStudent(jamesLester);
+        apCalculus.addStudent(stevensWendy);
         apCalculus.addStudent(williamsMarcus);
+        apCalculus.addStudent(williamsAbbey);
         classroomRepo.save(apCalculus);
 
         earthScience.addStudent(pattersonBecky);
         earthScience.addStudent(petersonBrian);
         earthScience.addStudent(wongMichael);
         earthScience.addStudent(changSarah);
+        earthScience.addStudent(stevensWendy);
+        earthScience.addStudent(jamesLester);
         classroomRepo.save(earthScience);
 
         apIntroComputerScience.addStudent(mccoyDamien);
@@ -144,6 +151,7 @@ public class Populator implements CommandLineRunner {
         apIntroComputerScience.addStudent(novikJoey);
         apIntroComputerScience.addStudent(changSarah);
         apIntroComputerScience.addStudent(sanghaAdi);
+        apIntroComputerScience.addStudent(jamesLester);
         classroomRepo.save(apIntroComputerScience);
 
 
