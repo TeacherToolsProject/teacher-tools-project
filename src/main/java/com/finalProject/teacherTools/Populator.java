@@ -162,17 +162,29 @@ public class Populator implements CommandLineRunner {
         "your least favorite.", "09/05/2021", "09/10/2021", "100");
         assignmentRepo.save(apHistoryOneSecondAssignment);
 
-
-
-
         Assignment civilWarHistoryFirstAssignment = new Assignment(civilWarHistory, "Summarize the accomplishment of a famous Civil War general", "Choose any Civil War general and summarize the accomplishments of that general, " +
                 "including major victories and areas he fought in.", "08/28/2021", "09/03/2021", "50");
         assignmentRepo.save(civilWarHistoryFirstAssignment);
+        Assignment civilWarHistorySecondAssignment = new Assignment(civilWarHistory, "Name all the soldiers in the Civil War", "Name them all. Go!", "09/06/2021", "09/06/2021", "500");
+        assignmentRepo.save(civilWarHistorySecondAssignment);
+        Assignment civilWarHistoryThirdAssignment = new Assignment(civilWarHistory, "How many buttons were on a Union General's coat?", "In efficitur molestie porta. Nullam quis sollicitudin orci, a tempus neque. Ut.",
+        "09/28/2021", "10/03/2021", "100");
+        assignmentRepo.save(civilWarHistoryThirdAssignment);
 
-
-        Assignment apCalculusFirstAssignment = new Assignment(apCalculus, "Calculus Quiz 2", "This quiz consists of 25 problems. Click on “Begin Quiz”, then read each problem carefully. " +
+ 
+        Assignment apCalculusFirstAssignment = new Assignment(apCalculus, "Calculus Quiz 1", "This quiz consists of 25 problems. Click on “Begin Quiz”, then read each problem carefully. " +
                 "Then work the problem on a separate sheet of paper and click on the box next to the correct choice.", "08/30/2021", "08/31/2021", "100");
         assignmentRepo.save(apCalculusFirstAssignment);
+        Assignment apCalculusSecondAssignment = new Assignment(apCalculus, "Calculus Quiz 2", "This quiz consists of 50 problems. Click on “Begin Quiz”, then read each problem carefully. " +
+                "Then work the problem on a separate sheet of paper and click on the box next to the correct choice.", "09/01/2021", "09/02/2021", "100");
+        assignmentRepo.save(apCalculusSecondAssignment);
+        Assignment apCalculusThirdAssignment = new Assignment(apCalculus, "Calculus Quiz 3", "This quiz consists of 75 problems. Click on “Begin Quiz”, then read each problem carefully. " +
+                "Then work the problem on a separate sheet of paper and click on the box next to the correct choice.", "09/03/2021", "09/04/2021", "100");
+        assignmentRepo.save(apCalculusThirdAssignment);
+        Assignment apCalculusFourthAssignment = new Assignment(apCalculus, "Calculus Quiz 4", "This quiz consists of 100 problems. Click on “Begin Quiz”, then read each problem carefully. " +
+                "Then work the problem on a separate sheet of paper and click on the box next to the correct choice.", "09/05/2021", "09/06/2021", "100");
+        assignmentRepo.save(apCalculusFourthAssignment);
+
 
 
         Assignment earthScienceFirstAssignment = new Assignment(earthScience, "Theory of Plate Tectonics", "You will complete a written analysis (about 5-6 pages) investigating the development of the Theory of Plate Tectonics as it relates to the scientific disciplines of geology, oceanography, meteorology and astronomy.\n" +
