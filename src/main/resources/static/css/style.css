@@ -133,7 +133,8 @@ li a:hover {
   text-align: left;
 }
 
-.single-student-page-list-box-arround-student-notes-and-add-a-note {
+.single-student-page-list-box-arround-student-notes-and-add-a-note, 
+.single-student-page-classes-and-grades-box {
   /* color: whitesmoke; */
   border: 2px solid black;
   background-image: url(..//images/free-chalkboard-black.jpg);
