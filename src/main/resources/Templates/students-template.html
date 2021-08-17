@@ -32,7 +32,7 @@
 
                         <div class="add-student">
                             <p class="students-page-add-a-student-title">Add A New Student:</p>
-                            <button onclick="hideShowNewStudent()">Hide and Show</button>
+                            <button  class="hide-show-button" onclick="hideShowNewStudent()">Hide and Show</button>
                             <div id="hideToggleNewStudent">
                             <form th:action="'/students/add'" class="students-page-add-a-student-form" method="post">
                                 <label for="name">Student's Name: </label><input id="name" class="form-element"
