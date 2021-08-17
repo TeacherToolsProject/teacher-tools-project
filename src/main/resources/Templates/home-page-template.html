@@ -34,7 +34,7 @@
                     <div>  <!--Take this div out to shorten the length of the input boxes-->
 
                         <p class="home-page-add-new-classroom-title">Add A New Classroom:</p>
-                        <button onclick="hideShowNewClassroom()">Hide and Show</button>
+                        <button class="hide-show-button" onclick="hideShowNewClassroom()">Hide and Show</button>
                         <div id="hideToggleAddNewClassroom">
                         <form th:action="'/add-classroom'" class="home-page-new-classroom-form" method="post">
                             <label for="subject">Subject: </label><input id="subject" class="form-element" type="text"

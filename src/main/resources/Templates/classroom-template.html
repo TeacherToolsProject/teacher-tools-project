@@ -43,7 +43,7 @@
           <div>
             <!--Take this div out to shorten the length of the input boxes-->
             <p class="single-classroom-page-add-new-assignment-title">Add New Assignment:</p>
-            <button onclick="hideShowAssignmentToClass()">Hide and Show</button>
+            <button class="hide-show-button" onclick="hideShowAssignmentToClass()">Hide and Show</button>
             <div id="hideToggleAddNewClass">
             <form action="/classroom/newAssignment" class="single-classroom-page-add-new-assignment-form" method="POST">
               <input type="hidden" name="classroomId" class="form-element" th:value="${individualClassroom.id}">
@@ -69,7 +69,7 @@
           <div>
             <!--Take this div out to shorten the length of the input boxes-->
             <p class="single-classroom-page-add-new-student-to-class-title">Add Student To This Class:</p>
-            <button onclick="hideShowStudentToClass()">Hide and Show</button>
+            <button class="hide-show-button" onclick="hideShowStudentToClass()">Hide and Show</button>
             <div id="hideToggleStudentToClass">
             <form th:action="'/classroom/addStudent/?id='+${individualClassroom.id}"
               class="single-classroom-page-add-new-student-to-class-form" method="POST">
