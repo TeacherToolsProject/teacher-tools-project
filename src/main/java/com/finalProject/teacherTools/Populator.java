@@ -186,11 +186,18 @@ public class Populator implements CommandLineRunner {
         assignmentRepo.save(apCalculusFourthAssignment);
 
 
-
-        Assignment earthScienceFirstAssignment = new Assignment(earthScience, "Theory of Plate Tectonics", "You will complete a written analysis (about 5-6 pages) investigating the development of the Theory of Plate Tectonics as it relates to the scientific disciplines of geology, oceanography, meteorology and astronomy.\n" +
-                "\n", "08/20/2021", "08/28/2021", "100");
+        Assignment earthScienceFirstAssignment = new Assignment(earthScience, "Theory of Plate Tectonics", "You will complete a written analysis (about 5-6 pages) investigating the " +
+        "development of the Theory of Plate Tectonics as it relates to the scientific disciplines of geology, oceanography, meteorology and astronomy.", "08/16/2021", "08/20/2021", "100");
         assignmentRepo.save(earthScienceFirstAssignment);
-
+        Assignment earthScienceSecondAssignment = new Assignment(earthScience, "The Joy of Geology", "Talk about rocks until you are stoned.", "08/23/2021", "08/27/2021", "100");
+        assignmentRepo.save(earthScienceSecondAssignment);
+        Assignment earthScienceThirdAssignment = new Assignment(earthScience, "Dig Up Some Dirt", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In non odio sed ante.", "08/30/2021", "09/03/2021", "100");
+        assignmentRepo.save(earthScienceThirdAssignment);
+        Assignment earthScienceFourthAssignment = new Assignment(earthScience, "Climate Change: Fact or Fiction?", "Praesent velit neque, pellentesque eget consequat ac, fermentum sed.", "09/06/2021", "09/10/2021", "100");
+        assignmentRepo.save(earthScienceFourthAssignment);
+        Assignment earthScienceFifthAssignment = new Assignment(earthScience, "Theory of Plate Tectonics", "Praesent eleifend tempor rhoncus. Quisque et purus sagittis, gravida neque rutrum, " +
+        "luctus lorem. Integer hendrerit, nibh at egestas bibendum, orci orci rhoncus magna, ut.", "09/13/2021", "09/17/2021", "100");
+        assignmentRepo.save(earthScienceFifthAssignment);
 
 
         Assignment apIntroComputerScienceFirstAssignment = new Assignment(apIntroComputerScience, "Hello World!", "Write \"Hello World!\" in Java", "08/28/2021", "08/28/2021", "10");
@@ -217,6 +224,18 @@ public class Populator implements CommandLineRunner {
         civilWarHistoryFirstAssignment.addStudent(williamsAbbey);
         assignmentRepo.save(civilWarHistoryFirstAssignment);
 
+        civilWarHistorySecondAssignment.addStudent(fongGary);
+        civilWarHistorySecondAssignment.addStudent(stevensWendy);
+        civilWarHistorySecondAssignment.addStudent(jamesLester);
+        civilWarHistorySecondAssignment.addStudent(williamsAbbey);
+        assignmentRepo.save(civilWarHistorySecondAssignment);
+
+        civilWarHistoryThirdAssignment.addStudent(fongGary);
+        civilWarHistoryThirdAssignment.addStudent(stevensWendy);
+        civilWarHistoryThirdAssignment.addStudent(jamesLester);
+        civilWarHistoryThirdAssignment.addStudent(williamsAbbey);
+        assignmentRepo.save(civilWarHistoryThirdAssignment);
+
         apCalculusFirstAssignment.addStudent(sanghaAdi);
         apCalculusFirstAssignment.addStudent(bahramAlliyah);
         apCalculusFirstAssignment.addStudent(williamsMarcus);
@@ -225,6 +244,30 @@ public class Populator implements CommandLineRunner {
         apCalculusFirstAssignment.addStudent(williamsAbbey);
         assignmentRepo.save(apCalculusFirstAssignment);
 
+        apCalculusSecondAssignment.addStudent(sanghaAdi);
+        apCalculusSecondAssignment.addStudent(bahramAlliyah);
+        apCalculusSecondAssignment.addStudent(williamsMarcus);
+        apCalculusSecondAssignment.addStudent(jamesLester);
+        apCalculusSecondAssignment.addStudent(stevensWendy);
+        apCalculusSecondAssignment.addStudent(williamsAbbey);
+        assignmentRepo.save(apCalculusSecondAssignment);
+
+        apCalculusThirdAssignment.addStudent(sanghaAdi);
+        apCalculusThirdAssignment.addStudent(bahramAlliyah);
+        apCalculusThirdAssignment.addStudent(williamsMarcus);
+        apCalculusThirdAssignment.addStudent(jamesLester);
+        apCalculusThirdAssignment.addStudent(stevensWendy);
+        apCalculusThirdAssignment.addStudent(williamsAbbey);
+        assignmentRepo.save(apCalculusThirdAssignment);
+
+        apCalculusFourthAssignment.addStudent(sanghaAdi);
+        apCalculusFourthAssignment.addStudent(bahramAlliyah);
+        apCalculusFourthAssignment.addStudent(williamsMarcus);
+        apCalculusFourthAssignment.addStudent(jamesLester);
+        apCalculusFourthAssignment.addStudent(stevensWendy);
+        apCalculusFourthAssignment.addStudent(williamsAbbey);
+        assignmentRepo.save(apCalculusFourthAssignment);
+
         earthScienceFirstAssignment.addStudent(pattersonBecky);
         earthScienceFirstAssignment.addStudent(petersonBrian);
         earthScienceFirstAssignment.addStudent(wongMichael);
@@ -232,6 +275,38 @@ public class Populator implements CommandLineRunner {
         earthScienceFirstAssignment.addStudent(stevensWendy);
         earthScienceFirstAssignment.addStudent(jamesLester);
         assignmentRepo.save(earthScienceFirstAssignment);
+
+        earthScienceSecondAssignment.addStudent(pattersonBecky);
+        earthScienceSecondAssignment.addStudent(petersonBrian);
+        earthScienceSecondAssignment.addStudent(wongMichael);
+        earthScienceSecondAssignment.addStudent(changSarah);
+        earthScienceSecondAssignment.addStudent(stevensWendy);
+        earthScienceSecondAssignment.addStudent(jamesLester);
+        assignmentRepo.save(earthScienceSecondAssignment);
+
+        earthScienceThirdAssignment.addStudent(pattersonBecky);
+        earthScienceThirdAssignment.addStudent(petersonBrian);
+        earthScienceThirdAssignment.addStudent(wongMichael);
+        earthScienceThirdAssignment.addStudent(changSarah);
+        earthScienceThirdAssignment.addStudent(stevensWendy);
+        earthScienceThirdAssignment.addStudent(jamesLester);
+        assignmentRepo.save(earthScienceThirdAssignment);
+
+        earthScienceFourthAssignment.addStudent(pattersonBecky);
+        earthScienceFourthAssignment.addStudent(petersonBrian);
+        earthScienceFourthAssignment.addStudent(wongMichael);
+        earthScienceFourthAssignment.addStudent(changSarah);
+        earthScienceFourthAssignment.addStudent(stevensWendy);
+        earthScienceFourthAssignment.addStudent(jamesLester);
+        assignmentRepo.save(earthScienceFourthAssignment);
+
+        earthScienceFifthAssignment.addStudent(pattersonBecky);
+        earthScienceFifthAssignment.addStudent(petersonBrian);
+        earthScienceFifthAssignment.addStudent(wongMichael);
+        earthScienceFifthAssignment.addStudent(changSarah);
+        earthScienceFifthAssignment.addStudent(stevensWendy);
+        earthScienceFifthAssignment.addStudent(jamesLester);
+        assignmentRepo.save(earthScienceFifthAssignment);
 
         apIntroComputerScienceFirstAssignment.addStudent(bahramAlliyah);
         apIntroComputerScienceFirstAssignment.addStudent(mccoyDamien);
