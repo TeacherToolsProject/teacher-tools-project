@@ -118,10 +118,11 @@ public class Populator implements CommandLineRunner {
         studentRepo.save(changSarah);
 
         apHistoryOne.addStudent(jonesBobby);
+        apHistoryOne.addStudent(fongGary);
         apHistoryOne.addStudent(williamsAbbey);
+        apHistoryOne.addStudent(stevensWendy);
         apHistoryOne.addStudent(jamesLester);
         apHistoryOne.addStudent(pattersonBecky);
-        apHistoryOne.addStudent(stevensWendy);
         classroomRepo.save(apHistoryOne);
 
         civilWarHistory.addStudent(fongGary);
@@ -205,6 +206,7 @@ public class Populator implements CommandLineRunner {
 
 
         apHistoryOneFirstAssignment.addStudent(jonesBobby);
+        apHistoryOneFirstAssignment.addStudent(fongGary);
         apHistoryOneFirstAssignment.addStudent(williamsAbbey);
         apHistoryOneFirstAssignment.addStudent(jamesLester);
         apHistoryOneFirstAssignment.addStudent(pattersonBecky);
@@ -212,6 +214,7 @@ public class Populator implements CommandLineRunner {
         assignmentRepo.save(apHistoryOneFirstAssignment);
 
         apHistoryOneSecondAssignment.addStudent(jonesBobby);
+        apHistoryOneSecondAssignment.addStudent(fongGary);
         apHistoryOneSecondAssignment.addStudent(williamsAbbey);
         apHistoryOneSecondAssignment.addStudent(jamesLester);
         apHistoryOneSecondAssignment.addStudent(pattersonBecky);
@@ -323,21 +326,51 @@ public class Populator implements CommandLineRunner {
         gradeRepo.save(bobbyJonesApHistoryGrade);
         bobbyJonesApHistoryGrade.addStudentToGrade(jonesBobby);
         gradeRepo.save(bobbyJonesApHistoryGrade);
-        
+        Grade fongGaryApHistoryGrade = new Grade(apHistoryOneFirstAssignment, 99, 100);
+        gradeRepo.save(fongGaryApHistoryGrade);
+        fongGaryApHistoryGrade.addStudentToGrade(fongGary);
+        gradeRepo.save(fongGaryApHistoryGrade);
         Grade abbeyWilliamsApHistoryGrade = new Grade(apHistoryOneFirstAssignment, 95, 100);
         gradeRepo.save(abbeyWilliamsApHistoryGrade);
         abbeyWilliamsApHistoryGrade.addStudentToGrade(williamsAbbey);
         gradeRepo.save(abbeyWilliamsApHistoryGrade);
-        
+        Grade stevensWendyApHistoryGrade = new Grade(apHistoryOneFirstAssignment, 92, 100);
+        gradeRepo.save(stevensWendyApHistoryGrade);
+        stevensWendyApHistoryGrade.addStudentToGrade(stevensWendy);
+        gradeRepo.save(stevensWendyApHistoryGrade);
         Grade lesterJamesApHistoryGrade = new Grade(apHistoryOneFirstAssignment, 89, 100);
         gradeRepo.save(lesterJamesApHistoryGrade);
         lesterJamesApHistoryGrade.addStudentToGrade(jamesLester);
         gradeRepo.save(lesterJamesApHistoryGrade);
-        
         Grade beckyPattersonApHistoryGrade = new Grade(apHistoryOneFirstAssignment, 91, 100);
         gradeRepo.save(beckyPattersonApHistoryGrade);
         beckyPattersonApHistoryGrade.addStudentToGrade(pattersonBecky);
         gradeRepo.save(beckyPattersonApHistoryGrade);
+
+        Grade bobbyJonesApHistoryGrade2 = new Grade(apHistoryOneSecondAssignment, 94, 100);
+        gradeRepo.save(bobbyJonesApHistoryGrade2);
+        bobbyJonesApHistoryGrade2.addStudentToGrade(jonesBobby);
+        gradeRepo.save(bobbyJonesApHistoryGrade2);
+        Grade fongGaryApHistoryGrade2 = new Grade(apHistoryOneSecondAssignment, 89, 100);
+        gradeRepo.save(fongGaryApHistoryGrade2);
+        fongGaryApHistoryGrade2.addStudentToGrade(fongGary);
+        gradeRepo.save(fongGaryApHistoryGrade2);
+        Grade abbeyWilliamsApHistoryGrade2 = new Grade(apHistoryOneSecondAssignment, 85, 100);
+        gradeRepo.save(abbeyWilliamsApHistoryGrade2);
+        abbeyWilliamsApHistoryGrade2.addStudentToGrade(williamsAbbey);
+        gradeRepo.save(abbeyWilliamsApHistoryGrade2);
+        Grade stevensWendyApHistoryGrade2 = new Grade(apHistoryOneSecondAssignment, 95, 100);
+        gradeRepo.save(stevensWendyApHistoryGrade2);
+        stevensWendyApHistoryGrade2.addStudentToGrade(stevensWendy);
+        gradeRepo.save(stevensWendyApHistoryGrade2);
+        Grade lesterJamesApHistoryGrade2 = new Grade(apHistoryOneSecondAssignment, 93, 100);
+        gradeRepo.save(lesterJamesApHistoryGrade2);
+        lesterJamesApHistoryGrade2.addStudentToGrade(jamesLester);
+        gradeRepo.save(lesterJamesApHistoryGrade2);
+        Grade beckyPattersonApHistoryGrade2 = new Grade(apHistoryOneSecondAssignment, 100, 100);
+        gradeRepo.save(beckyPattersonApHistoryGrade2);
+        beckyPattersonApHistoryGrade2.addStudentToGrade(pattersonBecky);
+        gradeRepo.save(beckyPattersonApHistoryGrade2);
 
 
         Grade pattersonBeckyEarthScienceGrade1 = new Grade(earthScienceFirstAssignment, 97, 100);
@@ -519,7 +552,5 @@ public class Populator implements CommandLineRunner {
         Note jamesLesterNote = new Note("Reminder for Lester", "Remind Lester to take out the trash.", "8/30/2021");
         jamesLester.addNoteToStudent(jamesLesterNote);
         studentRepo.save(jamesLester);
-
-
     }
 }
