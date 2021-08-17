@@ -126,33 +126,33 @@ public class Populator implements CommandLineRunner {
         classroomRepo.save(apHistoryOne);
 
         civilWarHistory.addStudent(fongGary);
+        civilWarHistory.addStudent(williamsAbbey);
         civilWarHistory.addStudent(stevensWendy);
         civilWarHistory.addStudent(jamesLester);
-        civilWarHistory.addStudent(williamsAbbey);
         classroomRepo.save(civilWarHistory);
 
+        apCalculus.addStudent(williamsAbbey);
+        apCalculus.addStudent(stevensWendy);
+        apCalculus.addStudent(jamesLester);
         apCalculus.addStudent(sanghaAdi);
         apCalculus.addStudent(bahramAlliyah);
-        apCalculus.addStudent(jamesLester);
-        apCalculus.addStudent(stevensWendy);
         apCalculus.addStudent(williamsMarcus);
-        apCalculus.addStudent(williamsAbbey);
         classroomRepo.save(apCalculus);
 
+        earthScience.addStudent(stevensWendy);
+        earthScience.addStudent(jamesLester);
         earthScience.addStudent(pattersonBecky);
         earthScience.addStudent(petersonBrian);
         earthScience.addStudent(wongMichael);
         earthScience.addStudent(changSarah);
-        earthScience.addStudent(stevensWendy);
-        earthScience.addStudent(jamesLester);
         classroomRepo.save(earthScience);
 
+        apIntroComputerScience.addStudent(jamesLester);
+        apIntroComputerScience.addStudent(bahramAlliyah);
         apIntroComputerScience.addStudent(mccoyDamien);
         apIntroComputerScience.addStudent(askerJennifer);
         apIntroComputerScience.addStudent(novikJoey);
         apIntroComputerScience.addStudent(changSarah);
-        apIntroComputerScience.addStudent(sanghaAdi);
-        apIntroComputerScience.addStudent(jamesLester);
         classroomRepo.save(apIntroComputerScience);
 
 
@@ -222,105 +222,102 @@ public class Populator implements CommandLineRunner {
         assignmentRepo.save(apHistoryOneSecondAssignment);
 
         civilWarHistoryFirstAssignment.addStudent(fongGary);
+        civilWarHistoryFirstAssignment.addStudent(williamsAbbey);
         civilWarHistoryFirstAssignment.addStudent(stevensWendy);
         civilWarHistoryFirstAssignment.addStudent(jamesLester);
-        civilWarHistoryFirstAssignment.addStudent(williamsAbbey);
         assignmentRepo.save(civilWarHistoryFirstAssignment);
 
         civilWarHistorySecondAssignment.addStudent(fongGary);
+        civilWarHistorySecondAssignment.addStudent(williamsAbbey);
         civilWarHistorySecondAssignment.addStudent(stevensWendy);
         civilWarHistorySecondAssignment.addStudent(jamesLester);
-        civilWarHistorySecondAssignment.addStudent(williamsAbbey);
         assignmentRepo.save(civilWarHistorySecondAssignment);
 
         civilWarHistoryThirdAssignment.addStudent(fongGary);
+        civilWarHistoryThirdAssignment.addStudent(williamsAbbey);
         civilWarHistoryThirdAssignment.addStudent(stevensWendy);
         civilWarHistoryThirdAssignment.addStudent(jamesLester);
-        civilWarHistoryThirdAssignment.addStudent(williamsAbbey);
         assignmentRepo.save(civilWarHistoryThirdAssignment);
 
+        apCalculusFirstAssignment.addStudent(williamsAbbey);
+        apCalculusFirstAssignment.addStudent(stevensWendy);
+        apCalculusFirstAssignment.addStudent(jamesLester);
         apCalculusFirstAssignment.addStudent(sanghaAdi);
         apCalculusFirstAssignment.addStudent(bahramAlliyah);
         apCalculusFirstAssignment.addStudent(williamsMarcus);
-        apCalculusFirstAssignment.addStudent(jamesLester);
-        apCalculusFirstAssignment.addStudent(stevensWendy);
-        apCalculusFirstAssignment.addStudent(williamsAbbey);
         assignmentRepo.save(apCalculusFirstAssignment);
 
+        apCalculusSecondAssignment.addStudent(williamsAbbey);
+        apCalculusSecondAssignment.addStudent(stevensWendy);
+        apCalculusSecondAssignment.addStudent(jamesLester);
         apCalculusSecondAssignment.addStudent(sanghaAdi);
         apCalculusSecondAssignment.addStudent(bahramAlliyah);
         apCalculusSecondAssignment.addStudent(williamsMarcus);
-        apCalculusSecondAssignment.addStudent(jamesLester);
-        apCalculusSecondAssignment.addStudent(stevensWendy);
-        apCalculusSecondAssignment.addStudent(williamsAbbey);
         assignmentRepo.save(apCalculusSecondAssignment);
 
+        apCalculusThirdAssignment.addStudent(williamsAbbey);
+        apCalculusThirdAssignment.addStudent(stevensWendy);
+        apCalculusThirdAssignment.addStudent(jamesLester);
         apCalculusThirdAssignment.addStudent(sanghaAdi);
         apCalculusThirdAssignment.addStudent(bahramAlliyah);
         apCalculusThirdAssignment.addStudent(williamsMarcus);
-        apCalculusThirdAssignment.addStudent(jamesLester);
-        apCalculusThirdAssignment.addStudent(stevensWendy);
-        apCalculusThirdAssignment.addStudent(williamsAbbey);
         assignmentRepo.save(apCalculusThirdAssignment);
 
+        apCalculusFourthAssignment.addStudent(williamsAbbey);
+        apCalculusFourthAssignment.addStudent(stevensWendy);
+        apCalculusFourthAssignment.addStudent(jamesLester);
         apCalculusFourthAssignment.addStudent(sanghaAdi);
         apCalculusFourthAssignment.addStudent(bahramAlliyah);
         apCalculusFourthAssignment.addStudent(williamsMarcus);
-        apCalculusFourthAssignment.addStudent(jamesLester);
-        apCalculusFourthAssignment.addStudent(stevensWendy);
-        apCalculusFourthAssignment.addStudent(williamsAbbey);
         assignmentRepo.save(apCalculusFourthAssignment);
 
+        earthScienceFirstAssignment.addStudent(stevensWendy);
+        earthScienceFirstAssignment.addStudent(jamesLester);
         earthScienceFirstAssignment.addStudent(pattersonBecky);
         earthScienceFirstAssignment.addStudent(petersonBrian);
         earthScienceFirstAssignment.addStudent(wongMichael);
         earthScienceFirstAssignment.addStudent(changSarah);
-        earthScienceFirstAssignment.addStudent(stevensWendy);
-        earthScienceFirstAssignment.addStudent(jamesLester);
         assignmentRepo.save(earthScienceFirstAssignment);
 
+        earthScienceSecondAssignment.addStudent(stevensWendy);
+        earthScienceSecondAssignment.addStudent(jamesLester);
         earthScienceSecondAssignment.addStudent(pattersonBecky);
         earthScienceSecondAssignment.addStudent(petersonBrian);
         earthScienceSecondAssignment.addStudent(wongMichael);
         earthScienceSecondAssignment.addStudent(changSarah);
-        earthScienceSecondAssignment.addStudent(stevensWendy);
-        earthScienceSecondAssignment.addStudent(jamesLester);
         assignmentRepo.save(earthScienceSecondAssignment);
 
+        earthScienceThirdAssignment.addStudent(stevensWendy);
+        earthScienceThirdAssignment.addStudent(jamesLester);
         earthScienceThirdAssignment.addStudent(pattersonBecky);
         earthScienceThirdAssignment.addStudent(petersonBrian);
         earthScienceThirdAssignment.addStudent(wongMichael);
         earthScienceThirdAssignment.addStudent(changSarah);
-        earthScienceThirdAssignment.addStudent(stevensWendy);
-        earthScienceThirdAssignment.addStudent(jamesLester);
-        assignmentRepo.save(earthScienceThirdAssignment);
+       assignmentRepo.save(earthScienceThirdAssignment);
 
+        earthScienceFourthAssignment.addStudent(stevensWendy);
+        earthScienceFourthAssignment.addStudent(jamesLester);
         earthScienceFourthAssignment.addStudent(pattersonBecky);
         earthScienceFourthAssignment.addStudent(petersonBrian);
         earthScienceFourthAssignment.addStudent(wongMichael);
         earthScienceFourthAssignment.addStudent(changSarah);
-        earthScienceFourthAssignment.addStudent(stevensWendy);
-        earthScienceFourthAssignment.addStudent(jamesLester);
         assignmentRepo.save(earthScienceFourthAssignment);
 
+        earthScienceFifthAssignment.addStudent(stevensWendy);
+        earthScienceFifthAssignment.addStudent(jamesLester);
         earthScienceFifthAssignment.addStudent(pattersonBecky);
         earthScienceFifthAssignment.addStudent(petersonBrian);
         earthScienceFifthAssignment.addStudent(wongMichael);
         earthScienceFifthAssignment.addStudent(changSarah);
-        earthScienceFifthAssignment.addStudent(stevensWendy);
-        earthScienceFifthAssignment.addStudent(jamesLester);
         assignmentRepo.save(earthScienceFifthAssignment);
 
+        apIntroComputerScienceFirstAssignment.addStudent(jamesLester);
         apIntroComputerScienceFirstAssignment.addStudent(bahramAlliyah);
         apIntroComputerScienceFirstAssignment.addStudent(mccoyDamien);
         apIntroComputerScienceFirstAssignment.addStudent(askerJennifer);
         apIntroComputerScienceFirstAssignment.addStudent(novikJoey);
         apIntroComputerScienceFirstAssignment.addStudent(changSarah);
-        apIntroComputerScienceFirstAssignment.addStudent(sanghaAdi);
-        apIntroComputerScienceFirstAssignment.addStudent(jamesLester);
         assignmentRepo.save(apIntroComputerScienceFirstAssignment);
-
-
 
         Grade bobbyJonesApHistoryGrade = new Grade(apHistoryOneFirstAssignment, 97, 100);
         gradeRepo.save(bobbyJonesApHistoryGrade);
@@ -372,165 +369,132 @@ public class Populator implements CommandLineRunner {
         beckyPattersonApHistoryGrade2.addStudentToGrade(pattersonBecky);
         gradeRepo.save(beckyPattersonApHistoryGrade2);
 
+        Grade stevensWendyEarthScienceGrade1 = new Grade(earthScienceFirstAssignment, 87, 100);
+        gradeRepo.save(stevensWendyEarthScienceGrade1);
+        stevensWendyEarthScienceGrade1.addStudentToGrade(stevensWendy);
+        gradeRepo.save(stevensWendyEarthScienceGrade1);
+        Grade stevensWendyEarthScienceGrade2 = new Grade(earthScienceSecondAssignment, 98, 100);
+        gradeRepo.save(stevensWendyEarthScienceGrade2);
+        stevensWendyEarthScienceGrade2.addStudentToGrade(stevensWendy);
+        gradeRepo.save(stevensWendyEarthScienceGrade2);
+        Grade stevensWendyEarthScienceGrade3 = new Grade(earthScienceThirdAssignment, 99, 100);
+        gradeRepo.save(stevensWendyEarthScienceGrade3);
+        stevensWendyEarthScienceGrade3.addStudentToGrade(stevensWendy);
+        gradeRepo.save(stevensWendyEarthScienceGrade3);
+        Grade stevensWendyEarthScienceGrade4 = new Grade(earthScienceFourthAssignment, 100, 100);
+        gradeRepo.save(stevensWendyEarthScienceGrade4);
+        stevensWendyEarthScienceGrade4.addStudentToGrade(stevensWendy);
+        gradeRepo.save(stevensWendyEarthScienceGrade4);
+        Grade stevensWendyEarthScienceGrade5 = new Grade(earthScienceFifthAssignment, 87, 100);
+        gradeRepo.save(stevensWendyEarthScienceGrade5);
+        stevensWendyEarthScienceGrade5.addStudentToGrade(stevensWendy);
+        gradeRepo.save(stevensWendyEarthScienceGrade5);
+
+        Grade jamesLesterEarthScienceGrade1 = new Grade(earthScienceFirstAssignment, 78, 100);
+        gradeRepo.save(jamesLesterEarthScienceGrade1);
+        jamesLesterEarthScienceGrade1.addStudentToGrade(jamesLester);
+        gradeRepo.save(jamesLesterEarthScienceGrade1);
+        Grade jamesLesterEarthScienceGrade2 = new Grade(earthScienceSecondAssignment, 79, 100);
+        gradeRepo.save(jamesLesterEarthScienceGrade2);
+        jamesLesterEarthScienceGrade2.addStudentToGrade(jamesLester);
+        gradeRepo.save(jamesLesterEarthScienceGrade2);
+        Grade jamesLesterEarthScienceGrade3 = new Grade(earthScienceThirdAssignment, 80, 100);
+        gradeRepo.save(jamesLesterEarthScienceGrade3);
+        jamesLesterEarthScienceGrade3.addStudentToGrade(jamesLester);
+        gradeRepo.save(jamesLesterEarthScienceGrade3);
+        Grade jamesLesterEarthScienceGrade4 = new Grade(earthScienceFourthAssignment, 90, 100);
+        gradeRepo.save(jamesLesterEarthScienceGrade4);
+        jamesLesterEarthScienceGrade4.addStudentToGrade(jamesLester);
+        gradeRepo.save(jamesLesterEarthScienceGrade4);
+        Grade jamesLesterEarthScienceGrade5 = new Grade(earthScienceFifthAssignment, 100, 100);
+        gradeRepo.save(jamesLesterEarthScienceGrade5);
+        jamesLesterEarthScienceGrade5.addStudentToGrade(jamesLester);
+        gradeRepo.save(jamesLesterEarthScienceGrade5);
 
         Grade pattersonBeckyEarthScienceGrade1 = new Grade(earthScienceFirstAssignment, 97, 100);
         gradeRepo.save(pattersonBeckyEarthScienceGrade1);
         pattersonBeckyEarthScienceGrade1.addStudentToGrade(pattersonBecky);
         gradeRepo.save(pattersonBeckyEarthScienceGrade1);
-
         Grade pattersonBeckyEarthScienceGrade2 = new Grade(earthScienceSecondAssignment, 93, 100);
         gradeRepo.save(pattersonBeckyEarthScienceGrade2);
         pattersonBeckyEarthScienceGrade2.addStudentToGrade(pattersonBecky);
         gradeRepo.save(pattersonBeckyEarthScienceGrade2);
-
         Grade pattersonBeckyEarthScienceGrade3 = new Grade(earthScienceThirdAssignment, 67, 100);
         gradeRepo.save(pattersonBeckyEarthScienceGrade3);
         pattersonBeckyEarthScienceGrade3.addStudentToGrade(pattersonBecky);
         gradeRepo.save(pattersonBeckyEarthScienceGrade3);
-
         Grade pattersonBeckyEarthScienceGrade4 = new Grade(earthScienceFourthAssignment, 78, 100);
         gradeRepo.save(pattersonBeckyEarthScienceGrade4);
         pattersonBeckyEarthScienceGrade4.addStudentToGrade(pattersonBecky);
         gradeRepo.save(pattersonBeckyEarthScienceGrade4);
-
         Grade pattersonBeckyEarthScienceGrade5 = new Grade(earthScienceFifthAssignment, 56, 100);
         gradeRepo.save(pattersonBeckyEarthScienceGrade5);
         pattersonBeckyEarthScienceGrade5.addStudentToGrade(pattersonBecky);
         gradeRepo.save(pattersonBeckyEarthScienceGrade5);
 
-
         Grade petersonBrianEarthScienceGrade1 = new Grade(earthScienceFirstAssignment, 90, 100);
         gradeRepo.save(petersonBrianEarthScienceGrade1);
         petersonBrianEarthScienceGrade1.addStudentToGrade(petersonBrian);
         gradeRepo.save(petersonBrianEarthScienceGrade1);
-        
         Grade petersonBrianEarthScienceGrade2 = new Grade(earthScienceSecondAssignment, 87, 100);
         gradeRepo.save(petersonBrianEarthScienceGrade2);
         petersonBrianEarthScienceGrade2.addStudentToGrade(petersonBrian);
         gradeRepo.save(petersonBrianEarthScienceGrade2);
-        
         Grade petersonBrianEarthScienceGrade3 = new Grade(earthScienceThirdAssignment, 85, 100);
         gradeRepo.save(petersonBrianEarthScienceGrade3);
         petersonBrianEarthScienceGrade3.addStudentToGrade(petersonBrian);
         gradeRepo.save(petersonBrianEarthScienceGrade3);
-        
         Grade petersonBrianEarthScienceGrade4 = new Grade(earthScienceFourthAssignment, 78, 100);
         gradeRepo.save(petersonBrianEarthScienceGrade4);
         petersonBrianEarthScienceGrade4.addStudentToGrade(petersonBrian);
         gradeRepo.save(petersonBrianEarthScienceGrade4);
-        
         Grade petersonBrianEarthScienceGrade5 = new Grade(earthScienceFifthAssignment, 87, 100);
         gradeRepo.save(petersonBrianEarthScienceGrade5);
         petersonBrianEarthScienceGrade5.addStudentToGrade(petersonBrian);
         gradeRepo.save(petersonBrianEarthScienceGrade5);
         
-
         Grade wongMichaelEarthScienceGrade1 = new Grade(earthScienceFirstAssignment, 65, 100);
         gradeRepo.save(wongMichaelEarthScienceGrade1);
         wongMichaelEarthScienceGrade1.addStudentToGrade(wongMichael);
         gradeRepo.save(wongMichaelEarthScienceGrade1);
-
         Grade wongMichaelEarthScienceGrade2 = new Grade(earthScienceSecondAssignment, 95, 100);
         gradeRepo.save(wongMichaelEarthScienceGrade2);
         wongMichaelEarthScienceGrade2.addStudentToGrade(wongMichael);
         gradeRepo.save(wongMichaelEarthScienceGrade2);
-        
         Grade wongMichaelEarthScienceGrade3 = new Grade(earthScienceThirdAssignment, 85, 100);
         gradeRepo.save(wongMichaelEarthScienceGrade3);
         wongMichaelEarthScienceGrade3.addStudentToGrade(wongMichael);
         gradeRepo.save(wongMichaelEarthScienceGrade3);
-        
         Grade wongMichaelEarthScienceGrade4 = new Grade(earthScienceFourthAssignment, 58, 100);
         gradeRepo.save(wongMichaelEarthScienceGrade4);
         wongMichaelEarthScienceGrade4.addStudentToGrade(wongMichael);
         gradeRepo.save(wongMichaelEarthScienceGrade4);
-        
         Grade wongMichaelEarthScienceGrade5 = new Grade(earthScienceFifthAssignment, 77, 100);
         gradeRepo.save(wongMichaelEarthScienceGrade5);
         wongMichaelEarthScienceGrade5.addStudentToGrade(wongMichael);
         gradeRepo.save(wongMichaelEarthScienceGrade5);
         
-
         Grade changSarahEarthScienceGrade1 = new Grade(earthScienceFirstAssignment, 88, 100);
         gradeRepo.save(changSarahEarthScienceGrade1);
         changSarahEarthScienceGrade1.addStudentToGrade(changSarah);
         gradeRepo.save(changSarahEarthScienceGrade1);
-        
         Grade changSarahEarthScienceGrade2 = new Grade(earthScienceSecondAssignment, 99, 100);
         gradeRepo.save(changSarahEarthScienceGrade2);
         changSarahEarthScienceGrade2.addStudentToGrade(changSarah);
         gradeRepo.save(changSarahEarthScienceGrade2);
-        
         Grade changSarahEarthScienceGrade3 = new Grade(earthScienceThirdAssignment, 100, 100);
         gradeRepo.save(changSarahEarthScienceGrade3);
         changSarahEarthScienceGrade3.addStudentToGrade(changSarah);
         gradeRepo.save(changSarahEarthScienceGrade3);
-        
         Grade changSarahEarthScienceGrade4 = new Grade(earthScienceFourthAssignment, 0, 100);
         gradeRepo.save(changSarahEarthScienceGrade4);
         changSarahEarthScienceGrade4.addStudentToGrade(changSarah);
         gradeRepo.save(changSarahEarthScienceGrade4);
-        
         Grade changSarahEarthScienceGrade5 = new Grade(earthScienceFifthAssignment, 67, 100);
         gradeRepo.save(changSarahEarthScienceGrade5);
         changSarahEarthScienceGrade5.addStudentToGrade(changSarah);
         gradeRepo.save(changSarahEarthScienceGrade5);
-        
 
-
-
-        Grade stevensWendyEarthScienceGrade1 = new Grade(earthScienceFirstAssignment, 87, 100);
-        gradeRepo.save(stevensWendyEarthScienceGrade1);
-        stevensWendyEarthScienceGrade1.addStudentToGrade(stevensWendy);
-        gradeRepo.save(stevensWendyEarthScienceGrade1);
-        
-        Grade stevensWendyEarthScienceGrade2 = new Grade(earthScienceSecondAssignment, 98, 100);
-        gradeRepo.save(stevensWendyEarthScienceGrade2);
-        stevensWendyEarthScienceGrade2.addStudentToGrade(stevensWendy);
-        gradeRepo.save(stevensWendyEarthScienceGrade2);
-        
-        Grade stevensWendyEarthScienceGrade3 = new Grade(earthScienceThirdAssignment, 99, 100);
-        gradeRepo.save(stevensWendyEarthScienceGrade3);
-        stevensWendyEarthScienceGrade3.addStudentToGrade(stevensWendy);
-        gradeRepo.save(stevensWendyEarthScienceGrade3);
-        
-        Grade stevensWendyEarthScienceGrade4 = new Grade(earthScienceFourthAssignment, 100, 100);
-        gradeRepo.save(stevensWendyEarthScienceGrade4);
-        stevensWendyEarthScienceGrade4.addStudentToGrade(stevensWendy);
-        gradeRepo.save(stevensWendyEarthScienceGrade4);
-        
-        Grade stevensWendyEarthScienceGrade5 = new Grade(earthScienceFifthAssignment, 87, 100);
-        gradeRepo.save(stevensWendyEarthScienceGrade5);
-        stevensWendyEarthScienceGrade5.addStudentToGrade(stevensWendy);
-        gradeRepo.save(stevensWendyEarthScienceGrade5);
-        
-
-        
-        Grade jamesLesterEarthScienceGrade1 = new Grade(earthScienceFirstAssignment, 78, 100);
-        gradeRepo.save(jamesLesterEarthScienceGrade1);
-        jamesLesterEarthScienceGrade1.addStudentToGrade(jamesLester);
-        gradeRepo.save(jamesLesterEarthScienceGrade1);
-        
-        Grade jamesLesterEarthScienceGrade2 = new Grade(earthScienceSecondAssignment, 79, 100);
-        gradeRepo.save(jamesLesterEarthScienceGrade2);
-        jamesLesterEarthScienceGrade2.addStudentToGrade(jamesLester);
-        gradeRepo.save(jamesLesterEarthScienceGrade2);
-        
-        Grade jamesLesterEarthScienceGrade3 = new Grade(earthScienceThirdAssignment, 80, 100);
-        gradeRepo.save(jamesLesterEarthScienceGrade3);
-        jamesLesterEarthScienceGrade3.addStudentToGrade(jamesLester);
-        gradeRepo.save(jamesLesterEarthScienceGrade3);
-        
-        Grade jamesLesterEarthScienceGrade4 = new Grade(earthScienceFourthAssignment, 90, 100);
-        gradeRepo.save(jamesLesterEarthScienceGrade4);
-        jamesLesterEarthScienceGrade4.addStudentToGrade(jamesLester);
-        gradeRepo.save(jamesLesterEarthScienceGrade4);
-        
-        Grade jamesLesterEarthScienceGrade5 = new Grade(earthScienceFifthAssignment, 100, 100);
-        gradeRepo.save(jamesLesterEarthScienceGrade5);
-        jamesLesterEarthScienceGrade5.addStudentToGrade(jamesLester);
-        gradeRepo.save(jamesLesterEarthScienceGrade5);
-        
 
         Note bobbyJonesNote = new Note("Reminder for Bobby", "Remind Bobby to cover his text book by next week.", "8/30/2021");
         jonesBobby.addNoteToStudent(bobbyJonesNote);
