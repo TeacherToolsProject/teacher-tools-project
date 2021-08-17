@@ -39,7 +39,6 @@ body {
   /* height: calc(100vh - 10px); */
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
-  /* grid-template-rows: 0.5fr 8fr 0.5fr; */
   gap: 10px;
 }
 
@@ -47,7 +46,6 @@ body {
   /* height: calc(100vh - 10px); */
   /* display: grid; */
   grid-template-columns: 0.5fr 2fr 0.5fr;
-  /* grid-template-rows: 0.5fr 8fr 0.5fr; */
 }
 
 header {
@@ -133,25 +131,20 @@ li a:hover {
   text-align: left;
 }
 
-.single-student-page-list-box-around-student-notes-and-add-a-note, 
+.single-student-page-list-box-around-student-notes-and-add-a-note,
 .single-student-page-classes-and-grades-box {
   /* color: whitesmoke; */
   border: 2px solid black;
   background-image: url(..//images/free-chalkboard-black.jpg);
   background-size: 100%;
-  background-position:center;
+  background-position: center;
   box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.4);
   border-radius: 6px;
   margin: 10px;
   padding: 5px 20px;
   width: 90%;
-align-items: center;
+  align-items: center;
 }
-
-/* The following section needs to follow the section above */
-/* .single-student-page-classes-and-grades-box { */
-/* width: 90%; */
-/* } */
 
 .home-page-classroom-list-box,
 .single-classroom-page-section-box,
@@ -189,12 +182,10 @@ align-items: center;
   background-image: none;
   margin: 10px 10px;
   padding: 5px 10px;
-
-
 }
 
-
-.single-student-page-note-list, .single-student-page-student-note {
+.single-student-page-note-list,
+.single-student-page-student-note {
   text-shadow: none;
   word-wrap: break-word;
   font-size: 0.9em;
@@ -223,7 +214,7 @@ align-items: center;
   text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
-.single-student-page-student-grade-list{
+.single-student-page-student-grade-list {
   color: lemonchiffon;
   margin: 20px auto;
 }
@@ -252,13 +243,9 @@ align-items: center;
   background-image: url(..//images/free-chalkboard-green.jpg);
   border-radius: 6px;
   padding: auto;
-  /* display: flex; */
-  /* flex-direction: column; */
-  /* justify-content: space-evenly; */
   width: 90%;
   text-align: center;
-  /* align-items: center; */
-  margin:auto;
+  margin: auto;
 }
 
 .home-page-classroom-list,
@@ -358,11 +345,12 @@ align-items: center;
   background-color: rgb(123, 124, 126);
   display: flex;
   flex-direction: column;
-  align-items: center; /*  this is causing an issue on some pages */
+  align-items: center;
   justify-content: space-evenly;
 }
 
-#about-main-content, #single-student-page-main-content {
+#about-main-content,
+#single-student-page-main-content {
   align-items: stretch;
 }
 
@@ -414,9 +402,9 @@ align-items: center;
 }
 
 /* This must come after the section above */
-.single-student-page-student-classes-title, 
+.single-student-page-student-classes-title,
 .single-student-page-student-grades-title {
-color: lemonchiffon;
+  color: lemonchiffon;
 }
 
 /* This must come after the section above */
@@ -469,7 +457,7 @@ color: lemonchiffon;
 /* .single-student-page-student-note, */
 .single-assignment-page-list-box-add-a-new-grade {
   align-items: center;
-  
+
   background-image: url(..//images/free-chalkboard-green.jpg);
   border: 2px solid black;
   border-radius: 6px;
@@ -496,7 +484,7 @@ color: lemonchiffon;
 .single-classroom-page-add-new-student-to-class-form,
 .students-page-add-a-student-form,
 .single-student-page-notes-add-a-note-about-this-student-form
-.delete-student-grade {
+  .delete-student-grade {
   color: lemonchiffon;
   text-align: center;
   margin: auto;
@@ -528,33 +516,24 @@ color: lemonchiffon;
 }
 
 .hide-show-button {
-background-color: rgb(123, 124, 126);
-border-radius: 4px;
-border: 1px solid black;
-box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.4);
-color: lemonchiffon;
-margin: 2px;
-text-shadow: 3px 3px 1px rgba(0, 0, 0, 0.1);
+  background-color: rgb(123, 124, 126);
+  border-radius: 4px;
+  border: 1px solid black;
+  box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.4);
+  color: lemonchiffon;
+  margin: 2px;
+  text-shadow: 3px 3px 1px rgba(0, 0, 0, 0.1);
 }
 
 .hide-show-button:hover {
-box-shadow: inset 2px 2px 0px rgba(0, 0, 0, 0.4);
-cursor: pointer;
-font-size: 12px;
-font-weight: normal;
+  box-shadow: inset 2px 2px 0px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: normal;
 }
 
-
-/* .delete-student-grade { */
-  /* display: flex; */
-  /* flex-direction: column; */
-  /* align-items: center; */
-  /* margin: 0 auto; */
-/* } */
-
-
 .delete-button {
-    font-size: 1em;
+  font-size: 1em;
   font-weight: bold;
   color: whitesmoke;
   background-color: red;
@@ -569,80 +548,17 @@ font-weight: normal;
     bottom-right, 
     bottom-left, 
     top-left */
-  text-shadow: 1px -1px 0px rgba(0,0,0,0.3), 
-    1.5px 1.5px 0px rgba(0,0,0,0.3),
-    -1px 1px 0px rgba(0,0,0,0.3), 
-    -1px -1px 0px rgba(0,0,0,0.3);
-
+  text-shadow: 1px -1px 0px rgba(0, 0, 0, 0.3),
+    1.5px 1.5px 0px rgba(0, 0, 0, 0.3), -1px 1px 0px rgba(0, 0, 0, 0.3),
+    -1px -1px 0px rgba(0, 0, 0, 0.3);
 }
 
 .delete-button:hover {
   cursor: pointer;
   border-style: inset;
   font-weight: normal;
-  background-color:rgba(255, 0, 0, 0.9);
+  background-color: rgba(255, 0, 0, 0.9);
 }
-
-
-
-/* below commented out while testing differnt button */
-/* .single-classroom-page-take-roll-call-button { */
-/* position: relative; */
-/* display: inline-block; */
-/* margin: 15px; */
-/* } */
-
-/* .single-classroom-page-take-roll-call-button a { */
-/* color: white; */
-/* font-weight: bold; */
-/* font-size: 1.5em; */
-/* text-align: center; */
-/* text-decoration: none; */
-/* background-color:rgb(211,185,56); */
-/* display: block; */
-/* position: relative; */
-/* padding: 10px 20px; */
-
-/* -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3); */
-/* text-shadow: 3px 3px 1px rgba(0, 0, 0, 0.3); */
-
-/* filter: dropshadow(color=#000, offx=5px, offy=5px); */
-
-/* -webkit-box-shadow: inset 10px 10px 3px rgb(211,185,56), 10px 10px 3px rgb(116,97,66); */
-/* -moz-box-shadow: inset 10px 10px 3px rgb(211,185,56), 10px 10px 3px rgb(116,97,66); */
-/* box-shadow: inset 10px 10px 3px rgb(211,185,56), 10px 10px 3px rgb(116,97,66); */
-
-/* border: 1px solid rgba(0, 0, 0, 0.5); */
-/* -webkit-border-radius: 4px; */
-/* -moz-border-radius: 4px; */
-/* border-radius: 4px; */
-/* } */
-
-/* .single-classroom-page-take-roll-call-button a:active { */
-/* top: 10px; */
-/* left: 10px; */
-/* background-color: rgb(211,185,56); */
-/*  */
-/* -webkit-box-shadow: inset 0 1px 0 #ffe5c4, inset 0 -3px 0 #915100; */
-/* -moz-box-shadow: inset 0 1px 0 #ffe5c4, inset 0 -3pxpx 0 #915100; */
-/* box-shadow: inset 0 1px 0 rgb(116,97,66), inset 0 -3px 0 #915100; */
-/* } */
-
-/* .single-classroom-page-take-roll-call-button:after { */
-/* content: ""; */
-/* height: 100%; */
-/* width: 100%; */
-/* padding: 4px; */
-/* position: absolute; */
-/* bottom: -15px; */
-/* left: -4px; */
-/* z-index: -1; */
-/* background-color: #2b1800; */
-/* -webkit-border-radius: 5px; */
-/* -moz-border-radius: 5px; */
-/* border-radius: 5px; */
-/* } */
-/* below commented out while testing differnt button */
 
 #usrform,
 .student-list,
@@ -680,7 +596,6 @@ font-weight: normal;
   text-align: center;
   text-shadow: 3px 3px 1px rgba(0, 0, 0, 0.3);
   width: 90%;
-  
 }
 
 /* The following section must follow the section above */
@@ -692,7 +607,6 @@ font-weight: normal;
 #single-student-page-title {
   width: 90%;
 }
-
 
 .roll-call-page-title {
   background: rgb(196, 235, 253);
@@ -750,15 +664,11 @@ font-weight: normal;
   font-weight: normal;
 }
 
-/* .single-student-page-profile-boxes { */
-  /* border: 2px solid black; */
-/* } */
-
 .about-profile-box,
 .single-student-page-profile-box {
   display: flex;
   flex-direction: column;
-justify-content: center;
+  justify-content: center;
   border: 1px solid black;
   border-radius: 6px;
   margin: 20px;
@@ -770,11 +680,10 @@ justify-content: center;
 
 /* The following section must follow the section above */
 .single-student-page-profile-box {
-/* padding: top | right | bottom | left; */
-   margin: 20px 50px 20px 20px;
-   margin: 20px auto;
+  /* padding: top | right | bottom | left; */
+  margin: 20px 50px 20px 20px;
+  margin: 20px auto;
 }
-
 
 .about-headshot-text-links,
 .single-student-page-text-pic {
@@ -783,7 +692,7 @@ justify-content: center;
   flex-direction: row;
   font-size: 1em;
   font-weight: bold;
-  justify-content:center;
+  justify-content: center;
   margin-top: 0px;
   margin: 5px;
 }
@@ -816,7 +725,7 @@ justify-content: center;
   color: rgb(9, 73, 198);
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
   font-weight: bold;
-  width:auto;
+  width: auto;
 }
 
 #about-page-profile-name {
@@ -929,8 +838,8 @@ form input[type="submit"]:hover {
   cursor: pointer;
   border-style: inset;
   /* lemonchiffon */
-  background-color: rgba(255,250,205,0.9);
-  box-shadow: inset 2px 2px 1px rgb(0 0 0 / 40%)
+  background-color: rgba(255, 250, 205, 0.9);
+  box-shadow: inset 2px 2px 1px rgb(0 0 0 / 40%);
 }
 
 form input[type="submit"] {
@@ -956,8 +865,7 @@ a:hover {
   cursor: pointer;
   border-style: inset;
   /* lemonchiffon */
-  background-color: rgba(255,250,205,0.9);
-
+  background-color: rgba(255, 250, 205, 0.9);
 }
 
 .single-classroom-page-take-roll-call-button {
@@ -983,17 +891,11 @@ a:hover {
   display: block;
   position: relative;
   padding: 10px 20px;
-
-
-/* top right, bottom-right, bottom-left, top-left */
-  text-shadow: 1px -1px 2px rgba(0, 0, 0, 0.2), 
-    2px 2px 2px rgba(0, 0, 0, 0.8), 
-    -1px 1px 2px rgba(0, 0, 0, 0.2), 
-    -1px -1px 2px rgba(0, 0, 0, 0.1);
-
+  /* top right, bottom-right, bottom-left, top-left */
+  text-shadow: 1px -1px 2px rgba(0, 0, 0, 0.2), 2px 2px 2px rgba(0, 0, 0, 0.8),
+    -1px 1px 2px rgba(0, 0, 0, 0.2), -1px -1px 2px rgba(0, 0, 0, 0.1);
   box-shadow: inset 2px 2px 1px rgb(211, 185, 56),
     6px 6px 1px rgba(0, 0, 0, 0.3);
-
   border: 1px solid orange;
   border-radius: 4px;
 }
@@ -1068,10 +970,3 @@ a:hover {
     background-position: 0 0;
   }
 }
-
-/* button { */
-  /* align-items:center; */
-  /* display: flex; */
-  /* box-sizing: unset; */
-/* } */
-
