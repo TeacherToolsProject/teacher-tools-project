@@ -195,7 +195,7 @@ public class Populator implements CommandLineRunner {
         assignmentRepo.save(earthScienceThirdAssignment);
         Assignment earthScienceFourthAssignment = new Assignment(earthScience, "Climate Change: Fact or Fiction?", "Praesent velit neque, pellentesque eget consequat ac, fermentum sed.", "09/06/2021", "09/10/2021", "100");
         assignmentRepo.save(earthScienceFourthAssignment);
-        Assignment earthScienceFifthAssignment = new Assignment(earthScience, "Theory of Plate Tectonics", "Praesent eleifend tempor rhoncus. Quisque et purus sagittis, gravida neque rutrum, " +
+        Assignment earthScienceFifthAssignment = new Assignment(earthScience, "Sky High Pie", "Praesent eleifend tempor rhoncus. Quisque et purus sagittis, gravida neque rutrum, " +
         "luctus lorem. Integer hendrerit, nibh at egestas bibendum, orci orci rhoncus magna, ut.", "09/13/2021", "09/17/2021", "100");
         assignmentRepo.save(earthScienceFifthAssignment);
 
@@ -335,8 +335,26 @@ public class Populator implements CommandLineRunner {
         gradeRepo.save(beckyPattersonApHistoryGrade);
 
         Note bobbyJonesNote = new Note("Reminder for Bobby", "Remind Bobby to cover his text book by next week.", "8/30/2021");
-
         jonesBobby.addNoteToStudent(bobbyJonesNote);
         studentRepo.save(jonesBobby);
+
+        Note fongGaryNote = new Note("Reminder for Gary", "Praesent eleifend tempor rhoncus. Quisque et purus sagittis, " + 
+        "gravida neque rutrum, luctus lorem. Integer hendrerit, nibh at egestas bibendum, orci orci rhoncus magna, ut.", "8/30/2021");
+        fongGary.addNoteToStudent(fongGaryNote);
+        studentRepo.save(fongGary);
+
+        Note williamsAbbeyNote = new Note("Reminder for Abbey", "Integer hendrerit, nibh at egestas bibendum, orci orci rhoncus magna, ut.", "8/30/2021");
+        williamsAbbey.addNoteToStudent(williamsAbbeyNote);
+        studentRepo.save(williamsAbbey);
+
+        Note stevensWendyNote = new Note("Reminder for Wendy", "Nibh at egestas bibendum", "8/30/2021");
+        stevensWendy.addNoteToStudent(stevensWendyNote);
+        studentRepo.save(stevensWendy);
+
+        Note jamesLesterNote = new Note("Reminder for Lester", "Remind Lester to take out the trash.", "8/30/2021");
+        jamesLester.addNoteToStudent(jamesLesterNote);
+        studentRepo.save(jamesLester);
+
+
     }
 }
