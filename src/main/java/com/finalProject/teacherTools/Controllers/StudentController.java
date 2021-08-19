@@ -64,7 +64,7 @@ public class StudentController {
         model.addAttribute("note", noteToDisplay);
         model.addAttribute("individualStudent", studentToAddNote);
 
-        return "single-student-template";
+        return "redirect:/student" + "?id=" +studentToAddNote.getId();
         }
 
     @PostMapping("/student/deletenote/{id}")
